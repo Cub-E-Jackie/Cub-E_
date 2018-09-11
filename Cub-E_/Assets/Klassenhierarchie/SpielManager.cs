@@ -15,7 +15,7 @@ using UnityEngine;
 
 public class SpielManager : MonoBehaviour {
 	
-	public bool aktivModus;
+	static public bool aktivModus;
 
 	// Use this for initialization
 	void Start () {
