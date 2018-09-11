@@ -39,7 +39,7 @@ public class DialogManager : MonoBehaviour {
 			StartCoroutine(Type());
 		} else {
 			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1); //nächste Scene starten = Scene
-			continueButton.SetActive(false);
+			button.SetActive(false);
 		}
 	}
 }
