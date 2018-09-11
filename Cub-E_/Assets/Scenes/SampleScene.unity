@@ -241,9 +241,30 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 4d70fb21fc92a439fbcf663985887fb9, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d27e40970e4755c4fad4d69783da84a8, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d70fb21fc92a439fbcf663985887fb9, type: 3}
   m_IsPrefabAsset: 0
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+--- !u!1 &388587941 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 4d70fb21fc92a439fbcf663985887fb9,
+    type: 3}
+  m_PrefabInternal: {fileID: 388587940}
+--- !u!114 &388587942
+=======
+=======
+>>>>>>> d0d737b17d5024ea6ab5fa10f2af3be118bd7a07
+=======
+>>>>>>> c92a873f2cee344161c2b034f7ec6b95a71a21a8
+=======
+>>>>>>> c92a873f2cee344161c2b034f7ec6b95a71a21a8
 --- !u!1 &959035070
 GameObject:
   m_ObjectHideFlags: 0
@@ -254,17 +275,44 @@ GameObject:
   - component: {fileID: 959035072}
   - component: {fileID: 959035071}
   m_Layer: 0
-  m_Name: SpawnerManager
+  m_Name: ObstacleMove
   m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!114 &959035071
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d0d737b17d5024ea6ab5fa10f2af3be118bd7a07
+=======
+>>>>>>> d0d737b17d5024ea6ab5fa10f2af3be118bd7a07
+=======
+>>>>>>> c92a873f2cee344161c2b034f7ec6b95a71a21a8
+=======
+>>>>>>> c92a873f2cee344161c2b034f7ec6b95a71a21a8
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+  m_GameObject: {fileID: 388587941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a8fda3384a70d141a39ba24e1eba6d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+=======
+=======
+>>>>>>> d0d737b17d5024ea6ab5fa10f2af3be118bd7a07
+=======
+>>>>>>> c92a873f2cee344161c2b034f7ec6b95a71a21a8
+=======
+>>>>>>> c92a873f2cee344161c2b034f7ec6b95a71a21a8
   m_GameObject: {fileID: 959035070}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -286,6 +334,16 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d0d737b17d5024ea6ab5fa10f2af3be118bd7a07
+=======
+>>>>>>> d0d737b17d5024ea6ab5fa10f2af3be118bd7a07
+=======
+>>>>>>> c92a873f2cee344161c2b034f7ec6b95a71a21a8
+=======
+>>>>>>> c92a873f2cee344161c2b034f7ec6b95a71a21a8
 --- !u!1 &1237430876
 GameObject:
   m_ObjectHideFlags: 0

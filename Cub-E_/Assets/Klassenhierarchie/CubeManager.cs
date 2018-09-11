@@ -62,7 +62,7 @@ public class CubeManager : MonoBehaviour {
 		float geschwindigkeit = 1f;
 	
 		// globale Variable aktivModus auf false, zur Organisation von SpielerInput
-		SpielUeberwachung.aktivModus = false;
+		SpielManager.aktivModus = false;
 	
 		// Cube dreht sich vertikal um x Achse um übergebenen Winkel 
 		transform.Rotate(new Vector3(richtung,0,0), geschwindigkeit);
@@ -74,7 +74,7 @@ public class CubeManager : MonoBehaviour {
 		//geht noch nicht 	Hindernisse.Feldwechsel();
 		
 		// globale Variable aktivModus auf true, zur Organisation von SpielerInput
-		SpielUeberwachung.aktivModus = true;
+		SpielManager.aktivModus = true;
 		
 	}
 	
@@ -84,7 +84,7 @@ public class CubeManager : MonoBehaviour {
 		//float geschwindigkeit = 100f;
 	
 		// globale Variable aktivModus auf false, zur Organisation von SpielerInput
-		SpielUeberwachung.aktivModus = false;
+		SpielManager.aktivModus = false;
 	
 		// Cube dreht sich vertikal um y Achse um übergebenen Winkel 
 		transform.Rotate(new Vector3(0,richtung,0));
@@ -93,7 +93,7 @@ public class CubeManager : MonoBehaviour {
 		// geht noch nicht 	Hindernisse.Feldwechsel();
 		
 		// globale Variable aktivModus auf true, zur Organisation von SpielerInput
-		SpielUeberwachung.aktivModus = true;
+		SpielManager.aktivModus = true;
 		
 	}
 	
