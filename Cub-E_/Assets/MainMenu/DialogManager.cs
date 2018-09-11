@@ -26,7 +26,7 @@ public class DialogManager : MonoBehaviour {
 	IEnumerator Type(){
 		foreach(char letter in sentences[i].ToCharArray()){
 			text.text += letter;
-			yield return new WaitForSeconds(Speed);
+			yield return new WaitForSeconds(speed);
 		}
 	}
 	
