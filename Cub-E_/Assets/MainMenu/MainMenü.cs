@@ -1,16 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainMenü : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
+
+	public void PlayGame () {
+		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); //nächste Scene starten = Game
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+
+	public void QuitGame() {
+	Debug.Log("Quit");//Schreibt: Quit in Console
+		Application.Quit(); 
 	}
 }

@@ -35,7 +35,7 @@ public class DialogManager : MonoBehaviour {
 		button.SetActive(false);
 		if(i<sentences.Length - 1){
 			i++; //+1 gerechnet
-			text.text = " ";
+			text.text = "";
 			StartCoroutine(Type());
 		} else {
 			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1); //nächste Scene starten = Scene
