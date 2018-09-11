@@ -34,3 +34,17 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+Cub-E_/Assets/Klassenhierarchie/CubeManager.cs
+Cub-E_/Assets/Klassenhierarchie/SpielManager.cs
+Cub-E_/Assets/Modelle/Materialien.meta
+Cub-E_/Assets/Models.meta
+Cub-E_/Assets/Prefabs.meta
+Cub-E_/Assets/Scenes/SampleScene.unity
+Cub-E_/Assets/Texturen/Materials.meta
+Cub-E_/Assets/Texturen/Materials/World_Water_Seamless.mat
+Cub-E_/Assets/Texturen/Materials/World_Water_Seamless.mat.meta
+Cub-E_/Assets/Scenes/SampleScene.unity
+Cub-E_/Assets/Prefabs.meta
+Cub-E_/Assets/Modelle/Materialien.meta
+Cub-E_/Assets/Klassenhierarchie/SpielManager.cs
+Cub-E_/Assets/Klassenhierarchie/CubeManager.cs
