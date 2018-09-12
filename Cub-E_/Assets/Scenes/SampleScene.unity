@@ -323,6 +323,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textureSpeed: {x: 0, y: 0}
+--- !u!65 &916942927
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 916942922}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 9.812496, y: 9.812492, z: 9.812497}
+  m_Center: {x: 0, y: 0, z: 0.00000047683716}
 --- !u!1 &1006903322
 GameObject:
   m_ObjectHideFlags: 0

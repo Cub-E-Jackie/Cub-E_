@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4851109259910422}
   - component: {fileID: 114642238733515358}
-  - component: {fileID: 54526171651929020}
+  - component: {fileID: 114502641106857796}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -41,21 +41,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &54526171651929020
-Rigidbody:
+--- !u!114 &114502641106857796
+MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1842113018389952}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c3cca766dc1f46f2a18583550ecdb03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementSpeed: 0.04
+  rotationSpeed: 0.8
+  distanceTolerance: 0.1
 --- !u!114 &114642238733515358
 MonoBehaviour:
   m_ObjectHideFlags: 1
