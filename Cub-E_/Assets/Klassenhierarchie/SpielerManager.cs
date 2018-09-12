@@ -30,8 +30,8 @@ public class SpielerManager : MonoBehaviour {
     private Vector3 targetPos = Vector3.zero;
 	public float step;
     public float smoothing;
-    private float animation;
-    private bool springe = false;
+    //private float animation;
+    //private bool springe = false;
     Vector3 sprungStartPosition = Vector3.zero;
    
 
@@ -73,8 +73,8 @@ public class SpielerManager : MonoBehaviour {
                 transform.Translate(0, -0.05f, 0);
             }
 
-            // Wuerfel ist getagged mit "WaterCube"
-            if (hit.collider.tag != "WaterCube")
+            // Wuerfel ist getagged mit "WorldCube"
+            if (hit.collider.tag != "World_Cube_01")
             {
                 transform.Rotate(1f, 0, 0);
                 
