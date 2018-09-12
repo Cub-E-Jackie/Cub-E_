@@ -20,6 +20,9 @@ public class SpielerManager : MonoBehaviour {
     private float animation;
     private bool springe = false;
     Vector3 sprungStartPosition = Vector3.zero;
+   
+
+
 
 	// Use this for initialization
 	void Start () {
@@ -54,5 +57,9 @@ public class SpielerManager : MonoBehaviour {
 	//Bewegungen nach links und rechts abdämpfen mit smoothing
 	transform.position += targetPos * smoothing;
     targetPos -= targetPos * smoothing;
-	}
+
+
+
+
+    }
 }
