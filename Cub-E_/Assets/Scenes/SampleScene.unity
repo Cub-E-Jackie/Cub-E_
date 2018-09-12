@@ -323,6 +323,55 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textureSpeed: {x: 0, y: 0}
+--- !u!1 &1006903322
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1006903324}
+  - component: {fileID: 1006903323}
+  m_Layer: 0
+  m_Name: Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1006903323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1006903322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53a609ba4d08a004390b778f3a621bc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemies:
+  - {fileID: 1821226765}
+  - {fileID: 1821226765}
+  spawnValues: {x: 1, y: 0, z: 1}
+  spawnWait: 0
+  spawnMostWait: 2
+  spawnLeastWait: 0.5
+  startWait: 0
+  stop: 0
+--- !u!4 &1006903324
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1006903322}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -69.4, y: -39.150734, z: 100.98751}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1821226765
 GameObject:
   m_ObjectHideFlags: 0
@@ -334,7 +383,6 @@ GameObject:
   - component: {fileID: 1821226769}
   - component: {fileID: 1821226768}
   - component: {fileID: 1821226767}
-  - component: {fileID: 1821226766}
   m_Layer: 0
   m_Name: SpielerPlatzhalter
   m_TagString: Untagged
@@ -342,22 +390,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1821226766
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1821226765}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b53689e3f4a042d4da5d636e0a47a92d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movementSpeed: 4
-  rotationSpeed: 4
-  distanceTolerance: 4
-  step: 1
-  smoothing: 1
 --- !u!65 &1821226767
 BoxCollider:
   m_ObjectHideFlags: 0
