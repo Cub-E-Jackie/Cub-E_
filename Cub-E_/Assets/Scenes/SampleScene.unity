@@ -351,8 +351,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemies:
-  - {fileID: 1821226765}
-  - {fileID: 1821226765}
+  - {fileID: 0}
+  - {fileID: 0}
   spawnValues: {x: 1, y: 0, z: 1}
   spawnWait: 0
   spawnMostWait: 2
@@ -406,6 +406,8 @@ MonoBehaviour:
   distanceTolerance: 0.1
   step: 1
   smoothing: 1
+  duckPref: {fileID: 0}
+  worldCube: {fileID: 0}
 --- !u!23 &1821226768
 MeshRenderer:
   m_ObjectHideFlags: 0

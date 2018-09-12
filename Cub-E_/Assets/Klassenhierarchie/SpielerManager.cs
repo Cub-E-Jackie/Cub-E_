@@ -33,13 +33,21 @@ public class SpielerManager : MonoBehaviour {
     //private float animation;
     //private bool springe = false;
     Vector3 sprungStartPosition = Vector3.zero;
-   
 
+    public GameObject duckPref;
+    public GameObject worldCube;
+
+    GameObject duck;
 
 
 	// Use this for initialization
 	void Start () {
-		
+
+        duck = Instantiate(duckPref);
+
+        duck.name = "Duck";
+        duck.transform.parent = this.transform;
+        duck.transform.position = transform.position;
 	}
 
     void Abtauchen()
