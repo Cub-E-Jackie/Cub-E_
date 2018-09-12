@@ -241,7 +241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a8fda3384a70d141a39ba24e1eba6d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textureSpeed: {x: 0.92, y: 1.07}
+  textureSpeed: {x: 0.001, y: 0}
 --- !u!1 &2002219555
 GameObject:
   m_ObjectHideFlags: 0
