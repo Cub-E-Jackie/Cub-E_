@@ -45,6 +45,7 @@ public class SpielerManager : MonoBehaviour {
     void Abtauchen()
     {
 
+    	
     }
 
     void DuckMovement()
