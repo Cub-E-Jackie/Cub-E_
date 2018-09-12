@@ -1378,16 +1378,16 @@ MonoBehaviour:
   textShow: {fileID: 377053450}
   sentences:
   - Welcome to the world of Cub-E!
-  - Poor duck Berta lost her children in this endlessy big world and desperately needs
+  - Poor duck Berta lost her children in this endless big world and desperately needs
     your help right now...
   - Unfortunately Berta is already old and can't control her limbs properly. Help
     her out by avoiding oncoming objects and collecting her children.
   - 'You navigate Berta with the keys ''A'' and ''D''. For jumping use the ''space''
     key. But be careful: if Berta gets hit by 3 objects, she will no longer be able
     to move on. '
-  - Please collect as many children as you can. If you reach a scertain highscore
-    you will open unlock new world where poor Berta has lost her children again...
-    What a pity!
+  - Please collect as many children as you can. If you reach a certain highscore you
+    will unlock a new world where poor Berta has lost her children again... What a
+    pity!
   - Have fun and good luck!
   speed: 0.02
   button: {fileID: 1434297676}
@@ -1884,7 +1884,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1323850054}
         m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
