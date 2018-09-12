@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class DialogManager : MonoBehaviour {
 
-	public TextMeshProUGUI text;
+	public TextMeshProUGUI textShow;
 	public string[] sentences; //die Saetze für Dialog
 	private int i;
 	public float speed; //Geschwindigkeit in der geschrieben wird
@@ -17,7 +17,7 @@ public class DialogManager : MonoBehaviour {
 	}
 	
 	void Update () {
-		if(text.text == sentences[i]) { //damit die Sätze nacheinander abgebildet und nicht gleichzeitig	
+		if(textShow.text == sentences[i]) { //damit die Sätze nacheinander abgebildet und nicht gleichzeitig	
 		button.SetActive(true);
 		}
 	}
@@ -25,7 +25,7 @@ public class DialogManager : MonoBehaviour {
 	//Text anzeigen
 	IEnumerator Type(){
 		foreach(char letter in sentences[i].ToCharArray()){
-			text.text += letter;
+			textShow.text += letter;
 			yield return new WaitForSeconds(speed);
 		}
 	}
@@ -35,7 +35,7 @@ public class DialogManager : MonoBehaviour {
 		button.SetActive(false);
 		if(i<sentences.Length - 1){
 			i++; //+1 gerechnet
-			text.text = "";
+			textShow.text = "";
 			StartCoroutine(Type());
 		} else {
 			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1); //nächste Scene starten = Scene

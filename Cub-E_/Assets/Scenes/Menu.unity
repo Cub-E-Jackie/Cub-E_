@@ -327,7 +327,6 @@ GameObject:
   - component: {fileID: 198160473}
   - component: {fileID: 198160472}
   - component: {fileID: 198160471}
-  - component: {fileID: 198160474}
   m_Layer: 5
   m_Name: SkipButton
   m_TagString: Untagged
@@ -393,7 +392,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1204722591}
         m_MethodName: PlayGame
         m_Mode: 1
         m_Arguments:
@@ -440,17 +439,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 198160469}
   m_CullTransparentMesh: 0
---- !u!114 &198160474
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 198160469}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c27cad124c6ba346b6c32a8d9569628, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &205072492
 GameObject:
   m_ObjectHideFlags: 0
@@ -496,7 +484,6 @@ GameObject:
   - component: {fileID: 285566292}
   - component: {fileID: 285566291}
   - component: {fileID: 285566290}
-  - component: {fileID: 285566294}
   m_Layer: 5
   m_Name: Menus
   m_TagString: Untagged
@@ -583,17 +570,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &285566294
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 285566289}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 548235db151b6fe4c97e69a7ac9db5f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &377053448
 GameObject:
   m_ObjectHideFlags: 0
@@ -1050,7 +1026,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 285566294}
+      - m_Target: {fileID: 0}
         m_MethodName: SetVolume
         m_Mode: 0
         m_Arguments:
@@ -1399,18 +1375,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cdf1618dfc3979498fec2b7b849e48f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: {fileID: 377053450}
+  textShow: {fileID: 377053450}
   sentences:
   - Welcome to the world of Cub-E!
-  - Poor duck Berta lost her children in thins endlessy big world and desperately
-    needs your help right now...
+  - Poor duck Berta lost her children in this endlessy big world and desperately needs
+    your help right now...
   - Unfortunately Berta is already old and can't control her limbs properly. Help
     her out by avoiding oncoming objects and collecting her children.
-  - 'You can navigate Berta with the keys ''A'' and ''D''. Berta can jump, too. You
-    can use ''space'' key. But be careful: if Berta gets hit by 3 objects, she will
-    no longer be able to move on. '
-  - If you collected all of the 10 children you reach a new destination where poor
-    Berta has lost her children again... What a pity!
+  - 'You navigate Berta with the keys ''A'' and ''D''. For jumping use the ''space''
+    key. But be careful: if Berta gets hit by 3 objects, she will no longer be able
+    to move on. '
+  - Please collect as many children as you can. If you reach a scertain highscore
+    you will open unlock new world where poor Berta has lost her children again...
+    What a pity!
   - Have fun and good luck!
   speed: 0.02
   button: {fileID: 1434297676}
@@ -1501,7 +1478,6 @@ GameObject:
   - component: {fileID: 1134014918}
   - component: {fileID: 1134014920}
   - component: {fileID: 1134014919}
-  - component: {fileID: 1134014921}
   m_Layer: 5
   m_Name: Skip
   m_TagString: Untagged
@@ -1648,21 +1624,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1134014917}
   m_CullTransparentMesh: 0
---- !u!114 &1134014921
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1134014917}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cdf1618dfc3979498fec2b7b849e48f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: {fileID: 0}
-  sentences: []
-  speed: 0
-  button: {fileID: 0}
 --- !u!1 &1204722589
 GameObject:
   m_ObjectHideFlags: 0
@@ -1671,6 +1632,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1204722590}
+  - component: {fileID: 1204722591}
   m_Layer: 5
   m_Name: StoryMenu
   m_TagString: Untagged
@@ -1700,6 +1662,17 @@ RectTransform:
   m_AnchoredPosition: {x: 2.6, y: 0.000030517578}
   m_SizeDelta: {x: 667.2, y: 380.6}
   m_Pivot: {x: 0.49999994, y: 0.50000006}
+--- !u!114 &1204722591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1204722589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c27cad124c6ba346b6c32a8d9569628, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1214364658
 GameObject:
   m_ObjectHideFlags: 0
@@ -2348,7 +2321,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1453814580
 RectTransform:
   m_ObjectHideFlags: 0
