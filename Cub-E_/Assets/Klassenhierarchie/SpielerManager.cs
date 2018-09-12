@@ -112,8 +112,8 @@ public class SpielerManager : MonoBehaviour {
 		targetPos = transform.right * step;
 	}
 	
-	//Spieler bei Tastenbedienung W Bewegung in einer Parabel über das Hindernis
-	if  (Input.GetKeyDown( KeyCode.W )){
+	//Spieler bei Tastenbedienung Leertaste Bewegung in einer Parabel über das Hindernis
+	if  (Input.GetKeyDown( KeyCode.Space )){
 		
 		targetPos = transform.up * step;
 		
