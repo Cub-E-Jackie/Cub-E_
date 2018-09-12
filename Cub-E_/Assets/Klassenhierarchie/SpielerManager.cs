@@ -26,7 +26,6 @@ public class SpielerManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
 		
 	}
 	
