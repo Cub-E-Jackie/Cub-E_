@@ -47,7 +47,7 @@ public class DuckMovement : MonoBehaviour {
             // Wuerfel ist getagged mit "WaterCube"
             if (hit.collider.tag != "WaterCube")
             {
-                transform.Rotate(1f, 0, 0);
+                transform.Rotate(1f, 1f, 0);
 ;           }
             
         }
