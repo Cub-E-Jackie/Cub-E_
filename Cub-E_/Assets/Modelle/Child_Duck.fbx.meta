@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c9f85dd853c32ad4abef6d37699ff04e
+guid: 9df9f215a62525244bba3fe1c75a9518
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -11,7 +11,7 @@ ModelImporter:
     2100006: Duck_Eyes
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Cube.000
+    4300000: Child.001
   externalObjects: {}
   materials:
     importMaterials: 1
