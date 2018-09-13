@@ -33,6 +33,15 @@ public class Spawner : MonoBehaviour
         }
     }
 
+    /* fuer Collision
+    void OnCollisionEnter(Collision otherObj) {
+        if (otherObj.gameObject.tag == "Obstacle")
+        {
+            Destroy(gameObject, .5f);
+         }
+     }
+     */
+
     IEnumerator WaitSpawner()
     {
         // Coroutine ist eine Funktion, die die Ausfuehrung anhalten und die Steuerung an Unity uebergeben kann, faehrt dort fort wo sie im naechsten Frame unterbrochen wurde
@@ -47,10 +56,13 @@ public class Spawner : MonoBehaviour
 
             //Random.Range mit min und max, y nur 1 da wir keine brauchen
             // benutzt spawn position, zufaellig wo es entsteht x und z
-            Vector3 spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x), 1, Random.Range(-spawnValues.z, spawnValues.z)); //wo
+            Vector3 spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x), Random.Range(-spawnValues.y, spawnValues.y), Random.Range(-spawnValues.z, spawnValues.z)); //wo
 
             // bringt die Objekte in die Szene (was - random, wo, quaternion nur wenn wir eine bestimmte rotation haben
-            Instantiate(enemies[randEnemy], spawnPosition + transform.TransformPoint(0, 0, 0), gameObject.transform.rotation);
+            // var clone = Instantiate(enemies[randEnemy], transform.position, transform.rotation);
+            var clone = Instantiate(enemies[randEnemy], spawnPosition + transform.TransformPoint(0, 0, 0), gameObject.transform.rotation);
+
+            Destroy(clone, 5f);
 
             //Wartezeit bis zum naechsten spawn
             yield return new WaitForSeconds(spawnWait);
