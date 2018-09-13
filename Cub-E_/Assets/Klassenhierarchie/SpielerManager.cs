@@ -82,7 +82,7 @@ public class SpielerManager : MonoBehaviour {
             }
 
             // Wuerfel ist getagged mit "WorldCube"
-            if (hit.collider.tag != "WorldCube")
+            if (hit.collider.tag != "World_Cube_01")
             {
                 transform.Rotate(1f, 0, 0);
                 
