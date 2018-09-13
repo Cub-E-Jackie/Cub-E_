@@ -25,6 +25,14 @@ public class Spawner : MonoBehaviour
         spawnWait = Random.Range(spawnLeastWait, spawnMostWait);
     }
 
+    void Destroy()
+    {
+        if (gameObject.name == "Cube(Clone)")
+        {
+            Destroy(gameObject, .5f);
+        }
+    }
+
     IEnumerator WaitSpawner()
     {
         // Coroutine ist eine Funktion, die die Ausfuehrung anhalten und die Steuerung an Unity uebergeben kann, faehrt dort fort wo sie im naechsten Frame unterbrochen wurde
