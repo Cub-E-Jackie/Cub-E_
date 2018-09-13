@@ -16,11 +16,13 @@ using UnityEngine;
 
 public class SpielerManager : MonoBehaviour {
 
-    // fuer konstante Bewegung der Ente
-    public float movementSpeed = 1f;
-    public float rotationSpeed = 0.01f;
-    // Sicherheitsvektor, da der Würfel sich konstant nach oben verschiebt
-    public float distanceTolerance = 0.1f;
+//    // fuer konstante Bewegung der Ente
+//    public float movementSpeed = 1f;
+//    public float rotationSpeed = 0.01f;
+//    // Sicherheitsvektor, da der Würfel sich konstant nach oben verschiebt
+//    public float distanceTolerance = 0.1f;
+//    
+   
 
     private Vector3 lastNormal = Vector3.zero;
     private float rotTimer = 0f;
@@ -36,7 +38,8 @@ public class SpielerManager : MonoBehaviour {
 
     public GameObject duckPref;
     public GameObject worldCube;
-
+  
+    
     GameObject duck;
 
 
@@ -50,12 +53,7 @@ public class SpielerManager : MonoBehaviour {
         duck.transform.position = transform.position;
 	}
 
-    void Abtauchen()
-    {
-
-    	
-    }
-
+	/*
     void DuckMovement()
     {
         RaycastHit hit;
@@ -96,7 +94,7 @@ public class SpielerManager : MonoBehaviour {
 
         transform.Translate(0, 0, movementSpeed);
     }
-
+	*/
 	
 	// Update is called once per frame
 	void Update () { 
@@ -104,20 +102,26 @@ public class SpielerManager : MonoBehaviour {
 		
 	// Spieler bei Tastenbedienung A Bewegung nach links
 	if( Input.GetKeyDown( KeyCode.A )){
+		
 		targetPos = -(transform.right * step);
+		
 	}
 	
 	//Spieler bei Tastenbedienung D Bewegung nach rechts
 	if( Input.GetKeyDown( KeyCode.D )){
+		
 		targetPos = transform.right * step;
+		
 	}
 	
 	//Spieler bei Tastenbedienung Leertaste Bewegung in einer Parabel über das Hindernis
 	if  (Input.GetKeyDown( KeyCode.Space )){
 		
 		targetPos = transform.up * step;
-		
+			
 	}
+	
+	
 	
 	//Bewegungen nach links und rechts abdämpfen mit smoothing
 	transform.position += targetPos * smoothing;

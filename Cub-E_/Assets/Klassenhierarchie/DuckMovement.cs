@@ -13,14 +13,17 @@ public class DuckMovement : MonoBehaviour {
     private float rotTimer = 0f;
 
     void Start () {
-		
+    	
+    		
 	}
 
 	void Update () {
-
+    	
+    	
         RaycastHit hit;
         if (Physics.Raycast(transform.position, -transform.up, out hit)) // in hit wird Treffer gespeichert
         {
+        	movementSpeed = 0.04f;
             lastNormal = hit.normal;
 
             // timer für die lineare Interpolation (LERP) siehe unten: wenn neue normale gefunden dann starte den interp. Timer
@@ -52,7 +55,12 @@ public class DuckMovement : MonoBehaviour {
         {
             transform.Rotate(1f, 0, 0);
         }
-
+        
+     
         transform.Translate(0, 0, movementSpeed);
+        
+        
+       
+    	
 	}
 }
