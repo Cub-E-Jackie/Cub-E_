@@ -38,6 +38,8 @@ public class SpielerManager : MonoBehaviour {
 
     public GameObject duckPref;
     public GameObject worldCube;
+    
+    public float turnSpeed = 50f;
   
     
     GameObject duck;
@@ -106,6 +108,20 @@ public class SpielerManager : MonoBehaviour {
 		targetPos = -(transform.right * step);
 		
 	}
+	
+	if (Input.GetMouseButtonDown(0)){
+		
+		 transform.Rotate(Vector3.right * Time.deltaTime);
+		
+	}
+	
+	if (Input.GetMouseButtonDown(1)){
+		
+		transform.Rotate(-(Vector3.right) * Time.deltaTime);
+		
+	}
+	
+	
 	
 	//Spieler bei Tastenbedienung D Bewegung nach rechts
 	if( Input.GetKeyDown( KeyCode.D )){
