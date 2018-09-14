@@ -122,6 +122,7 @@ GameObject:
   m_Component:
   - component: {fileID: 551365899}
   - component: {fileID: 551365898}
+  - component: {fileID: 551365900}
   - component: {fileID: 551365897}
   m_Layer: 0
   m_Name: Camera
@@ -145,7 +146,7 @@ Camera:
   m_GameObject: {fileID: 551365896}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
+  m_ClearFlags: 2
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
@@ -190,6 +191,17 @@ Transform:
   m_Father: {fileID: 1315421318}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 24.09, y: 17.268, z: 0}
+--- !u!114 &551365900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 551365896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3ac7fe108059c54d957a318b89a047a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &622574328
 GameObject:
   m_ObjectHideFlags: 0
@@ -289,12 +301,19 @@ MonoBehaviour:
   enemies:
   - {fileID: 1148181158736408, guid: 54f1704a427bb2449bf2fbca79f5bf72, type: 2}
   - {fileID: 1148181158736408, guid: 54f1704a427bb2449bf2fbca79f5bf72, type: 2}
+  friends: []
   spawnValues: {x: 5, y: 5, z: 0}
+  spawnValuesDuck: {x: 0, y: 0, z: 0}
   spawnWait: 0
+  spawnWaitDuck: 0
   spawnMostWait: 3
+  spawnMostWaitDuck: 0
   spawnLeastWait: 1
+  spawnLeastWaitDuck: 0
   startWait: 0
+  startWaitDuck: 0
   stop: 0
+  stopDuck: 0
 --- !u!64 &624023021
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -397,12 +416,19 @@ MonoBehaviour:
   enemies:
   - {fileID: 1148181158736408, guid: 54f1704a427bb2449bf2fbca79f5bf72, type: 2}
   - {fileID: 1148181158736408, guid: 54f1704a427bb2449bf2fbca79f5bf72, type: 2}
+  friends: []
   spawnValues: {x: 5, y: 0, z: 5}
+  spawnValuesDuck: {x: 0, y: 0, z: 0}
   spawnWait: 0
+  spawnWaitDuck: 0
   spawnMostWait: 3
+  spawnMostWaitDuck: 0
   spawnLeastWait: 1
+  spawnLeastWaitDuck: 0
   startWait: 0
+  startWaitDuck: 0
   stop: 0
+  stopDuck: 0
 --- !u!64 &765350790
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -581,12 +607,19 @@ MonoBehaviour:
   enemies:
   - {fileID: 0}
   - {fileID: 0}
+  friends: []
   spawnValues: {x: 1, y: 0, z: 1}
+  spawnValuesDuck: {x: 0, y: 0, z: 0}
   spawnWait: 0
+  spawnWaitDuck: 0
   spawnMostWait: 2
+  spawnMostWaitDuck: 0
   spawnLeastWait: 0.5
+  spawnLeastWaitDuck: 0
   startWait: 0
+  startWaitDuck: 0
   stop: 0
+  stopDuck: 0
 --- !u!4 &1006903324
 Transform:
   m_ObjectHideFlags: 0
@@ -683,12 +716,19 @@ MonoBehaviour:
   enemies:
   - {fileID: 1148181158736408, guid: 54f1704a427bb2449bf2fbca79f5bf72, type: 2}
   - {fileID: 1148181158736408, guid: 54f1704a427bb2449bf2fbca79f5bf72, type: 2}
+  friends: []
   spawnValues: {x: 5, y: 0, z: 5}
+  spawnValuesDuck: {x: 0, y: 0, z: 0}
   spawnWait: 0
+  spawnWaitDuck: 0
   spawnMostWait: 3
+  spawnMostWaitDuck: 0
   spawnLeastWait: 1
+  spawnLeastWaitDuck: 0
   startWait: 0
+  startWaitDuck: 0
   stop: 0
+  stopDuck: 0
 --- !u!64 &1216425715
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -791,12 +831,19 @@ MonoBehaviour:
   enemies:
   - {fileID: 1148181158736408, guid: 54f1704a427bb2449bf2fbca79f5bf72, type: 2}
   - {fileID: 1148181158736408, guid: 54f1704a427bb2449bf2fbca79f5bf72, type: 2}
+  friends: []
   spawnValues: {x: 0, y: -5, z: 5}
+  spawnValuesDuck: {x: 0, y: 0, z: 0}
   spawnWait: 0
+  spawnWaitDuck: 0
   spawnMostWait: 3
+  spawnMostWaitDuck: 0
   spawnLeastWait: 1
+  spawnLeastWaitDuck: 0
   startWait: 0
+  startWaitDuck: 0
   stop: 0
+  stopDuck: 0
 --- !u!64 &1241750815
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -955,12 +1002,19 @@ MonoBehaviour:
   enemies:
   - {fileID: 1148181158736408, guid: 54f1704a427bb2449bf2fbca79f5bf72, type: 2}
   - {fileID: 1148181158736408, guid: 54f1704a427bb2449bf2fbca79f5bf72, type: 2}
+  friends: []
   spawnValues: {x: 0, y: 0, z: 5}
+  spawnValuesDuck: {x: 0, y: 0, z: 0}
   spawnWait: 0
+  spawnWaitDuck: 0
   spawnMostWait: 3
+  spawnMostWaitDuck: 0
   spawnLeastWait: 1
+  spawnLeastWaitDuck: 0
   startWait: 0
+  startWaitDuck: 0
   stop: 0
+  stopDuck: 0
 --- !u!64 &1853004955
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1063,12 +1117,19 @@ MonoBehaviour:
   enemies:
   - {fileID: 1148181158736408, guid: 54f1704a427bb2449bf2fbca79f5bf72, type: 2}
   - {fileID: 1148181158736408, guid: 54f1704a427bb2449bf2fbca79f5bf72, type: 2}
+  friends: []
   spawnValues: {x: 5, y: 5, z: 0}
+  spawnValuesDuck: {x: 0, y: 0, z: 0}
   spawnWait: 0
+  spawnWaitDuck: 0
   spawnMostWait: 3
+  spawnMostWaitDuck: 0
   spawnLeastWait: 1
+  spawnLeastWaitDuck: 0
   startWait: 0
+  startWaitDuck: 0
   stop: 0
+  stopDuck: 0
 --- !u!64 &2099242798
 MeshCollider:
   m_ObjectHideFlags: 0
