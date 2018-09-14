@@ -90,13 +90,15 @@ public class Spawner : MonoBehaviour
             //Random.Range mit min und max, y nur 1 da wir keine brauchen
             // benutzt spawn position, zufaellig wo es entsteht x und z
             Vector3 spawnPositionDuck = new Vector3(Random.Range(-spawnValues.x, spawnValues.x), Random.Range(-spawnValues.y, spawnValues.y), Random.Range(-spawnValues.z, spawnValues.z)); //wo
+			
 
-            // bringt die Objekte in die Szene (was - random, wo, quaternion nur wenn wir eine bestimmte rotation haben
+			// bringt die Objekte in die Szene (was - random, wo, quaternion nur wenn wir eine bestimmte rotation haben
             // var clone = Instantiate(enemies[randEnemy], transform.position, transform.rotation);
     
-			var duck = Instantiate(friends[randDuck], spawnPositionDuck + transform.TransformPoint(0, 0, 0), gameObject.transform.rotation);
+			var duck = Instantiate(friends[randDuck], spawnPositionDuck + transform.TransformPoint(0, 0, 0), Quaternion.identity);
+           //var duck = Instantiate(friends[randDuck], spawnPositionDuck + transform.TransformPoint(0, 0, 0), gameObject.transform.rotation);
            
-			Destroy(duck, 5f);
+			Destroy(duck, 8f);
             //Wartezeit bis zum naechsten spawn
             yield return new WaitForSeconds(spawnWaitDuck);
         }
