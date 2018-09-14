@@ -137,9 +137,6 @@ public class SpielerManager : MonoBehaviour {
 			
 	}
 	
-	/*if (Input.GetKeyDown(KeyCode.W)) {
-		duck.transform.Rotate(duck.transform.rotation.x+0,duck.transform.rotation.y+0,duck.transform.rotation.z+90);
-	}*/
 	
 	
 	

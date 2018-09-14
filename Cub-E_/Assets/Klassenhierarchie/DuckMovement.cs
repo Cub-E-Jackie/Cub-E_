@@ -56,12 +56,6 @@ public class DuckMovement : MonoBehaviour {
             transform.Rotate(1f, 0, 0);
         }
 		
-		if (Input.GetKeyDown(KeyCode.W)) {
-		 SpielerManager.duck = duck;
-		 duck.transform.Rotate(duck.transform.rotation.x+0,duck.transform.rotation.y+0,duck.transform.rotation.z+90);
-		transform.Rotate(1f, 1f, 0);
-		}
-        
      
         transform.Translate(0, 0, movementSpeed);
         
