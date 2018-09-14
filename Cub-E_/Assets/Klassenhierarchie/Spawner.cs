@@ -5,9 +5,9 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
 
-    public GameObject[] enemies; //Array, fuer GameObjects, zum einfuegen der Hindernisse spaeter
-    public GameObject[] friends;
-	public Vector3 spawnValues; //fuer Grenzen, Zeiten
+    //public GameObject[] enemies; //Array, fuer GameObjects, zum einfuegen der Hindernisse spaeter
+    //public GameObject[] friends;
+	/*public Vector3 spawnValues; //fuer Grenzen, Zeiten
 	public Vector3 spawnValuesDuck;
     public float spawnWait;
 	public float spawnWaitDuck;
@@ -18,21 +18,47 @@ public class Spawner : MonoBehaviour
     public int startWait;
 	public int startWaitDuck;
     public bool stop;
-	public bool stopDuck;
+	public bool stopDuck;*/
+	
+	public GameObject duckPrefab;
+	public GameObject woodPrefab;
+	
+	
+	
+	public float spawnDuckFrequency = 1f;
+	public float spawnWoodFrequency = 1f;
+	public float spwanWoodFrequency = 1f;
+	public GameObject root;
+	private float timer = 0f;
 
-    int randEnemy; //zufaelliges objekt
-	int randDuck;
+   // int randEnemy; //zufaelliges objekt
+	//int randDuck;
 
     void Start()
     {
-        StartCoroutine(WaitSpawner());  // Coroutine fuer WaitForSeconds	
-		StartCoroutine(WaitSpawnerDuck());  // Coroutine fuer WaitForSeconds	
+       //StartCoroutine(WaitSpawner());  // Coroutine fuer WaitForSeconds	
+		//StartCoroutine(WaitSpawnerDuck());  // Coroutine fuer WaitForSeconds	
+		Update();
     }
 
     void Update()
     {
-        spawnWait = Random.Range(spawnLeastWait, spawnMostWait);
-		spawnWaitDuck = Random.Range(spawnLeastWaitDuck, spawnMostWaitDuck);
+		GameObject duckObj;
+       // spawnWait = Random.Range(spawnLeastWait, spawnMostWait);
+		//spawnWaitDuck = Random.Range(spawnLeastWaitDuck, spawnMostWaitDuck);
+		timer += Time.deltaTime;
+		if(timer >= spawnDuckFrequency) { 
+		Vector3 rndPos = new Vector3(Random.Range(-4.5f,4.5f), 5, Random.Range(-4.5f,4.5f)); //für jede Würfelfläche, also noch 5 weitere
+		
+		
+		
+		duckObj = Instantiate(duckPrefab, rndPos, Quaternion.identity);
+		duckObj.name = "Duck_Child";
+		duckObj.transform.parent = root.transform;
+		//duckObj.transform.position = transform.position;
+		duckObj.transform.eulerAngles = new Vector3(0, Random.Range(0f, 360f),0);
+		
+		}
     }
 
     /*void Destroy()
@@ -51,7 +77,7 @@ public class Spawner : MonoBehaviour
          }
      }
      */
-
+/*
     IEnumerator WaitSpawner()
     {
         // Coroutine ist eine Funktion, die die Ausfuehrung anhalten und die Steuerung an Unity uebergeben kann, faehrt dort fort wo sie im naechsten Frame unterbrochen wurde
@@ -60,7 +86,7 @@ public class Spawner : MonoBehaviour
 
         while (!stop)
         { // solange stop ist nicht true wird while ausgefuehrt, moeglich waere auch (true)
-
+			
             // muss angepasst werden, wenn wir mehr hindernisse verwenden
             randEnemy = Random.Range(0, 2); // sucht ein random enemy aus, min max in Klammern, also Nummer zwischen 0 und 1
             //Random.Range mit min und max, y nur 1 da wir keine brauchen
@@ -102,5 +128,5 @@ public class Spawner : MonoBehaviour
             //Wartezeit bis zum naechsten spawn
             yield return new WaitForSeconds(spawnWaitDuck);
         }
-    }	
+    }	*/
 }
