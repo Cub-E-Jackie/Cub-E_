@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class KameraBewegen : MonoBehaviour {
 
-	public GameObject player; 
+	public GameObject entePlayer; 
 	float abstandXZ = 6f;
 	float hoeheY = 4f;
 	
@@ -13,13 +13,13 @@ public class KameraBewegen : MonoBehaviour {
 		
 		Quaternion fahrzeugRotationY = new Quaternion();
 		
-		fahrzeugRotationY.eulerAngles = new Vector3 (0, player.transform.eulerAngles.y, 0);
+		fahrzeugRotationY.eulerAngles = new Vector3 (0, entePlayer.transform.eulerAngles.y, 0);
 		
 		Vector3 abstandHinterFahrzeug = fahrzeugRotationY * new Vector3 (0, 0, abstandXZ);
 		
-		transform.position = player.transform.position - abstandHinterFahrzeug;
+		transform.position = entePlayer.transform.position - abstandHinterFahrzeug;
 		transform.position = new Vector3 (transform.position.x, transform.position.y + hoeheY, transform.position.z);
-		transform.LookAt(player.transform);
+		transform.LookAt(entePlayer.transform);
 		
 	}
 }

@@ -111,13 +111,13 @@ public class SpielerManager : MonoBehaviour {
 	
 	if (Input.GetMouseButtonDown(0)){
 		
-		 transform.Rotate(Vector3.right * Time.deltaTime);
+		GetComponent<Rigidbody>().AddTorque(0,5f,0);
 		
 	}
 	
 	if (Input.GetMouseButtonDown(1)){
 		
-		transform.Rotate(-(Vector3.right) * Time.deltaTime);
+		GetComponent<Rigidbody>().AddTorque(0,-5f,0);
 		
 	}
 	
@@ -132,13 +132,47 @@ public class SpielerManager : MonoBehaviour {
 	
 	//Spieler bei Tastenbedienung Leertaste Bewegung in einer Parabel über das Hindernis
 	if  (Input.GetKeyDown( KeyCode.Space )){
-		
+				
 		targetPos = transform.up * step;
 			
 	}
 	
+	float yEingabe = Input.GetAxis("Vertical");
+	float xEingabe = Input.GetAxis("Horizontal");
+		
+		if ( -10f < yEingabe < 10f){
+		
+			return;
+
+		}
 	
+	float xNeu = transform.position.x + xEingabe * step * Time.deltaTime;
 	
+	if ( xEingabe < -10f ){
+			
+			xNeu = -10f;
+			
+		}
+	
+		if ( 10f < xEingabe ){
+			
+			xNeu = 10f;
+			
+		}
+	
+	float yNeu = transform.position.y + yEingabe * step * Time.deltaTime;
+	
+		if ( -10f > yEingabe ){
+			
+			yNeu = -10f;
+			
+		}
+	
+		if ( 10f < yEingabe ){
+			
+			yNeu = 10f;
+			
+	}
 	
 	//Bewegungen nach links und rechts abdämpfen mit smoothing
 	transform.position += targetPos * smoothing;
