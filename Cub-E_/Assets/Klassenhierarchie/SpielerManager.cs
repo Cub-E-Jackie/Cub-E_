@@ -25,7 +25,9 @@ public class SpielerManager : MonoBehaviour {
    
 
     private Vector3 lastNormal = Vector3.zero;
-    private float rotTimer = 0f;
+    private float Timer = 0f;
+    
+    float jump = 0;
 
 
     //Vektor zur Speicherung des Nullvektors
@@ -59,15 +61,19 @@ public class SpielerManager : MonoBehaviour {
 	
 	void Springen(){
 		
-		float xWert = 0;
+			
+		jump += 1.5f;
 		
-		targetPos = transform.up * Mathf.Sin(xWert);
+		transform.position += transform.up * Mathf.Sin(jump);
 		
-		xWert += 0.05f;
-		
-		if( xWert <= 3.14f){
-		jumping = false;
+		if( jump <= Mathf.PI){
+				
+			jumping = false;
+			jump = 0;
+			
 		}
+	
+		
 		
 	}
 
