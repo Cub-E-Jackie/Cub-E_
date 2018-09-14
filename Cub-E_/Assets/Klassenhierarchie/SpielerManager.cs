@@ -42,7 +42,7 @@ public class SpielerManager : MonoBehaviour {
     public float turnSpeed = 50f;
   
     
-    GameObject duck;
+    public GameObject duck;
 
 
 	// Use this for initialization
@@ -56,7 +56,7 @@ public class SpielerManager : MonoBehaviour {
 	}
 
 	/*
-    void DuckMovement()
+    void DuckMovement() //eigene Klasse
     {
         RaycastHit hit;
         if (Physics.Raycast(transform.position, -transform.up, out hit)) // in hit wird Treffer gespeichert
@@ -136,6 +136,10 @@ public class SpielerManager : MonoBehaviour {
 		targetPos = transform.up * step;
 			
 	}
+	
+	/*if (Input.GetKeyDown(KeyCode.W)) {
+		duck.transform.Rotate(duck.transform.rotation.x+0,duck.transform.rotation.y+0,duck.transform.rotation.z+90);
+	}*/
 	
 	
 	
