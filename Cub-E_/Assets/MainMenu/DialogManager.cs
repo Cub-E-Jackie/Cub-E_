@@ -12,6 +12,8 @@ public class DialogManager : MonoBehaviour {
 	public float speed; //Geschwindigkeit in der geschrieben wird
 	public GameObject button; //Continue Button für weiter
 	
+	
+	
 	void Start(){
 		StartCoroutine(Type());
 	}
@@ -40,6 +42,10 @@ public class DialogManager : MonoBehaviour {
 		} else {
 			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1); //nächste Scene starten = Scene
 			button.SetActive(false);
+		
 		}
 	}
+	
+
+	
 }
