@@ -43,6 +43,8 @@ public class SpielerManager : MonoBehaviour {
   
     
     public GameObject duck;
+    
+    public bool jumping = false;
 
 
 	// Use this for initialization
@@ -53,6 +55,20 @@ public class SpielerManager : MonoBehaviour {
         duck.name = "Duck";
         duck.transform.parent = this.transform;
         duck.transform.position = transform.position;
+	}
+	
+	void Springen(){
+		
+		float xWert = 0;
+		
+		targetPos = transform.up * Mathf.Sin(xWert);
+		
+		xWert += 0.05f;
+		
+		if( xWert <= 3.14f){
+		jumping = false;
+		}
+		
 	}
 
 	/*
@@ -131,48 +147,54 @@ public class SpielerManager : MonoBehaviour {
 	}
 	
 	//Spieler bei Tastenbedienung Leertaste Bewegung in einer Parabel über das Hindernis
-	if  (Input.GetKeyDown( KeyCode.Space )){
+	if  (Input.GetKeyDown( KeyCode.Space ) && !jumping){
 				
-		targetPos = transform.up * step;
-			
+		jumping = true;
+		
 	}
 	
-	float yEingabe = Input.GetAxis("Vertical");
-	float xEingabe = Input.GetAxis("Horizontal");
+	if (jumping){
 		
-		if ( -10f < yEingabe < 10f){
+		Springen();
 		
-			return;
-
-		}
-	
-	float xNeu = transform.position.x + xEingabe * step * Time.deltaTime;
-	
-	if ( xEingabe < -10f ){
-			
-			xNeu = -10f;
-			
-		}
-	
-		if ( 10f < xEingabe ){
-			
-			xNeu = 10f;
-			
-		}
-	
-	float yNeu = transform.position.y + yEingabe * step * Time.deltaTime;
-	
-		if ( -10f > yEingabe ){
-			
-			yNeu = -10f;
-			
-		}
-	
-		if ( 10f < yEingabe ){
-			
-			yNeu = 10f;
-			
 	}
+	
+//	float yEingabe = Input.GetAxis("Vertical");
+//	float xEingabe = Input.GetAxis("Horizontal");
+//		
+//		if ( -10f < yEingabe < 10f){
+//		
+//			return;
+//
+//		}
+//	
+//	float xNeu = transform.position.x + xEingabe * step * Time.deltaTime;
+//	
+//	if ( xEingabe < -10f ){
+//			
+//			xNeu = -10f;
+//			
+//		}
+//	
+//		if ( 10f < xEingabe ){
+//			
+//			xNeu = 10f;
+//			
+//		}
+//	
+//	float yNeu = transform.position.y + yEingabe * step * Time.deltaTime;
+//	
+//		if ( -10f > yEingabe ){
+//			
+//			yNeu = -10f;
+//			
+//		}
+//	
+//		if ( 10f < yEingabe ){
+//			
+//			yNeu = 10f;
+//			
+//	}
 	
 	//Bewegungen nach links und rechts abdämpfen mit smoothing
 	transform.position += targetPos * smoothing;

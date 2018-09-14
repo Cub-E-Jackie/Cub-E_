@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 327142517}
   - component: {fileID: 327142516}
   - component: {fileID: 327142515}
+  - component: {fileID: 327142514}
   m_Layer: 0
   m_Name: NeueCamera
   m_TagString: Untagged
@@ -130,6 +131,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &327142514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 327142513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2efab8b6d2d8884e807ef4f32b69309, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  entePlayer: {fileID: 1591259527}
 --- !u!81 &327142515
 AudioListener:
   m_ObjectHideFlags: 0
@@ -901,6 +914,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!1 &1591259527 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1842113018389952, guid: 8a1ffa17e5a134a9092fa78d8baa1dec,
+    type: 2}
+  m_PrefabInternal: {fileID: 1621510462}
 --- !u!1001 &1621510462
 Prefab:
   m_ObjectHideFlags: 0
