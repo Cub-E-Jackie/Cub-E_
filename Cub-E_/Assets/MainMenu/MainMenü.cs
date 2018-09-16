@@ -5,10 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class MainMenü : MonoBehaviour {
 
-
+PauseMenu start;
 	
 	public void PlayGame () {
+		//start = GameObject.Find("Menu").GetComponent<PauseMenu>();
 		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); //nächste Scene starten = Game
+		//start.pauseMenu.SetActive(false);
+		//start.PausedGame = false;
 
 	}
 

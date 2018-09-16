@@ -10,7 +10,9 @@ public class DuckMovement : MonoBehaviour {
     public float distanceTolerance = 0.1f; 
 
     private Vector3 lastNormal = Vector3.zero;
-    private float rotTimer = 0f;
+    
+	public float rotTimer = 0f;
+	//private float rotTimer = 0f;
 
     void Start () {
     	
