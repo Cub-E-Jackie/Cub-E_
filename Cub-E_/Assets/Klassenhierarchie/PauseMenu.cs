@@ -27,21 +27,22 @@ public class PauseMenu : MonoBehaviour {
 	
 	public void Resume() {
 		pauseMenu.SetActive(false);
-		zeit.rotTimer = 0f;
+		/*zeit.rotTimer = 0f;
 		zeit.movementSpeed = 1f;
 		zeit.rotationSpeed = 0.01f;
-		zeit.distanceTolerance = 0.1f;
+		zeit.distanceTolerance = 0.1f;*/
 				
 		//Time.timeScale = 1f; //Zeit wieder weiter laufen lassen
 		PausedGame = false;
 	}
 	
 	public void Pause() {
+		
 		pauseMenu.SetActive(true);
-		zeit.rotTimer = 0f;
+		/*zeit.rotTimer = 0f;
 		zeit.movementSpeed = 0f;
 		zeit.rotationSpeed = 0f;
-		zeit.distanceTolerance = 0f;
+		zeit.distanceTolerance = 0f;*/
 		//Time.timeScale = 0f; // in Bewegungen einfrieren)
 		PausedGame = true; //Game pausiert
 	}
