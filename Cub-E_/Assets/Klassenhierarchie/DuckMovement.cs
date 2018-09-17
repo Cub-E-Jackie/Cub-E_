@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class DuckMovement : MonoBehaviour {
 
-    public float movementSpeed = 1f;
-    public float rotationSpeed = 0.01f;
+    public float movementSpeed = 0.004f;
+    public float rotationSpeed = 0.8f;
     // Sicherheitsvektor, da der Würfel sich konstant nach oben verschiebt
     public float distanceTolerance = 0.1f; 
 
