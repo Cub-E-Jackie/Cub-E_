@@ -15,21 +15,26 @@ public class Spawner : MonoBehaviour
 	public float spawnMostWaitDuck; // 2
     public float spawnLeastWait; // 0,5, kann entschieden werden
 	public float spawnLeastWaitDuck; // 0,5, kann entschieden werden
-    public int startWait;
-	public int startWaitDuck;
-    public bool stop;
-	public bool stopDuck;*/
+    public int startWait;*/
+	//public int startWaitDuck;
+    //public bool stop;
+	//public bool stopDuck;
 	
-	public GameObject duckPrefab;
+	public GameObject duckPrefab; //braucht alle da unterschiedliche Drehungen jeweils bzw Position
+	public GameObject duckPrefab1;
+	public GameObject duckPrefab2;
+	public GameObject duckPrefab3;
+	public GameObject duckPrefab4;
+	public GameObject duckPrefab5;
 	public GameObject woodPrefab;
 	
 	
 	
-	public float spawnDuckFrequency = 1f;
-	public float spawnWoodFrequency = 1f;
-	public float spwanWoodFrequency = 1f;
+	public float spawnDuckFrequency = 2f;
+	public float spawnWoodFrequency = 0.1f;
+	public float spwanStoneFrequency = 0.1f;
 	public GameObject root;
-	private float timer = 0f;
+	private float timer = 1f;
 
    // int randEnemy; //zufaelliges objekt
 	//int randDuck;
@@ -43,20 +48,68 @@ public class Spawner : MonoBehaviour
 
     void Update()
     {
-		GameObject duckObj;
+		GameObject duckObj; //oben
+		GameObject duckObj1; //unten
+		GameObject duckObj2; 
+		GameObject duckObj3;
+		GameObject duckObj4;
+		GameObject duckObj5;
        // spawnWait = Random.Range(spawnLeastWait, spawnMostWait);
 		//spawnWaitDuck = Random.Range(spawnLeastWaitDuck, spawnMostWaitDuck);
 		timer += Time.deltaTime;
-		if(timer >= spawnDuckFrequency) { 
-		Vector3 rndPos = new Vector3(Random.Range(-4.5f,4.5f), 5, Random.Range(-4.5f,4.5f)); //für jede Würfelfläche, also noch 5 weitere
+
+	if(timer >= spawnDuckFrequency) { 
+
 		
+
+		 
+		 // für die verschiedenen Positionen
+		Vector3 rndPos = new Vector3(Random.Range(-4.5f,4.5f), 5, Random.Range(-4.5f,4.5f)); // duckObj 
+		Vector3 rndPos1 = new Vector3(Random.Range(-4.5f,4.5f), -5, Random.Range(-4.5f,4.5f)); // duckObj1
+		Vector3 rndPos2 = new Vector3( 5, Random.Range(-4.5f,4.5f), Random.Range(-4.5f,4.5f)); // duckObj2
+		Vector3 rndPos3 = new Vector3(-5, Random.Range(-4.5f,4.5f), Random.Range(-4.5f,4.5f)); // duckObj3
+		Vector3 rndPos4 = new Vector3(Random.Range(-4.5f,4.5f), Random.Range(-4.5f,4.5f), 5); // duckObj4
+		Vector3 rndPos5 = new Vector3(Random.Range(-4.5f,4.5f), Random.Range(-4.5f,4.5f), -5); // duckObj5
 		
-		
+		//Instantiate zum Ausführen (welches Object, wo, rotation)
 		duckObj = Instantiate(duckPrefab, rndPos, Quaternion.identity);
 		duckObj.name = "Duck_Child";
 		duckObj.transform.parent = root.transform;
 		//duckObj.transform.position = transform.position;
 		duckObj.transform.eulerAngles = new Vector3(0, Random.Range(0f, 360f),0);
+		
+		duckObj1 = Instantiate(duckPrefab1, rndPos1, Quaternion.identity);
+		duckObj1.name = "Duck_Child1";
+		duckObj1.transform.parent = root.transform;
+		//duckObj1.transform.position = transform.position;
+		duckObj1.transform.eulerAngles = new Vector3(0, Random.Range(0f, 360f),0);
+		
+		duckObj2 = Instantiate(duckPrefab2, rndPos2, Quaternion.identity);
+		duckObj2.name = "Duck_Child1";
+		duckObj2.transform.parent = root.transform;
+		//duckObj2.transform.position = transform.position;
+		duckObj2.transform.eulerAngles = new Vector3(Random.Range(0f, 360f), 0, 0);
+		
+		duckObj3 = Instantiate(duckPrefab3, rndPos3, Quaternion.identity);
+		duckObj3.name = "Duck_Child2";
+		duckObj3.transform.parent = root.transform;
+		//duckObj3.transform.position = transform.position;
+		duckObj3.transform.eulerAngles = new Vector3(Random.Range(0f, 360f),0, 0);
+		
+		duckObj4 = Instantiate(duckPrefab4, rndPos4, Quaternion.identity);
+		duckObj4.name = "Duck_Child4";
+		duckObj4.transform.parent = root.transform;
+		//duckObj4.transform.position = transform.position;
+		duckObj4.transform.eulerAngles = new Vector3( 0, 0, Random.Range(0f, 360f));
+		
+		duckObj5 = Instantiate(duckPrefab5, rndPos5, Quaternion.identity);
+		duckObj5.name = "Duck_Child5";
+		duckObj5.transform.parent = root.transform;
+		//duckObj5.transform.position = transform.position;
+		duckObj5.transform.eulerAngles = new Vector3( 0, 0, Random.Range(0f, 360f));
+		
+		
+		
 		
 		}
     }
@@ -78,7 +131,8 @@ public class Spawner : MonoBehaviour
      }
      */
 /*
-    IEnumerator WaitSpawner()
+    
+	IEnumerator WaitSpawner()
     {
         // Coroutine ist eine Funktion, die die Ausfuehrung anhalten und die Steuerung an Unity uebergeben kann, faehrt dort fort wo sie im naechsten Frame unterbrochen wurde
 
@@ -129,4 +183,5 @@ public class Spawner : MonoBehaviour
             yield return new WaitForSeconds(spawnWaitDuck);
         }
     }	*/
+	
 }
