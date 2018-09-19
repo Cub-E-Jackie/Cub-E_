@@ -2950,6 +2950,11 @@ Prefab:
       propertyPath: planeObenVorne
       value: 
       objectReference: {fileID: 260253785}
+    - target: {fileID: 114642238733515358, guid: 8a1ffa17e5a134a9092fa78d8baa1dec,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a1ffa17e5a134a9092fa78d8baa1dec, type: 2}
   m_IsPrefabAsset: 0

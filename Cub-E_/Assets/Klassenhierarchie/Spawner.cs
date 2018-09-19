@@ -42,8 +42,8 @@ public class Spawner : MonoBehaviour
     void Start()
     {
         //StartCoroutine(WaitSpawner());  // Coroutine fuer WaitForSeconds	
-		//StartCoroutine(WaitSpawnerDuck());  // Coroutine fuer WaitForSeconds	
-		Update();
+        //StartCoroutine(WaitSpawnerDuck());  // Coroutine fuer WaitForSeconds	
+        Update();
     }
 
     void Update()
