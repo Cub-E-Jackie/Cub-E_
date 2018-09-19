@@ -2798,21 +2798,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1842113018389952, guid: 8a1ffa17e5a134a9092fa78d8baa1dec,
     type: 2}
   m_PrefabInternal: {fileID: 1621510462}
---- !u!114 &1328748278
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1328748277}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c3cca766dc1f46f2a18583550ecdb03, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movementSpeed: 0.004
-  rotationSpeed: 0.8
-  distanceTolerance: 0.1
-  rotTimer: 0
 --- !u!1 &1392405957
 GameObject:
   m_ObjectHideFlags: 0
@@ -2955,27 +2940,17 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 114502641106857796, guid: 8a1ffa17e5a134a9092fa78d8baa1dec,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1842113018389952, guid: 8a1ffa17e5a134a9092fa78d8baa1dec, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114642238733515358, guid: 8a1ffa17e5a134a9092fa78d8baa1dec,
-        type: 2}
-      propertyPath: planeObenVorne
-      value: 
-      objectReference: {fileID: 260253785}
     - target: {fileID: 114642238733515358, guid: 8a1ffa17e5a134a9092fa78d8baa1dec,
         type: 2}
       propertyPath: drehCube
       value: 
       objectReference: {fileID: 2039444706}
-    m_RemovedComponents:
-    - {fileID: 114502641106857796, guid: 8a1ffa17e5a134a9092fa78d8baa1dec, type: 2}
+    - target: {fileID: 114642238733515358, guid: 8a1ffa17e5a134a9092fa78d8baa1dec,
+        type: 2}
+      propertyPath: planeObenVorne
+      value: 
+      objectReference: {fileID: 260253785}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a1ffa17e5a134a9092fa78d8baa1dec, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &1762843258

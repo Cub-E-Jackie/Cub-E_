@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4851109259910422}
   - component: {fileID: 114642238733515358}
-  - component: {fileID: 114502641106857796}
+  - component: {fileID: 114559383679879224}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -41,7 +41,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114502641106857796
+--- !u!114 &114559383679879224
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -52,9 +52,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c3cca766dc1f46f2a18583550ecdb03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 0.04
-  rotationSpeed: 0.8
+  movementSpeed: 0.1
+  rotationSpeed: 0.23
   distanceTolerance: 0.1
+  rotTimer: 0
 --- !u!114 &114642238733515358
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -66,10 +67,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b53689e3f4a042d4da5d636e0a47a92d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 1
-  rotationSpeed: 0.01
-  distanceTolerance: 0.1
   step: 1
   smoothing: 0.5
   duckPref: {fileID: 1019406873164828, guid: fc0d1f61cff80442683d749ae1d286d6, type: 2}
   worldCube: {fileID: 100000, guid: 4d70fb21fc92a439fbcf663985887fb9, type: 3}
+  drehCube: {fileID: 0}
+  turnSpeed: 50
+  planeObenVorne: {fileID: 0}
+  drehX: 0
+  duck: {fileID: 0}
+  jumping: 0
+  zeitGesamt: 0

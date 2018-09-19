@@ -58,3 +58,9 @@ MonoBehaviour:
     pitch: 0.55
     loop: 1
     source: {fileID: 0}
+  - name: Ducks
+    clip: {fileID: 8300000, guid: 1bf378a91b5956242b8a07a55aad558b, type: 3}
+    volume: 0.292
+    pitch: 0.55
+    loop: 0
+    source: {fileID: 0}
