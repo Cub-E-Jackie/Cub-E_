@@ -77,41 +77,46 @@ public class Spawner : MonoBehaviour
 		duckObj.transform.parent = root.transform;
 		//duckObj.transform.position = transform.position;
 		duckObj.transform.eulerAngles = new Vector3(0, Random.Range(0f, 360f),0);
-		
-		duckObj1 = Instantiate(duckPrefab1, rndPos1, Quaternion.identity);
+        Destroy(duckObj, 5f);
+
+        duckObj1 = Instantiate(duckPrefab1, rndPos1, Quaternion.identity);
 		duckObj1.name = "Duck_Child1";
 		duckObj1.transform.parent = root.transform;
 		//duckObj1.transform.position = transform.position;
 		duckObj1.transform.eulerAngles = new Vector3(0, Random.Range(0f, 360f),0);
-		
-		duckObj2 = Instantiate(duckPrefab2, rndPos2, Quaternion.identity);
+        Destroy(duckObj1, 5f);
+
+        duckObj2 = Instantiate(duckPrefab2, rndPos2, Quaternion.identity);
 		duckObj2.name = "Duck_Child1";
 		duckObj2.transform.parent = root.transform;
 		//duckObj2.transform.position = transform.position;
 		duckObj2.transform.eulerAngles = new Vector3(Random.Range(0f, 360f), 0, 0);
-		
-		duckObj3 = Instantiate(duckPrefab3, rndPos3, Quaternion.identity);
+        Destroy(duckObj2, 5f);
+
+        duckObj3 = Instantiate(duckPrefab3, rndPos3, Quaternion.identity);
 		duckObj3.name = "Duck_Child2";
 		duckObj3.transform.parent = root.transform;
 		//duckObj3.transform.position = transform.position;
 		duckObj3.transform.eulerAngles = new Vector3(Random.Range(0f, 360f),0, 0);
-		
-		duckObj4 = Instantiate(duckPrefab4, rndPos4, Quaternion.identity);
+        Destroy(duckObj3, 5f);
+
+        duckObj4 = Instantiate(duckPrefab4, rndPos4, Quaternion.identity);
 		duckObj4.name = "Duck_Child4";
 		duckObj4.transform.parent = root.transform;
 		//duckObj4.transform.position = transform.position;
 		duckObj4.transform.eulerAngles = new Vector3( 0, 0, Random.Range(0f, 360f));
-		
-		duckObj5 = Instantiate(duckPrefab5, rndPos5, Quaternion.identity);
+        Destroy(duckObj4, 5f);
+
+        duckObj5 = Instantiate(duckPrefab5, rndPos5, Quaternion.identity);
 		duckObj5.name = "Duck_Child5";
 		duckObj5.transform.parent = root.transform;
 		//duckObj5.transform.position = transform.position;
 		duckObj5.transform.eulerAngles = new Vector3( 0, 0, Random.Range(0f, 360f));
-		
-		
-		
-		
-		}
+        Destroy(duckObj5, 5f);
+
+
+
+        }
     }
 
     /*void Destroy()

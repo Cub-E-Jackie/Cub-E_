@@ -155,6 +155,48 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 249bdf74735826647bcd3ec01b976e85, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1001 &172242024
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4581304850407158, guid: 3d96e38082a24ab488afb9e738f16688, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4581304850407158, guid: 3d96e38082a24ab488afb9e738f16688, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4581304850407158, guid: 3d96e38082a24ab488afb9e738f16688, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4581304850407158, guid: 3d96e38082a24ab488afb9e738f16688, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4581304850407158, guid: 3d96e38082a24ab488afb9e738f16688, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4581304850407158, guid: 3d96e38082a24ab488afb9e738f16688, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4581304850407158, guid: 3d96e38082a24ab488afb9e738f16688, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4581304850407158, guid: 3d96e38082a24ab488afb9e738f16688, type: 2}
+      propertyPath: m_RootOrder
+      value: 19
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3d96e38082a24ab488afb9e738f16688, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &229132631
 GameObject:
   m_ObjectHideFlags: 0
@@ -1964,7 +2006,7 @@ MonoBehaviour:
   woodPrefab: {fileID: 0}
   spawnDuckFrequency: 1
   spawnWoodFrequency: 1
-  spwanWoodFrequency: 1
+  spwanStoneFrequency: 0.1
   root: {fileID: 0}
 --- !u!4 &1006903324
 Transform:
@@ -2303,9 +2345,9 @@ MonoBehaviour:
   duckPrefab4: {fileID: 387720793}
   duckPrefab5: {fileID: 1883426917}
   woodPrefab: {fileID: 1080269435487082, guid: 16a0a7531d03b4fa5b6873032121d29b, type: 2}
-  spawnDuckFrequency: 1
+  spawnDuckFrequency: 0.5
   spawnWoodFrequency: 1
-  spwanWoodFrequency: 1
+  spwanStoneFrequency: 0.1
   root: {fileID: 1062422949}
 --- !u!4 &1062422951
 Transform:
@@ -2415,7 +2457,7 @@ MonoBehaviour:
   woodPrefab: {fileID: 0}
   spawnDuckFrequency: 1
   spawnWoodFrequency: 1
-  spwanWoodFrequency: 1
+  spwanStoneFrequency: 0.1
   root: {fileID: 0}
 --- !u!64 &1216425715
 MeshCollider:
@@ -2762,7 +2804,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1328748277}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7c3cca766dc1f46f2a18583550ecdb03, type: 3}
   m_Name: 
