@@ -30,11 +30,11 @@ public class Spawner : MonoBehaviour
 	
 	
 	
-	public float spawnDuckFrequency = 2f;
+	public float spawnDuckFrequency = 1f;
 	public float spawnWoodFrequency = 0.1f;
 	public float spwanStoneFrequency = 0.1f;
 	public GameObject root;
-	private float timer = 5f;
+	private float timer = 0f;
 
    // int randEnemy; //zufaelliges objekt
 	//int randDuck;
@@ -78,7 +78,7 @@ public class Spawner : MonoBehaviour
         // duckObj.transform.position = transform.position;
         duckObj.transform.eulerAngles = new Vector3(0, Random.Range(0f, 360f), 0);
             // FindObjectOfType<AudioManager>().Play("Ducks");
-            Destroy(duckObj, 5f);
+            Destroy(duckObj, 3f);
 
         duckObj1 = Instantiate(duckPrefab1, rndPos1, Quaternion.identity);
 		duckObj1.name = "Duck_Child1";
