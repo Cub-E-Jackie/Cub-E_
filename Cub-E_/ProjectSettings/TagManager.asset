@@ -6,6 +6,17 @@ TagManager:
   tags:
   - WaterCube
   - PlaneObenVorne
+  - PlaneObenHinten
+  - PlaneObenRechts
+  - PlaneObenLinks
+  - PlaneVorneLinks
+  - PlaneVorneRechts
+  - PlaneHintenLinks
+  - PlaneHintenRechts
+  - PlaneUntenVorne
+  - PlaneUntenHinten
+  - PlaneUntenLinks
+  - PlaneUntenRechts
   layers:
   - Default
   - TransparentFX
