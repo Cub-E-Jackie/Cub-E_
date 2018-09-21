@@ -54,12 +54,14 @@ MonoBehaviour:
   sounds:
   - name: Theme
     clip: {fileID: 8300000, guid: 9e817496490381a418c75d9277a407d3, type: 3}
+    audioMixer: {fileID: 24100000, guid: 0b9b52f375ba28843b7676f95712a49f, type: 2}
     volume: 0.292
     pitch: 0.55
     loop: 1
     source: {fileID: 0}
   - name: Ducks
     clip: {fileID: 8300000, guid: 1bf378a91b5956242b8a07a55aad558b, type: 3}
+    audioMixer: {fileID: 0}
     volume: 0.292
     pitch: 0.55
     loop: 0
