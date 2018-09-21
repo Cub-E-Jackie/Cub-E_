@@ -2135,6 +2135,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnWait: 0
   startWait: 0
+  stop: 0
   duckPrefab: {fileID: 0}
   duckPrefab1: {fileID: 0}
   duckPrefab2: {fileID: 0}
@@ -2142,9 +2143,6 @@ MonoBehaviour:
   duckPrefab4: {fileID: 0}
   duckPrefab5: {fileID: 0}
   woodPrefab: {fileID: 0}
-  spawnDuckFrequency: 1
-  spawnWoodFrequency: 1
-  spwanStoneFrequency: 0.1
   root: {fileID: 0}
 --- !u!4 &1006903324
 Transform:
@@ -2478,6 +2476,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnWait: 2
   startWait: 1
+  stop: 0
   duckPrefab: {fileID: 1121870705426258, guid: 0e785b15ed50f7b4bbf5000895eab62d, type: 2}
   duckPrefab1: {fileID: 1674832291215974, guid: 73c631e028f42fe4180ad1684bd41d7b,
     type: 2}
@@ -2490,9 +2489,6 @@ MonoBehaviour:
   duckPrefab5: {fileID: 1883524441835730, guid: 7aef619679ea75b469e1835d5e31a559,
     type: 2}
   woodPrefab: {fileID: 1080269435487082, guid: 16a0a7531d03b4fa5b6873032121d29b, type: 2}
-  spawnDuckFrequency: 10
-  spawnWoodFrequency: 1
-  spwanStoneFrequency: 0.1
   root: {fileID: 172803882}
 --- !u!4 &1062422951
 Transform:
@@ -2677,6 +2673,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnWait: 0
   startWait: 0
+  stop: 0
   duckPrefab: {fileID: 0}
   duckPrefab1: {fileID: 0}
   duckPrefab2: {fileID: 0}
@@ -2684,9 +2681,6 @@ MonoBehaviour:
   duckPrefab4: {fileID: 0}
   duckPrefab5: {fileID: 0}
   woodPrefab: {fileID: 0}
-  spawnDuckFrequency: 1
-  spawnWoodFrequency: 1
-  spwanStoneFrequency: 0.1
   root: {fileID: 0}
 --- !u!64 &1216425715
 MeshCollider:
@@ -3603,16 +3597,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 114642238733515358, guid: 8a1ffa17e5a134a9092fa78d8baa1dec,
-        type: 2}
-      propertyPath: drehCube
-      value: 
-      objectReference: {fileID: 2039444706}
-    - target: {fileID: 114642238733515358, guid: 8a1ffa17e5a134a9092fa78d8baa1dec,
-        type: 2}
-      propertyPath: planeObenVorne
-      value: 
-      objectReference: {fileID: 260253785}
+    - target: {fileID: 4851109259910422, guid: 8a1ffa17e5a134a9092fa78d8baa1dec, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a1ffa17e5a134a9092fa78d8baa1dec, type: 2}
   m_IsPrefabAsset: 0

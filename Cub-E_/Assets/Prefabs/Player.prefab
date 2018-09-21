@@ -34,13 +34,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1842113018389952}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0.7, y: 5, z: -3.9}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!114 &114559383679879224
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -69,7 +69,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   step: 1
   smoothing: 0.5
-  duckPref: {fileID: 1019406873164828, guid: fc0d1f61cff80442683d749ae1d286d6, type: 2}
+  duckPref: {fileID: 1971033875488638, guid: fc0d1f61cff80442683d749ae1d286d6, type: 2}
   worldCube: {fileID: 100000, guid: 4d70fb21fc92a439fbcf663985887fb9, type: 3}
   drehCube: {fileID: 0}
   turnSpeed: 50
