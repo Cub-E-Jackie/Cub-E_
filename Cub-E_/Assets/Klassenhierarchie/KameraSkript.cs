@@ -7,7 +7,8 @@ public class KameraSkript : MonoBehaviour {
 	public GameObject kamera;
 	
 	float zeitGesamt;
-    
+	
+	public Vector3 startPosition;
        
     float zeitAnteilAlt;
 
@@ -25,12 +26,12 @@ public class KameraSkript : MonoBehaviour {
 	void Update () {
 		
 		if(SpielerManager.drehX){
-		
+						
 			float zeitAnteil = (Time.time - SpielerManager.bewegungZeitStart) / zeitGesamt;
 			
 			float winkelAenderung = (zeitAnteil - zeitAnteilAlt) * SpielerManager.winkelGesamt;
 			
-			transform.RotateAround ( new Vector3(1f, 0, 0), new Vector3(5f, 0, 0), winkelAenderung );
+			transform.RotateAround ( SpielerManager.drehPunkt, SpielerManager.drehAchse, winkelAenderung );
 			
 			zeitAnteilAlt = zeitAnteil;
 			

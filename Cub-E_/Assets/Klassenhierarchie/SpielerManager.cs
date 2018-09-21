@@ -59,7 +59,15 @@ public class SpielerManager : MonoBehaviour {
      
     public static float winkelGesamt;
     
-
+    public float startKameraX;
+    
+    public float startKameraY;
+    
+    public float startKameraZ;
+    
+    public static Vector3 drehPunkt;
+    
+    public static float drehAchse;
 
 	// Use this for initialization
 	void Start () {
@@ -71,6 +79,10 @@ public class SpielerManager : MonoBehaviour {
         duck.transform.position = transform.position;
         
         drehX = false;
+        
+        startKameraX = 0;
+		startKameraY = 15f;
+		startKameraZ = 0;
        
 	}
 	
@@ -82,7 +94,11 @@ public class SpielerManager : MonoBehaviour {
 			
 			bewegungZeitStart = Time.time;
 			
-			winkelGesamt = 90f;
+			winkelGesamt = -90f;
+			
+			drehPunkt = new Vector3(1f, 0, 0);
+			
+			drehAchse = new Vector3(5f, 0, 0);
 		}
 		
 		if ( coll.gameObject.tag == "PlaneObenVorne")
@@ -91,7 +107,11 @@ public class SpielerManager : MonoBehaviour {
 			
 			bewegungZeitStart = Time.time;
 			
-			winkelGesamt = 90f;			
+			winkelGesamt = 90f;	
+			
+			drehPunkt = new Vector3(1f, 0, 0);	
+			
+			drehAchse = new Vector3(5f, 0, 0);			
 			
 		}
 		
@@ -115,6 +135,10 @@ public class SpielerManager : MonoBehaviour {
 		
 		if ( coll.gameObject.tag == "PlaneUntenVorne")
 		{
+			startKameraX = kamera.transform.position.x;
+			startKameraY = kamera.transform.position.y;
+			startKameraZ = kamera.transform.position.z;
+			
 			drehX = true;
 			
 			bewegungZeitStart = Time.time;
