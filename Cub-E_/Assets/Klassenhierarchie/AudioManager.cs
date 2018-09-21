@@ -10,6 +10,8 @@ public class AudioManager : MonoBehaviour
     // damit keine zwei AudioManager entstehen 
     public static AudioManager instance;
 
+
+	
     // aehnlich start nur vorher noch
     void Awake()
     {
@@ -37,6 +39,8 @@ public class AudioManager : MonoBehaviour
             s.source.volume = s.volume;
             s.source.pitch = s.pitch;
             s.source.loop = s.loop;
+			
+			//s.audioMixer.SetFloat("Volume", s.volume);
         }
     }
 
