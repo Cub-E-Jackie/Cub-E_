@@ -41,25 +41,22 @@ public class SpielerManager : MonoBehaviour {
     public GameObject duckPref;
     public GameObject worldCube;
     
-    public GameObject drehCube;
-    
     public float turnSpeed = 50f;
     
     public GameObject planeObenVorne;
-    
-    public bool drehX;
-    
+       
     public GameObject duck;
     
     public bool jumping = false;
     
     public float zeitGesamt;
     
-    float winkelGesamt;
+    public GameObject kamera;
+            
+    public static bool drehX;
     
-    float bewegungZeitStart;
+     public static float bewegungZeitStart;
     
-    float zeitAnteilAlt;
 
 
 	// Use this for initialization
@@ -72,9 +69,18 @@ public class SpielerManager : MonoBehaviour {
         duck.transform.position = transform.position;
         
         drehX = false;
-        zeitGesamt = 3f;
-        winkelGesamt = 90f;
-        zeitAnteilAlt = 0;
+       
+	}
+	
+	void OnTriggerExit(Collider coll){
+		
+		if ( coll.gameObject.tag == "PlaneObenHinten")
+		{
+			drehX = true;
+			
+			bewegungZeitStart = Time.time;
+		}
+		
 	}
 	
 	void Springen(){
@@ -92,16 +98,7 @@ public class SpielerManager : MonoBehaviour {
 		}
 	}
 	
-	void OnCollisionEnter(Collision coll){
-		
-		if ( coll.gameObject.tag == "PlaneObenVorne")
-		{
-			drehX = true;
-			
-			bewegungZeitStart = Time.time;
-		}
-		
-	}
+
 
 	/*
     void DuckMovement() //eigene Klasse
@@ -191,58 +188,8 @@ public class SpielerManager : MonoBehaviour {
 		
 	}
 	
-	if(drehX){
-		
-		float zeitAnteil = (Time.time - bewegungZeitStart);
-		
-		float winkelAenderung = (zeitAnteil - zeitAnteilAlt) * winkelGesamt;
-		
-		drehCube.transform.RotateAround( Vector3.zero, new Vector3(0,1,0), winkelAenderung );
-		
-		zeitAnteilAlt = zeitAnteil;
-		
-		if(zeitAnteil >= 1f)
-			drehX = false;
-		
-		}
-	
-	
-//	float yEingabe = Input.GetAxis("Vertical");
-//	float xEingabe = Input.GetAxis("Horizontal");
-//		
-//		if ( -10f < yEingabe < 10f){
-//		
-//			return;
-//
-//		}
-//	
-//	float xNeu = transform.position.x + xEingabe * step * Time.deltaTime;
-//	
-//	if ( xEingabe < -10f ){
-//			
-//			xNeu = -10f;
-//			
-//		}
-//	
-//		if ( 10f < xEingabe ){
-//			
-//			xNeu = 10f;
-//			
-//		}
-//	
-//	float yNeu = transform.position.y + yEingabe * step * Time.deltaTime;
-//	
-//		if ( -10f > yEingabe ){
-//			
-//			yNeu = -10f;
-//			
-//		}
-//	
-//		if ( 10f < yEingabe ){
-//			
-//			yNeu = 10f;
-//			
-//	}
+
+
 	
 	//Bewegungen nach links und rechts abdämpfen mit smoothing
 	transform.position += targetPos * smoothing;
