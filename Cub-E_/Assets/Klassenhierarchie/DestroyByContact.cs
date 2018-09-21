@@ -8,5 +8,7 @@ public class DestroyByContact : MonoBehaviour {
     {
         Destroy(gameObject);
         Destroy(gameObject);
+
+        FindObjectOfType<AudioManager>().Play("Collision");
     }
 }

@@ -53,7 +53,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - name: Theme
-    clip: {fileID: 8300000, guid: 9e817496490381a418c75d9277a407d3, type: 3}
+    clip: {fileID: 8300000, guid: 301865e2bfdef20478a8fcdaad0adc94, type: 3}
     volume: 0.292
     pitch: 0.55
     loop: 1
@@ -63,4 +63,10 @@ MonoBehaviour:
     volume: 0.292
     pitch: 0.55
     loop: 1
+    source: {fileID: 0}
+  - name: Collision
+    clip: {fileID: 8300000, guid: d66d4082e205aa4459aa8e717ef2c12e, type: 3}
+    volume: 0.292
+    pitch: 0.55
+    loop: 0
     source: {fileID: 0}
