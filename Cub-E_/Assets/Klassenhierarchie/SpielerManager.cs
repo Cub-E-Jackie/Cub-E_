@@ -67,7 +67,7 @@ public class SpielerManager : MonoBehaviour {
     
     public static Vector3 drehPunkt;
     
-    public static float drehAchse;
+    public static Vector3 drehAchse;
 
 	// Use this for initialization
 	void Start () {
