@@ -55,7 +55,9 @@ public class SpielerManager : MonoBehaviour {
             
     public static bool drehX;
     
-     public static float bewegungZeitStart;
+    public static float bewegungZeitStart;
+     
+    public static float winkelGesamt;
     
 
 
@@ -79,8 +81,109 @@ public class SpielerManager : MonoBehaviour {
 			drehX = true;
 			
 			bewegungZeitStart = Time.time;
+			
+			winkelGesamt = 90f;
 		}
 		
+		if ( coll.gameObject.tag == "PlaneObenVorne")
+		{
+			drehX = true;
+			
+			bewegungZeitStart = Time.time;
+			
+			winkelGesamt = 90f;			
+			
+		}
+		
+		if ( coll.gameObject.tag == "PlaneObenLinks")
+		{
+			drehX = true;
+			
+			bewegungZeitStart = Time.time;
+			
+			winkelGesamt = 90f;
+		}
+		
+		if ( coll.gameObject.tag == "PlaneObenRechts")
+		{
+			drehX = true;
+			
+			bewegungZeitStart = Time.time;
+			
+			winkelGesamt = 90f;
+		}
+		
+		if ( coll.gameObject.tag == "PlaneUntenVorne")
+		{
+			drehX = true;
+			
+			bewegungZeitStart = Time.time;
+			
+			winkelGesamt = 90f;
+		}
+		
+		if ( coll.gameObject.tag == "PlaneUntenHinten")
+		{
+			drehX = true;
+			
+			bewegungZeitStart = Time.time;
+			
+			winkelGesamt = 90f;
+		}
+		
+		if ( coll.gameObject.tag == "PlaneUntenLinks")
+		{
+			drehX = true;
+			
+			bewegungZeitStart = Time.time;
+			
+			winkelGesamt = 90f;
+		}
+		
+		if ( coll.gameObject.tag == "PlaneUntenRechts")
+		{
+			drehX = true;
+			
+			bewegungZeitStart = Time.time;
+			
+			winkelGesamt = 90f;
+		}
+		
+		if ( coll.gameObject.tag == "PlaneVorneLinks")
+		{
+			drehX = true;
+			
+			bewegungZeitStart = Time.time;
+			
+			winkelGesamt = 90f;
+		}
+		
+		if ( coll.gameObject.tag == "PlaneVorneRechts")
+		{
+			drehX = true;
+			
+			bewegungZeitStart = Time.time;
+			
+			winkelGesamt = 90f;
+		}
+		
+		if ( coll.gameObject.tag == "PlaneHintenLinks")
+		{
+			drehX = true;
+			
+			bewegungZeitStart = Time.time;
+			
+			winkelGesamt = 90f;
+		}
+		
+		if ( coll.gameObject.tag == "PlaneHintenRechts")
+		{
+			drehX = true;
+			
+			bewegungZeitStart = Time.time;
+			
+			winkelGesamt = 90f;
+		}
 	}
 	
 	void Springen(){

@@ -8,8 +8,7 @@ public class KameraSkript : MonoBehaviour {
 	
 	float zeitGesamt;
     
-    float winkelGesamt;
-    
+       
     float zeitAnteilAlt;
 
 	
@@ -18,8 +17,7 @@ public class KameraSkript : MonoBehaviour {
 	// Aufruf der Funktion Startbewegung
 	
 	    zeitGesamt = 3f;
-        winkelGesamt = 90f;
-        zeitAnteilAlt = 0;
+                zeitAnteilAlt = 0;
 		
 	}
 	
@@ -30,7 +28,7 @@ public class KameraSkript : MonoBehaviour {
 		
 			float zeitAnteil = (Time.time - SpielerManager.bewegungZeitStart) / zeitGesamt;
 			
-			float winkelAenderung = (zeitAnteil - zeitAnteilAlt) * winkelGesamt;
+			float winkelAenderung = (zeitAnteil - zeitAnteilAlt) * SpielerManager.winkelGesamt;
 			
 			transform.RotateAround ( new Vector3(1f, 0, 0), new Vector3(5f, 0, 0), winkelAenderung );
 			
