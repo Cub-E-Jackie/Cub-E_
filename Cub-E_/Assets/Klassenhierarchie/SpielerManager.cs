@@ -78,6 +78,9 @@ public class SpielerManager : MonoBehaviour {
 
         duck = Instantiate(duckPref);
 
+        // sound
+        FindObjectOfType<AudioManager>().Play("PlayerDuck");
+
         duck.name = "Duck";
         duck.transform.parent = this.transform;
         duck.transform.position = transform.position;
