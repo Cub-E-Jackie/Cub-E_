@@ -43,7 +43,11 @@ public class SpielerManager : MonoBehaviour {
     
     public float turnSpeed = 50f;
     
+    public static GameObject plane;
+    
     public GameObject planeObenVorne;
+    
+    public GameObject planeUntenVorne;
        
     public GameObject duck;
     
@@ -80,9 +84,9 @@ public class SpielerManager : MonoBehaviour {
         
         drehX = false;
         
-        startKameraX = 0;
-		startKameraY = 15f;
-		startKameraZ = 0;
+//      startKameraX = 0;
+//		startKameraY = 15f;
+//		startKameraZ = 0;
        
 	}
 	
@@ -96,7 +100,7 @@ public class SpielerManager : MonoBehaviour {
 			
 			winkelGesamt = -90f;
 			
-			drehPunkt = new Vector3(1f, 0, 0);
+			
 			
 			drehAchse = new Vector3(5f, 0, 0);
 		}
@@ -107,9 +111,9 @@ public class SpielerManager : MonoBehaviour {
 			
 			bewegungZeitStart = Time.time;
 			
-			winkelGesamt = 90f;	
+			winkelGesamt = 180f;	
 			
-			drehPunkt = new Vector3(1f, 0, 0);	
+			plane = planeObenVorne;
 			
 			drehAchse = new Vector3(5f, 0, 0);			
 			
@@ -135,15 +139,19 @@ public class SpielerManager : MonoBehaviour {
 		
 		if ( coll.gameObject.tag == "PlaneUntenVorne")
 		{
-			startKameraX = kamera.transform.position.x;
-			startKameraY = kamera.transform.position.y;
-			startKameraZ = kamera.transform.position.z;
+//			startKameraX = kamera.transform.position.x;
+//			startKameraY = kamera.transform.position.y;
+//			startKameraZ = kamera.transform.position.z;
 			
 			drehX = true;
 			
 			bewegungZeitStart = Time.time;
 			
-			winkelGesamt = 90f;
+			winkelGesamt = -90f;
+			
+			plane = planeUntenVorne;
+						
+			drehAchse = new Vector3(1f, 0, 0);
 		}
 		
 		if ( coll.gameObject.tag == "PlaneUntenHinten")

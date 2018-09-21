@@ -6,6 +6,10 @@ public class KameraSkript : MonoBehaviour {
 
 	public GameObject kamera;
 	
+	public GameObject spieler;
+	
+	public GameObject planeObenVorne;
+	
 	float zeitGesamt;
 	
 	public Vector3 startPosition;
@@ -26,12 +30,18 @@ public class KameraSkript : MonoBehaviour {
 	void Update () {
 		
 		if(SpielerManager.drehX){
+			
+			float x = SpielerManager.plane.transform.position.x;
+			float y = SpielerManager.plane.transform.position.y;
+			float z = SpielerManager.plane.transform.position.z;
+			
+			Vector3 drehPunkt = new Vector3 (x, y, z);
 						
 			float zeitAnteil = (Time.time - SpielerManager.bewegungZeitStart) / zeitGesamt;
 			
 			float winkelAenderung = (zeitAnteil - zeitAnteilAlt) * SpielerManager.winkelGesamt;
 			
-			transform.RotateAround ( SpielerManager.drehPunkt, SpielerManager.drehAchse, winkelAenderung );
+			transform.RotateAround ( drehPunkt, SpielerManager.drehAchse, winkelAenderung );
 			
 			zeitAnteilAlt = zeitAnteil;
 			
@@ -41,5 +51,7 @@ public class KameraSkript : MonoBehaviour {
 				SpielerManager.drehX = false;
 			}
 		}
+		
+		//transform.LookAt(spieler.transform);
 	}
 }
