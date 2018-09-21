@@ -2133,6 +2133,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53a609ba4d08a004390b778f3a621bc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnWait: 0
+  startWait: 0
   duckPrefab: {fileID: 0}
   duckPrefab1: {fileID: 0}
   duckPrefab2: {fileID: 0}
@@ -2474,6 +2476,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53a609ba4d08a004390b778f3a621bc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnWait: 2
+  startWait: 1
   duckPrefab: {fileID: 1121870705426258, guid: 0e785b15ed50f7b4bbf5000895eab62d, type: 2}
   duckPrefab1: {fileID: 1674832291215974, guid: 73c631e028f42fe4180ad1684bd41d7b,
     type: 2}
@@ -2671,6 +2675,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53a609ba4d08a004390b778f3a621bc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnWait: 0
+  startWait: 0
   duckPrefab: {fileID: 0}
   duckPrefab1: {fileID: 0}
   duckPrefab2: {fileID: 0}

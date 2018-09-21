@@ -15,12 +15,16 @@ public class Spawner : MonoBehaviour
 	public float spawnMostWaitDuck; // 2
     public float spawnLeastWait; // 0,5, kann entschieden werden
 	public float spawnLeastWaitDuck; // 0,5, kann entschieden werden
-    public int startWait;*/
-	//public int startWaitDuck;
-    //public bool stop;
-	//public bool stopDuck;
-	
-	public GameObject duckPrefab; //braucht alle da unterschiedliche Drehungen jeweils bzw Position
+    public int startWait;
+	public int startWaitDuck;
+    public bool stop;
+	public bool stopDuck;*/
+	public float spawnWait;
+	    public int startWait;
+		public bool stop;
+		
+		
+	public GameObject duckPrefab;
 	public GameObject duckPrefab1;
 	public GameObject duckPrefab2;
 	public GameObject duckPrefab3;
@@ -30,101 +34,100 @@ public class Spawner : MonoBehaviour
 	
 	
 	
-	public float spawnDuckFrequency = 1f;
-	public float spawnWoodFrequency = 0.1f;
-	public float spwanStoneFrequency = 0.1f;
+	
 	public GameObject root;
-	private float timer = 0f;
+	//private float timer = 6f;
 
    // int randEnemy; //zufaelliges objekt
 	//int randDuck;
 
     void Start()
     {
-        //StartCoroutine(WaitSpawner());  // Coroutine fuer WaitForSeconds	
-        //StartCoroutine(WaitSpawnerDuck());  // Coroutine fuer WaitForSeconds	
-        Update();
+       //StartCoroutine(WaitSpawner());  // Coroutine fuer WaitForSeconds	
+		StartCoroutine(WaitSpawnerDuck());  // Coroutine fuer WaitForSeconds	
+		//Update();
     }
 
     void Update()
     {
-		GameObject duckObj; //oben
+		
+	}
+	//if(timer <= spawnDuckFrequency) { 
+	
+	GameObject duckObj; //oben
 		GameObject duckObj1; //unten
 		GameObject duckObj2; 
 		GameObject duckObj3;
 		GameObject duckObj4;
 		GameObject duckObj5;
-        // spawnWait = Random.Range(spawnLeastWait, spawnMostWait);
-		// spawnWaitDuck = Random.Range(spawnLeastWaitDuck, spawnMostWaitDuck);
-		timer += Time.deltaTime;
-
-	if(timer >= spawnDuckFrequency) { 
-
+       // spawnWait = Random.Range(spawnLeastWait, spawnMostWait);
+		//spawnWaitDuck = Random.Range(spawnLeastWaitDuck, spawnMostWaitDuck);
+		//timer += Time.deltaTime;
 		
+	IEnumerator WaitSpawnerDuck() {
+		yield return new WaitForSeconds(startWait); //ab wann es spawnt
 
-		 
-		 // für die verschiedenen Positionen
-		Vector3 rndPos = new Vector3(Random.Range(-4.5f,4.5f), 5, Random.Range(-4.5f,4.5f)); // duckObj 
+        while (!stop){
+		Vector3 rndPos = new Vector3(Random.Range(-4.5f,4.5f), 5, Random.Range(-4.5f,4.5f)); // duckObj
 		Vector3 rndPos1 = new Vector3(Random.Range(-4.5f,4.5f), -5, Random.Range(-4.5f,4.5f)); // duckObj1
 		Vector3 rndPos2 = new Vector3( 5, Random.Range(-4.5f,4.5f), Random.Range(-4.5f,4.5f)); // duckObj2
 		Vector3 rndPos3 = new Vector3(-5, Random.Range(-4.5f,4.5f), Random.Range(-4.5f,4.5f)); // duckObj3
 		Vector3 rndPos4 = new Vector3(Random.Range(-4.5f,4.5f), Random.Range(-4.5f,4.5f), 5); // duckObj4
 		Vector3 rndPos5 = new Vector3(Random.Range(-4.5f,4.5f), Random.Range(-4.5f,4.5f), -5); // duckObj5
 		
-		//Instantiate zum Ausführen (welches Object, wo, rotation)
+		
 		duckObj = Instantiate(duckPrefab, rndPos, Quaternion.identity);
-        duckObj.name = "Duck_Child";
+		duckObj.name = "Duck_Child";
 		duckObj.transform.parent = root.transform;
-        // duckObj.transform.position = transform.position;
-        duckObj.transform.eulerAngles = new Vector3(0, Random.Range(0f, 360f), 0);
-            // FindObjectOfType<AudioManager>().Play("Ducks");
-            Destroy(duckObj, 3f);
-
-        duckObj1 = Instantiate(duckPrefab1, rndPos1, Quaternion.identity);
+		//duckObj.transform.position = transform.position;
+		duckObj.transform.eulerAngles = new Vector3(0, Random.Range(0f, 360f),0);
+		Destroy(duckObj, 4f);
+		
+		duckObj1 = Instantiate(duckPrefab1, rndPos1, Quaternion.identity);
 		duckObj1.name = "Duck_Child1";
 		duckObj1.transform.parent = root.transform;
 		//duckObj1.transform.position = transform.position;
 		duckObj1.transform.eulerAngles = new Vector3(0, Random.Range(0f, 360f),0);
-            Destroy(duckObj1, 5f);
-
-        duckObj2 = Instantiate(duckPrefab2, rndPos2, Quaternion.identity);
+		Destroy(duckObj1, 4f);
+		
+		duckObj2 = Instantiate(duckPrefab2, rndPos2, Quaternion.identity);
 		duckObj2.name = "Duck_Child1";
 		duckObj2.transform.parent = root.transform;
 		//duckObj2.transform.position = transform.position;
 		duckObj2.transform.eulerAngles = new Vector3(Random.Range(0f, 360f), 0, 0);
-            Destroy(duckObj2, 5f);
-
-        duckObj3 = Instantiate(duckPrefab3, rndPos3, Quaternion.identity);
+		Destroy(duckObj2, 4f);
+		
+		duckObj3 = Instantiate(duckPrefab3, rndPos3, Quaternion.identity);
 		duckObj3.name = "Duck_Child2";
 		duckObj3.transform.parent = root.transform;
 		//duckObj3.transform.position = transform.position;
 		duckObj3.transform.eulerAngles = new Vector3(Random.Range(0f, 360f),0, 0);
-            Destroy(duckObj3, 5f);
-
-        duckObj4 = Instantiate(duckPrefab4, rndPos4, Quaternion.identity);
+		Destroy(duckObj3, 4f);
+		
+		duckObj4 = Instantiate(duckPrefab4, rndPos4, Quaternion.identity);
 		duckObj4.name = "Duck_Child4";
 		duckObj4.transform.parent = root.transform;
 		//duckObj4.transform.position = transform.position;
 		duckObj4.transform.eulerAngles = new Vector3( 0, 0, Random.Range(0f, 360f));
-            Destroy(duckObj4, 5f);
-
-        duckObj5 = Instantiate(duckPrefab5, rndPos5, Quaternion.identity);
+		Destroy(duckObj4, 4f);
+		
+		duckObj5 = Instantiate(duckPrefab5, rndPos5, Quaternion.identity);
 		duckObj5.name = "Duck_Child5";
 		duckObj5.transform.parent = root.transform;
 		//duckObj5.transform.position = transform.position;
 		duckObj5.transform.eulerAngles = new Vector3( 0, 0, Random.Range(0f, 360f));
-            Destroy(duckObj5, 5f);
-
-
-
-        }
-    }
+		Destroy(duckObj5, 4f);
+		
+		yield return new WaitForSeconds(spawnWait);
+		}
+	}
+    
 
     /*void Destroy()
     {
         if (gameObject.name == "Cube(Clone)")
         {
-            Destroy(gameObject, .5f);
+            Destroy(gameObject, 3f);
         }
     }
 */
@@ -189,5 +192,4 @@ public class Spawner : MonoBehaviour
             yield return new WaitForSeconds(spawnWaitDuck);
         }
     }	*/
-	
-}
+	}
