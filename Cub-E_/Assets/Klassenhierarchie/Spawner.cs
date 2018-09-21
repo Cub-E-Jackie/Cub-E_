@@ -91,14 +91,14 @@ public class Spawner : MonoBehaviour
 		Destroy(duckObj1, 4f);
 		
 		duckObj2 = Instantiate(duckPrefab2, rndPos2, Quaternion.identity);
-		duckObj2.name = "Duck_Child1";
+		duckObj2.name = "Duck_Child2";
 		duckObj2.transform.parent = root.transform;
 		//duckObj2.transform.position = transform.position;
 		duckObj2.transform.eulerAngles = new Vector3(Random.Range(0f, 360f), 0, 0);
 		Destroy(duckObj2, 4f);
 		
 		duckObj3 = Instantiate(duckPrefab3, rndPos3, Quaternion.identity);
-		duckObj3.name = "Duck_Child2";
+		duckObj3.name = "Duck_Child3";
 		duckObj3.transform.parent = root.transform;
 		//duckObj3.transform.position = transform.position;
 		duckObj3.transform.eulerAngles = new Vector3(Random.Range(0f, 360f),0, 0);
