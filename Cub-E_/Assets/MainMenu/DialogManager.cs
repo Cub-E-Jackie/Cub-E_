@@ -11,10 +11,12 @@ public class DialogManager : MonoBehaviour {
 	private int i;
 	public float speed; //Geschwindigkeit in der geschrieben wird
 	public GameObject button; //Continue Button für weiter
-	
+
+    private AudioSource source;
 	
 	
 	void Start(){
+        source = GetComponent<AudioSource>();
 		StartCoroutine(Type()); //Weitergabe an Unity
 	}
 	
@@ -34,6 +36,9 @@ public class DialogManager : MonoBehaviour {
 	
 	//damit nach Continue Button drücken neuer Satz gezeigt wird
 	public void NextSentence(){
+
+        source.Play();
+
 		button.SetActive(false);
 		if(i<sentences.Length - 1){
 			i++; //+1 gerechnet
