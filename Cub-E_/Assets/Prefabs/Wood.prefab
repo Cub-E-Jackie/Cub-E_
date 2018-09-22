@@ -478,6 +478,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4279702467709478}
   - component: {fileID: 136062909870389398}
+  - component: {fileID: 114198241595014124}
+  - component: {fileID: 111619327452555254}
   m_Layer: 0
   m_Name: Wood
   m_TagString: Untagged
@@ -8034,7 +8036,7 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1245271008840654}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 9000000, guid: 82e9b9e671e414885ad3c6569730c6cb, type: 3}
   m_Controller: {fileID: 9100000, guid: 329d980e918244edd9b14d9d88b4057f, type: 2}
   m_CullingMode: 0
@@ -8045,6 +8047,32 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!111 &111619327452555254
+Animation:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1344218415664170}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 82e9b9e671e414885ad3c6569730c6cb, type: 3}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!114 &114198241595014124
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1344218415664170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b162b2cf555ec74d9fa93dfd34bcbee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 95094872758018498}
 --- !u!136 &136062909870389398
 CapsuleCollider:
   m_ObjectHideFlags: 1
