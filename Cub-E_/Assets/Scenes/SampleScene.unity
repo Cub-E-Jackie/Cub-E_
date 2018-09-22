@@ -113,6 +113,38 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &160262822 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1842113018389952, guid: 8a1ffa17e5a134a9092fa78d8baa1dec,
+    type: 2}
+  m_PrefabInternal: {fileID: 1621510462}
+--- !u!114 &160262828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 160262822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 602dc33f1829a7343b61ac1986649c0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  step: 2
+  smoothing: 1
+  duckPref: {fileID: 1971033875488638, guid: fc0d1f61cff80442683d749ae1d286d6, type: 2}
+  worldCube: {fileID: 916942922}
+  test: {fileID: 0}
+  turnSpeed: 50
+  kamera: {fileID: 0}
+  planeObenVorne: {fileID: 0}
+  kameraOben: {fileID: 1124536375}
+  kameraUnten: {fileID: 1214525817}
+  kameraLinks: {fileID: 1775090974}
+  kameraRechts: {fileID: 170913298}
+  kameraHinten: {fileID: 1756812061}
+  kameraVorne: {fileID: 1820084415}
+  duck: {fileID: 0}
+  jumping: 0
 --- !u!1 &170913296
 GameObject:
   m_ObjectHideFlags: 0
@@ -124,7 +156,7 @@ GameObject:
   - component: {fileID: 170913298}
   - component: {fileID: 170913297}
   m_Layer: 0
-  m_Name: Camera Rechts
+  m_Name: Camera Links
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3005,9 +3037,9 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1124536372}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c98915e17515c548b15264f1e9c1ac0, type: 3}
+  m_Script: {fileID: 11500000, guid: 11dbc855403a71f4cabb0d20840ddc6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   kameraOben: {fileID: 1124536375}
@@ -3153,6 +3185,7 @@ GameObject:
   - component: {fileID: 1214525818}
   - component: {fileID: 1214525817}
   - component: {fileID: 1214525816}
+  - component: {fileID: 1214525819}
   m_Layer: 0
   m_Name: Camera Unten
   m_TagString: Untagged
@@ -3221,6 +3254,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!114 &1214525819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1214525815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 551b19520c9bb8342a804ebd3f328102, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kameraOben: {fileID: 1124536375}
+  kameraUnten: {fileID: 1214525817}
+  kameraLinks: {fileID: 1775090974}
+  kameraRechts: {fileID: 170913298}
+  kameraHinten: {fileID: 1756812061}
+  kameraVorne: {fileID: 1820084415}
 --- !u!1 &1238867849
 GameObject:
   m_ObjectHideFlags: 0
@@ -4279,6 +4329,11 @@ Prefab:
       propertyPath: kamera
       value: 
       objectReference: {fileID: 1124536372}
+    - target: {fileID: 114642238733515358, guid: 8a1ffa17e5a134a9092fa78d8baa1dec,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a1ffa17e5a134a9092fa78d8baa1dec, type: 2}
   m_IsPrefabAsset: 0
@@ -4292,8 +4347,9 @@ GameObject:
   - component: {fileID: 1756812062}
   - component: {fileID: 1756812061}
   - component: {fileID: 1756812060}
+  - component: {fileID: 1756812063}
   m_Layer: 0
-  m_Name: Camera Hinten
+  m_Name: Camera Vorne
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4360,6 +4416,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &1756812063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1756812059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92bbd133b1192724b9c82fe84abb5ad9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kameraOben: {fileID: 1124536375}
+  kameraUnten: {fileID: 1214525817}
+  kameraLinks: {fileID: 1775090974}
+  kameraRechts: {fileID: 170913298}
+  kameraHinten: {fileID: 1756812061}
+  kameraVorne: {fileID: 1820084415}
 --- !u!1 &1759325671
 GameObject:
   m_ObjectHideFlags: 0
@@ -4508,7 +4581,7 @@ GameObject:
   - component: {fileID: 1775090974}
   - component: {fileID: 1775090973}
   m_Layer: 0
-  m_Name: Camera Links
+  m_Name: Camera Rechts
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4585,8 +4658,9 @@ GameObject:
   - component: {fileID: 1820084416}
   - component: {fileID: 1820084415}
   - component: {fileID: 1820084414}
+  - component: {fileID: 1820084417}
   m_Layer: 0
-  m_Name: Camera Vorne
+  m_Name: Camera Hinten
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4653,6 +4727,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1820084417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1820084413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ff2c08042e7f5e4ab422728ce8188d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kameraOben: {fileID: 1124536375}
+  kameraUnten: {fileID: 1214525817}
+  kameraLinks: {fileID: 1775090974}
+  kameraRechts: {fileID: 170913298}
+  kameraHinten: {fileID: 1756812061}
+  kameraVorne: {fileID: 1820084415}
 --- !u!1 &1871593727
 GameObject:
   m_ObjectHideFlags: 0
