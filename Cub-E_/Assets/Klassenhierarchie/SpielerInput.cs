@@ -31,7 +31,7 @@ public class SpielerInput	: MonoBehaviour {
     
     public GameObject test;
     public float turnSpeed = 50f;
-    public GameObject kamera;
+   
     
     public static  float winkelGesamt;
         
@@ -148,7 +148,6 @@ public class SpielerInput	: MonoBehaviour {
 			
 			bewegungZeitStart = Time.time;
 			
-			winkelGesamt = 90;
 		}
 		
 		if ( coll.gameObject.tag == "PlaneObenHinten")
@@ -157,7 +156,6 @@ public class SpielerInput	: MonoBehaviour {
 			
 			bewegungZeitStart = Time.time;
 			
-			winkelGesamt = 90;
 		}
 		
 		if ( coll.gameObject.tag == "PlaneObenRechts")
@@ -208,7 +206,6 @@ public class SpielerInput	: MonoBehaviour {
 			
 			bewegungZeitStart = Time.time;
 			
-			winkelGesamt = -90;
 		}
 		
 		if ( coll.gameObject.tag == "PlaneUntenHinten")

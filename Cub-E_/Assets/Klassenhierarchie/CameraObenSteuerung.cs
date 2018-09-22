@@ -51,12 +51,12 @@ public class CameraObenSteuerung : MonoBehaviour {
 		
 		if(SpielerInput.drehOV){
 			
-//			kameraOben.enabled = true;
-//			kameraUnten.enabled = false;
-//	 		kameraLinks.enabled = false;
-//			kameraRechts.enabled = false;
-//			kameraHinten.enabled = false;
-//			kameraVorne.enabled = false;
+			kameraOben.enabled = true;
+			kameraUnten.enabled = false;
+	 		kameraLinks.enabled = false;
+			kameraRechts.enabled = false;
+			kameraHinten.enabled = false;
+			kameraVorne.enabled = false;
 		
 			float zeitAnteil = (Time.time - SpielerInput.bewegungZeitStart) / zeitGesamt;
 			

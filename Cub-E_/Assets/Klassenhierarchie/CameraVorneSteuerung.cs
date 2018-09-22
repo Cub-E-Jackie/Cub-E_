@@ -40,13 +40,13 @@ public class CameraVorneSteuerung : MonoBehaviour {
 	void Update () {	
 	
 		if(SpielerInput.drehUV){
-//			
-//			kameraOben.enabled = false;
-//			kameraUnten.enabled = false;
-//	 		kameraLinks.enabled = false;
-//			kameraRechts.enabled = false;
-//			kameraHinten.enabled = false;
-//			kameraVorne.enabled = true;
+			
+			kameraOben.enabled = false;
+			kameraUnten.enabled = false;
+	 		kameraLinks.enabled = false;
+			kameraRechts.enabled = false;
+			kameraHinten.enabled = false;
+			kameraVorne.enabled = true;
 		
 			float zeitAnteil = (Time.time - SpielerInput.bewegungZeitStart) / zeitGesamt;
 			

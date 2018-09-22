@@ -38,12 +38,12 @@ public class CameraUntenSteuerung : MonoBehaviour {
 	
 		if(SpielerInput.drehUH){
 			
-//			kameraOben.enabled = false;
-//			kameraUnten.enabled = true;
-//	 		kameraLinks.enabled = false;
-//			kameraRechts.enabled = false;
-//			kameraHinten.enabled = false;
-//			kameraVorne.enabled = false;
+			kameraOben.enabled = false;
+			kameraUnten.enabled = true;
+	 		kameraLinks.enabled = false;
+			kameraRechts.enabled = false;
+			kameraHinten.enabled = false;
+			kameraVorne.enabled = false;
 		
 			float zeitAnteil = (Time.time - SpielerInput.bewegungZeitStart) / zeitGesamt;
 			
