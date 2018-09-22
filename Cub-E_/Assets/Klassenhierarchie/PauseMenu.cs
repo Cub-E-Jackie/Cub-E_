@@ -8,42 +8,35 @@ public class PauseMenu : MonoBehaviour {
 	public static bool PausedGame = false;
 	public GameObject pauseMenu;
 	
-	 DuckMovement zeit;
+	DuckMovement zeit; //Zugreifen auf DuckMovement
 	
 	// Update is called once per frame
 	void Update () {
-		zeit = GameObject.Find("Player").GetComponent<DuckMovement>();
+		zeit = GameObject.Find("Player").GetComponent<DuckMovement>(); //Zugreifen auf DuckMovement, zeit definieren
 		
 		if (Input.GetKeyDown(KeyCode.Escape)){
 			if (PausedGame){
-				Resume(); //Game wieder starten
-				
+				Resume(); //Game wieder starten	
 			} else {
 				Pause(); //Game Pause
-			
 			}
 		}
 	}
 	
+	//Pause aufheben 
 	public void Resume() {
-		pauseMenu.SetActive(false);
-		/*zeit.rotTimer = 0f;
-		zeit.movementSpeed = 1f;
-		zeit.rotationSpeed = 0.01f;
-		zeit.distanceTolerance = 0.1f;*/
-				
-		//Time.timeScale = 1f; //Zeit wieder weiter laufen lassen
+		pauseMenu.SetActive(false); 
+		zeit.activModus = true; 
+		Time.timeScale = 1f; //Zeit wieder weiter laufen lassen
 		PausedGame = false;
 	}
 	
+	//Pause einstellen
 	public void Pause() {
 		
-		pauseMenu.SetActive(true);
-		/*zeit.rotTimer = 0f;
-		zeit.movementSpeed = 0f;
-		zeit.rotationSpeed = 0f;
-		zeit.distanceTolerance = 0f;*/
-		//Time.timeScale = 0f; // in Bewegungen einfrieren)
+		pauseMenu.SetActive(true); 
+		zeit.activModus = false; //auf activeModus von DuckMovement zugreifen und Bewegung ausschalten
+		Time.timeScale = 0f; // in Bewegungen einfrieren*/
 		PausedGame = true; //Game pausiert
 	}
 	
@@ -53,15 +46,15 @@ public class PauseMenu : MonoBehaviour {
 		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+0); 
 		
 	}*/
-
-	//ACHTUNG!! BEI MENu zu Spiel ist PAUSE MENÜ NOCH DA???
+	
+	//Bei auf Menu drücken: auf Menu wechseln
 	public void LoadMenu() {
-		Debug.Log("Load menu...");
-		//Time.timeScale = 1f;
-		SceneManager.LoadScene("Menu");
-		pauseMenu.SetActive(false);
+		Debug.Log("Load menu..."); //wird ausgeschrieben
+		Time.timeScale = 1f;
+		//Pause Menu wieder false um es auszustellen
+		pauseMenu.SetActive(false); 
 		PausedGame = false;
-		//SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+0); 
+		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex-1); //-1 um zurück zu MainMenu
 		
 	}
 	

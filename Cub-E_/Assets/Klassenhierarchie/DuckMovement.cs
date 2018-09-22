@@ -13,56 +13,48 @@ public class DuckMovement : MonoBehaviour {
     
 	public float rotTimer = 0f;
 	//private float rotTimer = 0f;
+    public bool activModus = true;
 
-    void Start () {
+	void Update () {	
     	
-    		
-	}
+		if(activModus){ //damit im PauseMenu Bewegung eingefroren ist
+			RaycastHit hit;
+			if (Physics.Raycast(transform.position, -transform.up, out hit)) // in hit wird Treffer gespeichert
+			{
+				lastNormal = hit.normal;
 
-	void Update () {
-    	
-    	
-        RaycastHit hit;
-        if (Physics.Raycast(transform.position, -transform.up, out hit)) // in hit wird Treffer gespeichert
-        {
-            lastNormal = hit.normal;
+				// timer für die lineare Interpolation (LERP) siehe unten: wenn neue normale gefunden dann starte den interp. Timer
+				// mit rotation, da er sonst zu schnell die oberflaeche verlaesst
+				if (transform.up != hit.normal)
+				{
+					rotTimer += Time.deltaTime * rotationSpeed;
+				}
+				else
+				{
+					rotTimer = 0;
+				}
+				transform.up = Vector3.Lerp(transform.up, hit.normal, rotTimer); // weiche interpolation der rotation
 
-            // timer für die lineare Interpolation (LERP) siehe unten: wenn neue normale gefunden dann starte den interp. Timer
-            // mit rotation, da er sonst zu schnell die oberflaeche verlaesst
-            if (transform.up != hit.normal)
-            {
-                rotTimer += Time.deltaTime * rotationSpeed;
-            }
-            else
-            {
-                rotTimer = 0;
-            }
-            transform.up = Vector3.Lerp(transform.up, hit.normal, rotTimer); // weiche interpolation der rotation
+				// prüfe ob sich GO zu weit von der oberfläche entfernt - und steuer dagegen
+				if (Vector3.Distance(transform.position, hit.point) > distanceTolerance)
+				{
+					transform.Translate(0, -0.05f, 0);
+				}
 
-            // prüfe ob sich GO zu weit von der oberfläche entfernt - und steuer dagegen
-            if (Vector3.Distance(transform.position, hit.point) > distanceTolerance)
-            {
-                transform.Translate(0, -0.05f, 0);
-            }
+				// Wuerfel ist getagged mit "WaterCube"
+				if (hit.collider.tag != "WaterCube")
+				{
+					transform.Rotate(1f, 1f, 0);
+	;           }
+				
+			}
+			else
+			{
+				transform.Rotate(1f, 0, 0);
+			}
 
-            // Wuerfel ist getagged mit "WaterCube"
-            if (hit.collider.tag != "WaterCube")
-            {
-                transform.Rotate(1f, 1f, 0);
-;           }
-            
-        }
-        else
-        {
-            transform.Rotate(1f, 0, 0);
-        }
-		
-     
-        transform.Translate(0, 0, movementSpeed);
-        
-        
-       
-    	
+			transform.Translate(0, 0, movementSpeed);
+        } 	
 	}
 }
 

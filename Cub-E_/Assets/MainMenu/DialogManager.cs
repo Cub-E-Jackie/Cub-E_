@@ -15,12 +15,12 @@ public class DialogManager : MonoBehaviour {
 	
 	
 	void Start(){
-		StartCoroutine(Type());
+		StartCoroutine(Type()); //Weitergabe an Unity
 	}
 	
 	void Update () {
 		if(textShow.text == sentences[i]) { //damit die Sätze nacheinander abgebildet und nicht gleichzeitig	
-		button.SetActive(true);
+		button.SetActive(true); // Button angezeigt nachdem Satz fertig
 		}
 	}
 	
@@ -40,12 +40,9 @@ public class DialogManager : MonoBehaviour {
 			textShow.text = "";
 			StartCoroutine(Type());
 		} else {
-			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1); //nächste Scene starten = Scene
-			button.SetActive(false);
-		
+			//nächste Scene starten = Scene, nachdem alle Sätze angezeigt wurden 
+			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+			button.SetActive(false); //Button active = false		
 		}
-	}
-	
-
-	
+	}	
 }
