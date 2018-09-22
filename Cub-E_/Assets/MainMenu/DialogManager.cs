@@ -12,10 +12,13 @@ public class DialogManager : MonoBehaviour {
 	public float speed; //Geschwindigkeit in der geschrieben wird
 	public GameObject button; //Continue Button für weiter
 
+    // fuer Sound
     private AudioSource source;
 	
 	
 	void Start(){
+
+        //Zuweisung der Audio Source
         source = GetComponent<AudioSource>();
 		StartCoroutine(Type()); //Weitergabe an Unity
 	}
@@ -37,6 +40,7 @@ public class DialogManager : MonoBehaviour {
 	//damit nach Continue Button drücken neuer Satz gezeigt wird
 	public void NextSentence(){
 
+        // Spielt den Click Sound bei Continue
         source.Play();
 
 		button.SetActive(false);
