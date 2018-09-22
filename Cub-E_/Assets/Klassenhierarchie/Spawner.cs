@@ -35,6 +35,12 @@ public class Spawner : MonoBehaviour
     public GameObject woodPrefab3;
     public GameObject woodPrefab4;
     public GameObject woodPrefab5;
+    public GameObject stonePrefab;
+    public GameObject stonePrefab1;
+    public GameObject stonePrefab2;
+    public GameObject stonePrefab3;
+    public GameObject stonePrefab4;
+    public GameObject stonePrefab5;
 
     public GameObject root;
     //private float timer = 6f;
@@ -48,6 +54,8 @@ public class Spawner : MonoBehaviour
         StartCoroutine(WaitSpawnerDuck()); // Coroutine fuer WaitForSeconds	
                                            //Update();
         StartCoroutine(WaitSpawnerWood());
+
+        StartCoroutine(WaitSpawnerStone());
     }
 
     void Update()
@@ -68,6 +76,13 @@ public class Spawner : MonoBehaviour
     GameObject woodObj3;
     GameObject woodObj4;
     GameObject woodObj5;
+    GameObject stoneObj;
+    GameObject stoneObj1;
+    GameObject stoneObj2;
+    GameObject stoneObj3;
+    GameObject stoneObj4;
+    GameObject stoneObj5;
+
     // spawnWait = Random.Range(spawnLeastWait, spawnMostWait);
     //spawnWaitDuck = Random.Range(spawnLeastWaitDuck, spawnMostWaitDuck);
     //timer += Time.deltaTime;
@@ -150,6 +165,7 @@ public class Spawner : MonoBehaviour
             Vector3 rndPos4 = new Vector3(Random.Range(-4.5f, 4.5f), Random.Range(-4.5f, 4.5f), 5); // duckObj4
             Vector3 rndPos5 = new Vector3(Random.Range(-4.5f, 4.5f), Random.Range(-4.5f, 4.5f), -5); // duckObj5
 
+            #region Wood
             woodObj = Instantiate(woodPrefab, rndPos, Quaternion.identity);
             woodObj.name = "Wood";
             woodObj.transform.parent = root.transform;
@@ -191,6 +207,8 @@ public class Spawner : MonoBehaviour
             //duckObj.transform.position = transform.position;
             //woodObj.transform.eulerAngles = new Vector3(0, Random.Range(0f, 360f), 0);
             Destroy(woodObj5, 4f);
+
+            #endregion
 
             yield return new WaitForSeconds(spawnWait);
         }
@@ -267,4 +285,64 @@ public class Spawner : MonoBehaviour
             }	*/
         #endregion
     }
+    IEnumerator WaitSpawnerStone()
+    {
+        yield return new WaitForSeconds(startWait); //ab wann es spawnt
+
+        while (!stop)
+        {
+            Vector3 rndPos = new Vector3(Random.Range(-4.5f, 4.5f), 5, Random.Range(-4.5f, 4.5f)); // duckObj
+            Vector3 rndPos1 = new Vector3(Random.Range(-4.5f, 4.5f), -5, Random.Range(-4.5f, 4.5f)); // duckObj1
+            Vector3 rndPos2 = new Vector3(5, Random.Range(-4.5f, 4.5f), Random.Range(-4.5f, 4.5f)); // duckObj2
+            Vector3 rndPos3 = new Vector3(-5, Random.Range(-4.5f, 4.5f), Random.Range(-4.5f, 4.5f)); // duckObj3
+            Vector3 rndPos4 = new Vector3(Random.Range(-4.5f, 4.5f), Random.Range(-4.5f, 4.5f), 5); // duckObj4
+            Vector3 rndPos5 = new Vector3(Random.Range(-4.5f, 4.5f), Random.Range(-4.5f, 4.5f), -5); // duckObj5
+
+            stoneObj = Instantiate(stonePrefab, rndPos, Quaternion.identity);
+            stoneObj.name = "Stone";
+            stoneObj.transform.parent = root.transform;
+            //duckObj.transform.position = transform.position;
+            //woodObj.transform.eulerAngles = new Vector3(0, Random.Range(0f, 360f), 0);
+            Destroy(stoneObj, 4f);
+
+            stoneObj1 = Instantiate(stonePrefab1, rndPos1, Quaternion.identity);
+            stoneObj1.name = "Stone1";
+            stoneObj1.transform.parent = root.transform;
+            //duckObj.transform.position = transform.position;
+            //woodObj.transform.eulerAngles = new Vector3(0, Random.Range(0f, 360f), 0);
+            Destroy(stoneObj1, 4f);
+
+            stoneObj2 = Instantiate(stonePrefab2, rndPos2, Quaternion.identity);
+            stoneObj2.name = "Stone2";
+            stoneObj2.transform.parent = root.transform;
+            //duckObj.transform.position = transform.position;
+            //woodObj.transform.eulerAngles = new Vector3(0, Random.Range(0f, 360f), 0);
+            Destroy(stoneObj2, 4f);
+
+            stoneObj3 = Instantiate(stonePrefab3, rndPos3, Quaternion.identity);
+            stoneObj3.name = "Stone3";
+            stoneObj3.transform.parent = root.transform;
+            //duckObj.transform.position = transform.position;
+            //woodObj.transform.eulerAngles = new Vector3(0, Random.Range(0f, 360f), 0);
+            Destroy(stoneObj3, 4f);
+
+            stoneObj4 = Instantiate(stonePrefab4, rndPos4, Quaternion.identity);
+            stoneObj4.name = "Stone4";
+            stoneObj4.transform.parent = root.transform;
+            //duckObj.transform.position = transform.position;
+            //woodObj.transform.eulerAngles = new Vector3(0, Random.Range(0f, 360f), 0);
+            Destroy(stoneObj4, 4f);
+
+            stoneObj5 = Instantiate(stonePrefab5, rndPos5, Quaternion.identity);
+            stoneObj5.name = "Stone5";
+            stoneObj5.transform.parent = root.transform;
+            //duckObj.transform.position = transform.position;
+            //woodObj.transform.eulerAngles = new Vector3(0, Random.Range(0f, 360f), 0);
+            Destroy(stoneObj5, 4f);
+
+            yield return new WaitForSeconds(spawnWait);
+        }
+    }
+
+
 }
