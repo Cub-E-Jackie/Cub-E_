@@ -3186,10 +3186,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   kameraOben: {fileID: 1124536375}
   kameraUnten: {fileID: 1214525817}
-  kameraLinks: {fileID: 1775090974}
-  kameraRechts: {fileID: 170913298}
-  kameraHinten: {fileID: 1756812061}
-  kameraVorne: {fileID: 1820084415}
+  kameraLinks: {fileID: 170913298}
+  kameraRechts: {fileID: 1775090974}
+  kameraHinten: {fileID: 1820084415}
+  kameraVorne: {fileID: 1756812061}
 --- !u!81 &1124536374
 AudioListener:
   m_ObjectHideFlags: 0
@@ -3409,10 +3409,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   kameraOben: {fileID: 1124536375}
   kameraUnten: {fileID: 1214525817}
-  kameraLinks: {fileID: 1775090974}
-  kameraRechts: {fileID: 170913298}
-  kameraHinten: {fileID: 1756812061}
-  kameraVorne: {fileID: 1820084415}
+  kameraLinks: {fileID: 170913298}
+  kameraRechts: {fileID: 1775090974}
+  kameraHinten: {fileID: 1820084415}
+  kameraVorne: {fileID: 1756812061}
 --- !u!1 &1238867849
 GameObject:
   m_ObjectHideFlags: 0
@@ -4658,15 +4658,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1756812059}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92bbd133b1192724b9c82fe84abb5ad9, type: 3}
+  m_Script: {fileID: 11500000, guid: 6ff2c08042e7f5e4ab422728ce8188d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   kameraOben: {fileID: 1124536375}
   kameraUnten: {fileID: 1214525817}
-  kameraLinks: {fileID: 1775090974}
-  kameraRechts: {fileID: 170913298}
-  kameraHinten: {fileID: 1756812061}
-  kameraVorne: {fileID: 1820084415}
+  kameraLinks: {fileID: 170913298}
+  kameraRechts: {fileID: 1775090974}
+  kameraHinten: {fileID: 1820084415}
+  kameraVorne: {fileID: 1756812061}
 --- !u!1 &1759325671
 GameObject:
   m_ObjectHideFlags: 0
@@ -5015,15 +5015,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1820084413}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ff2c08042e7f5e4ab422728ce8188d9, type: 3}
+  m_Script: {fileID: 11500000, guid: 92bbd133b1192724b9c82fe84abb5ad9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   kameraOben: {fileID: 1124536375}
   kameraUnten: {fileID: 1214525817}
-  kameraLinks: {fileID: 1775090974}
-  kameraRechts: {fileID: 170913298}
-  kameraHinten: {fileID: 1756812061}
-  kameraVorne: {fileID: 1820084415}
+  kameraLinks: {fileID: 170913298}
+  kameraRechts: {fileID: 1775090974}
+  kameraHinten: {fileID: 1820084415}
+  kameraVorne: {fileID: 1756812061}
 --- !u!1 &1871593727
 GameObject:
   m_ObjectHideFlags: 0
