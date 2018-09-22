@@ -258,7 +258,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4767674320190276}
   - component: {fileID: 136170751983421296}
-  - component: {fileID: 114104631072518564}
+  - component: {fileID: 111712155430079350}
+  - component: {fileID: 114928357068619332}
   m_Layer: 0
   m_Name: Stone1
   m_TagString: Untagged
@@ -6210,7 +6211,7 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1206798836614772}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 9000000, guid: 18bc33a72531d2044ad7b9c2beedff66, type: 3}
   m_Controller: {fileID: 9100000, guid: 75c62793063a8b7499a4d47517162c8b, type: 2}
   m_CullingMode: 0
@@ -6221,7 +6222,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114104631072518564
+--- !u!111 &111712155430079350
+Animation:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1123351751031888}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 18bc33a72531d2044ad7b9c2beedff66, type: 3}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!114 &114928357068619332
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6229,9 +6244,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1123351751031888}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23784a4599770431f858c242835128da, type: 3}
+  m_Script: {fileID: 11500000, guid: 5b162b2cf555ec74d9fa93dfd34bcbee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 95205323076713842}
 --- !u!136 &136170751983421296
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -6239,7 +6255,7 @@ CapsuleCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1123351751031888}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.7380306
   m_Height: 1.5392816

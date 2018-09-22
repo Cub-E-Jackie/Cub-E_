@@ -1379,7 +1379,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4657296804548518}
   - component: {fileID: 136189526573116552}
-  - component: {fileID: 114492635564589008}
+  - component: {fileID: 111381134535333138}
+  - component: {fileID: 114698386366848030}
   m_Layer: 0
   m_Name: Stone4
   m_TagString: Untagged
@@ -6210,9 +6211,9 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1254613512808478}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 9000000, guid: 18bc33a72531d2044ad7b9c2beedff66, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 75c62793063a8b7499a4d47517162c8b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -6221,7 +6222,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114492635564589008
+--- !u!111 &111381134535333138
+Animation:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1940610573095642}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 18bc33a72531d2044ad7b9c2beedff66, type: 3}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!114 &114698386366848030
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6229,9 +6244,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1940610573095642}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23784a4599770431f858c242835128da, type: 3}
+  m_Script: {fileID: 11500000, guid: 5b162b2cf555ec74d9fa93dfd34bcbee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 95731857326958894}
 --- !u!136 &136189526573116552
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -6239,7 +6255,7 @@ CapsuleCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1940610573095642}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.6235009
   m_Height: 1.5151534
