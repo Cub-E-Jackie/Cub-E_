@@ -94,6 +94,11 @@ public class CameraObenSteuerung : MonoBehaviour {
 //					
 					SpielerInput.drehOV = false;
 					
+					zeitGesamt = 3f;
+        			//SpielerInput.winkelGesamt = 90f;
+        			zeitAnteilAlt = 0;
+		
+					
 					
 				}
 		

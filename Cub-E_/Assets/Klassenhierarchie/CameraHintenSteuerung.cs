@@ -74,6 +74,10 @@ public class CameraHintenSteuerung : MonoBehaviour {
 					
 					kameraHinten.transform.rotation = Quaternion.Slerp(transform.rotation, SpielerInput.originalDrehHinten, Time.time * rotationsSpeed);
 					
+					zeitGesamt = 3f;
+        			//SpielerInput.winkelGesamt = 90f;
+        			zeitAnteilAlt = 0;
+					
 				}
 		
 		}

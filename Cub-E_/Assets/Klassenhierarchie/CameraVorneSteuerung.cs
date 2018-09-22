@@ -78,7 +78,10 @@ public class CameraVorneSteuerung : MonoBehaviour {
 					kameraVorne.transform.rotation = Quaternion.Slerp(transform.rotation, SpielerInput.originalDrehVorne, Time.time * rotationsSpeed);
 					
 					SpielerInput.drehUV = false;
-					
+					zeitGesamt = 3f;
+        //SpielerInput.winkelGesamt = 90f;
+        zeitAnteilAlt = 0;
+		
 					
 				}
 		

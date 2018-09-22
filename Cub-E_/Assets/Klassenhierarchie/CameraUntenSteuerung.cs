@@ -74,6 +74,11 @@ public class CameraUntenSteuerung : MonoBehaviour {
 					
 					kameraUnten.transform.rotation = Quaternion.Slerp(transform.rotation, SpielerInput.originalDrehUnten, Time.time * rotationsSpeed);
 					
+					zeitGesamt = 3f;
+        //SpielerInput.winkelGesamt = 90f;
+        zeitAnteilAlt = 0;
+		
+					
 //					float kameraPositionX = 0;
 //					float kameraPositionY = 0;
 //					float kameraPositionZ = -15f;
