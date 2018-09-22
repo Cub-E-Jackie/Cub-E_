@@ -53,25 +53,29 @@ public class SpielerManager : MonoBehaviour {
     
     public bool jumping = false;
     
-    public float zeitGesamt;
+    
     
     public GameObject kamera;
             
-    public static bool drehX;
+    public static bool drehOV;
+    public static bool drehOH;
+    public static bool drehOL;
+    public static bool drehOR;
+    public static bool drehUV;
+    public static bool drehUH;
+    public static bool drehUR;
+    public static bool drehUL;
+    public static bool drehVR;
+    public static bool drehVL;
+    public static bool drehHR;
+    public static bool drehHL;
+    
     
     public static float bewegungZeitStart;
      
     public static float winkelGesamt;
-    
-    public float startKameraX;
-    
-    public float startKameraY;
-    
-    public float startKameraZ;
-    
-    public static Vector3 drehPunkt;
-    
-    public static Vector3 drehAchse;
+        
+   
 
 	// Use this for initialization
 	void Start () {
@@ -85,140 +89,116 @@ public class SpielerManager : MonoBehaviour {
         duck.transform.parent = this.transform;
         duck.transform.position = transform.position;
         
-        drehX = false;
+        drehOV = false;
+        drehOH = false;
+    	drehOL = false;
+    	drehOR = false;
+    	drehUV = false;
+    	drehUH = false;
+    	drehUR = false;
+    	drehUL = false;
+    	drehVR = false;
+    	drehVL = false;
+    	drehHR = false;
+    	drehHL = false;
         
-//      startKameraX = 0;
-//		startKameraY = 15f;
-//		startKameraZ = 0;
+		
        
 	}
 	
 	void OnTriggerExit(Collider coll){
 		
-		if ( coll.gameObject.tag == "PlaneObenHinten")
-		{
-			drehX = true;
-			
-			bewegungZeitStart = Time.time;
-			
-			winkelGesamt = -90f;
-			
-			
-			
-			drehAchse = new Vector3(5f, 0, 0);
-		}
-		
 		if ( coll.gameObject.tag == "PlaneObenVorne")
 		{
-			drehX = true;
+			Debug.Log("In Kollision mit OV");
+			
+			drehOV = true;
 			
 			bewegungZeitStart = Time.time;
 			
-			winkelGesamt = 180f;	
-			
-			plane = planeObenVorne;
-			
-			drehAchse = new Vector3(5f, 0, 0);			
-			
+			winkelGesamt = 90;
 		}
 		
-		if ( coll.gameObject.tag == "PlaneObenLinks")
-		{
-			drehX = true;
-			
-			bewegungZeitStart = Time.time;
-			
-			winkelGesamt = 90f;
-		}
-		
-		if ( coll.gameObject.tag == "PlaneObenRechts")
-		{
-			drehX = true;
-			
-			bewegungZeitStart = Time.time;
-			
-			winkelGesamt = 90f;
-		}
-		
-		if ( coll.gameObject.tag == "PlaneUntenVorne")
-		{
-//			startKameraX = kamera.transform.position.x;
-//			startKameraY = kamera.transform.position.y;
-//			startKameraZ = kamera.transform.position.z;
-			
-			drehX = true;
-			
-			bewegungZeitStart = Time.time;
-			
-			winkelGesamt = -90f;
-			
-			plane = planeUntenVorne;
-						
-			drehAchse = new Vector3(1f, 0, 0);
-		}
-		
-		if ( coll.gameObject.tag == "PlaneUntenHinten")
-		{
-			drehX = true;
-			
-			bewegungZeitStart = Time.time;
-			
-			winkelGesamt = 90f;
-		}
-		
-		if ( coll.gameObject.tag == "PlaneUntenLinks")
-		{
-			drehX = true;
-			
-			bewegungZeitStart = Time.time;
-			
-			winkelGesamt = 90f;
-		}
-		
-		if ( coll.gameObject.tag == "PlaneUntenRechts")
-		{
-			drehX = true;
-			
-			bewegungZeitStart = Time.time;
-			
-			winkelGesamt = 90f;
-		}
-		
-		if ( coll.gameObject.tag == "PlaneVorneLinks")
-		{
-			drehX = true;
-			
-			bewegungZeitStart = Time.time;
-			
-			winkelGesamt = 90f;
-		}
-		
-		if ( coll.gameObject.tag == "PlaneVorneRechts")
-		{
-			drehX = true;
-			
-			bewegungZeitStart = Time.time;
-			
-			winkelGesamt = 90f;
-		}
-		
-		if ( coll.gameObject.tag == "PlaneHintenLinks")
-		{
-			drehX = true;
-			
-			bewegungZeitStart = Time.time;
-			
-			winkelGesamt = 90f;
-		}
-		
-		if ( coll.gameObject.tag == "PlaneHintenRechts")
-		{
-			drehX = true;
-			
-			bewegungZeitStart = Time.time;
-			
-			winkelGesamt = 90f;
-		}
+//		if ( coll.gameObject.tag == "PlaneObenHinten")
+//		{
+//			drehOH = true;
+//			
+//			bewegungZeitStart = Time.time;
+//			
+//			winkelGesamt = -90;
+//		}
+//		
+//		if ( coll.gameObject.tag == "PlaneObenRechts")
+//		{
+//			drehOR = true;
+//			
+//			bewegungZeitStart = Time.time;
+//		}
+//		
+//		if ( coll.gameObject.tag == "PlaneObenLinks")
+//		{
+//			drehOL = true;
+//			
+//			bewegungZeitStart = Time.time;
+//		}
+//		
+//		if ( coll.gameObject.tag == "PlaneVorneLinks")
+//		{
+//			drehVL = true;
+//			
+//			bewegungZeitStart = Time.time;
+//		}
+//		
+//		if ( coll.gameObject.tag == "PlaneVorneRechts")
+//		{
+//			drehVR = true;
+//			
+//			bewegungZeitStart = Time.time;
+//		}
+//		
+//		if ( coll.gameObject.tag == "PlaneHintenLinks")
+//		{
+//			drehHL = true;
+//			
+//			bewegungZeitStart = Time.time;
+//		}
+//		
+//		if ( coll.gameObject.tag == "PlaneHintenRechts")
+//		{
+//			drehHR = true;
+//			
+//			bewegungZeitStart = Time.time;
+//		}
+//		
+//		if ( coll.gameObject.tag == "PlaneUntenVorne")
+//		{
+//			drehUV = true;
+//			
+//			bewegungZeitStart = Time.time;
+//			
+//			winkelGesamt = 90;
+//		}
+//		
+//		if ( coll.gameObject.tag == "PlaneUntenHinten")
+//		{
+//			drehUH = true;
+//			
+//			bewegungZeitStart = Time.time;
+//		}
+//		
+//		if ( coll.gameObject.tag == "PlaneUntenRechts")
+//		{
+//			drehUR = true;
+//			
+//			bewegungZeitStart = Time.time;
+//		}
+//		
+//		if ( coll.gameObject.tag == "PlaneUntenLinks")
+//		{
+//			drehUL = true;
+//			
+//			bewegungZeitStart = Time.time;
+//		}
 	}
 	
 	void Springen(){
@@ -294,13 +274,13 @@ public class SpielerManager : MonoBehaviour {
 	
 	if (Input.GetMouseButtonDown(0)){
 		
-		GetComponent<Rigidbody>().AddTorque(0,5f,0);
+		GetComponent<Rigidbody>().AddTorque(0,95f,0);
 		
 	}
 	
 	if (Input.GetMouseButtonDown(1)){
 		
-		GetComponent<Rigidbody>().AddTorque(0,-5f,0);
+		GetComponent<Rigidbody>().AddTorque(0,-95f,0);
 		
 	}
 	
