@@ -175,6 +175,8 @@ public class SpielerInput	: MonoBehaviour {
 			drehOR = true;
 			
 			bewegungZeitStart = Time.time;
+			
+			CameraRechtsSteuerung.drehRechts = true;	
 		}
 		
 		if ( coll.gameObject.tag == "PlaneObenLinks")
@@ -259,6 +261,11 @@ public class SpielerInput	: MonoBehaviour {
 	// Update is called once per frame
 	void Update () { 
 
+		if (CameraRechtsSteuerung.drehRechts){
+			
+			targetPos = -(transform.right * (5f*step));
+			
+		}
 		
 	// Spieler bei Tastenbedienung A Bewegung nach links
 	if( Input.GetKeyDown( KeyCode.A )){
@@ -266,6 +273,7 @@ public class SpielerInput	: MonoBehaviour {
 		targetPos = -(transform.right * step);
 		
 	}
+	
 	
 	if (Input.GetKeyDown( KeyCode.T )){
 		
