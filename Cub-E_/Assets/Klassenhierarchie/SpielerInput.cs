@@ -434,7 +434,7 @@ public class SpielerInput	: MonoBehaviour {
 		
 		float zeitAnteil = (Time.time - zeitSchaltuhrStart)/sprungSperre;
 				
-		jump = (zeitAnteil - sprungZeitAlt) * 5f;
+		jump = (zeitAnteil - sprungZeitAlt) * 1.5f;
 		
 		//zeitAnteil = zeitAnteil - sprungZeitAlt;
 		
