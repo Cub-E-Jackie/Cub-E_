@@ -13,6 +13,10 @@ public class SpielerLeben : MonoBehaviour
     public TextMeshProUGUI HighScore;
     DuckMovement zeit;
 
+    private bool collidingWithFeind;
+    private bool collidingWithPlayer;
+    public Animator anim;
+
 
     void Start()
     {
@@ -22,20 +26,37 @@ public class SpielerLeben : MonoBehaviour
 
     }
 
-    void OnTriggerEnter(Collider other)
+    // doppelter Trigger für Animation und Leben
+    // Collider muss wieder auf false gestellt werden
+    void OnTriggerEnter(Collider col)
     {
-
-        if (other.gameObject.tag == ("Feind"))
+        if (col.CompareTag("Feind"))
         {
+            FindObjectOfType<AudioManager>().Play("Collision");
 
-
-            other.gameObject.SetActive(false);
+            collidingWithFeind = true;
             lives -= 1;
             SubLives();
-
         }
-        // FindObjectOfType<AudioManager>().Play("Collision");
+        else if (col.CompareTag("Player"))
+        {
+            collidingWithPlayer = true;
+            anim.enabled = true;
+        }
     }
+
+    void OnTriggerExit(Collider col)
+    {
+        if (col.CompareTag("Feind"))
+        {
+            collidingWithFeind = false;
+        }
+        else if (col.CompareTag("Player"))
+        {
+            collidingWithPlayer = false;
+        }
+    }
+
 
     public void SubLives()
     {
