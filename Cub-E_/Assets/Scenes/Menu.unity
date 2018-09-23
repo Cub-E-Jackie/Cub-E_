@@ -4128,7 +4128,7 @@ MonoBehaviour:
     will unlock a new world where poor Berta has lost her children again... What a
     pity!
   - Have fun and good luck!
-  speed: 0.02
+  speed: 0.04
   button: {fileID: 1434297676}
 --- !u!1 &1037139612
 GameObject:
