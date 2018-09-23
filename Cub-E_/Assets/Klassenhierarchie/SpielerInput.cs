@@ -18,7 +18,7 @@ public class SpielerInput	: MonoBehaviour {
 
 
   
-    float jump = 0;
+    
 
     //Vektor zur Speicherung des Nullvektors
     private Vector3 targetPos = Vector3.zero;
@@ -68,9 +68,17 @@ public class SpielerInput	: MonoBehaviour {
     public GameObject duck;
     
     
-    
+    public bool sprungSchalter;
  
     public bool jumping = false;
+    
+    public float jump = 0;
+    
+    public float zeitSchaltuhrStart;
+    
+    public float sprungSperre;
+    
+    public float sprungZeitAlt;
     
    
     
@@ -86,6 +94,10 @@ public class SpielerInput	: MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		
+		sprungSperre = 0.3f;
+		sprungZeitAlt = 0;
+		sprungSchalter = true;
 
         duck = Instantiate(duckPref);
 
@@ -125,20 +137,20 @@ public class SpielerInput	: MonoBehaviour {
 //        zeitAnteilAlt = 0;
 	}
 	
-	void Springen(){
-		
-			
-		jump += 1.5f;
-		
-		transform.position += transform.up * Mathf.Sin(jump);
-		
-		if( jump <= Mathf.PI){
-				
-			jumping = false;
-			jump = 0;
-			
-		}
-	}
+//	void Springen(){
+//		
+//			
+//		jump += 1.5f;
+//		
+//		transform.position += transform.up * Mathf.Sin(jump);
+//		
+//		if( jump <= Mathf.PI){
+//				
+//			jumping = false;
+//			jump = 0;
+//			
+//		}
+//	}
 	
 	void OnTriggerExit(Collider coll){
 		
@@ -276,17 +288,55 @@ public class SpielerInput	: MonoBehaviour {
 		
 	}	
 	
+	if (sprungSchalter){
+	
 	//Spieler bei Tastenbedienung Leertaste Bewegung in einer Parabel über das Hindernis
 	if  (Input.GetKeyDown( KeyCode.Space ) && !jumping){
 				
 		jumping = true;
 		
+		zeitSchaltuhrStart = Time.time;
+		
+	}
+	
+	}
+	
+	else {
+		
+		float zeitSperre = 1.5f;
+		float vergangen = Time.time - zeitSchaltuhrStart;
+			
+			if(vergangen > zeitSperre){
+			
+			sprungSchalter = true;
+		}
 	}
 
 	
 	if (jumping){
 		
-		Springen();
+		sprungSchalter = false;
+		
+		float zeitAnteil = (Time.time - zeitSchaltuhrStart)/sprungSperre;
+				
+		jump = (zeitAnteil - sprungZeitAlt) * 2.5f;
+		
+		//zeitAnteil = zeitAnteil - sprungZeitAlt;
+		
+		transform.position += transform.up * Mathf.Sin(jump);
+		
+		sprungZeitAlt = zeitAnteil;
+		
+		if( zeitAnteil >= 1f){
+				
+			jumping = false;
+			jump = 0;
+			
+			sprungSperre = 0.3f;
+			sprungZeitAlt = 0;
+			sprungSchalter = false;
+			
+		}
 		
 	}
 		
