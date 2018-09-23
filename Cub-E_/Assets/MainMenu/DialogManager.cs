@@ -24,7 +24,8 @@ public class DialogManager : MonoBehaviour {
 	}
 	
 	void Update () {
-		if(textShow.text == sentences[i]) { //damit die Sätze nacheinander abgebildet und nicht gleichzeitig	
+		//damit die Sätze nacheinander abgebildet und nicht gleichzeitig	
+		if(textShow.text == sentences[i]) { 
 		button.SetActive(true); // Button angezeigt nachdem Satz fertig
 		}
 	}
