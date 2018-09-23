@@ -79,6 +79,9 @@ public class SpielerInput	: MonoBehaviour {
     
     public float sprungZeitAlt;
     
+    public bool sperreLinks;
+    public bool sperreRechts;
+    
    
     
 //    float zeitGesamt;
@@ -93,6 +96,9 @@ public class SpielerInput	: MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		
+		sperreLinks = true;
+		sperreRechts = true;
 		
 		sprungSperre = 0.3f;
 		sprungZeitAlt = 0;
@@ -175,7 +181,7 @@ public class SpielerInput	: MonoBehaviour {
 		{
 			drehOR = true;
 			
-			bewegungZeitStart = Time.time;
+			sperreRechts = true;
 			
 			//CameraRechtsSteuerung.drehRechts = true;	
 		}
@@ -184,21 +190,21 @@ public class SpielerInput	: MonoBehaviour {
 		{
 			drehOL = true;
 			
-			bewegungZeitStart = Time.time;
+			sperreLinks = true;
 		}
 		
 		if ( coll.gameObject.tag == "PlaneVorneLinks")
 		{
 			drehVL = true;
 			
-			bewegungZeitStart = Time.time;
+			sperreLinks = true;
 		}
 		
 		if ( coll.gameObject.tag == "PlaneVorneRechts")
 		{
 			drehVR = true;
 			
-			bewegungZeitStart = Time.time;
+			sperreRechts = true;
 			
 			//CameraRechtsSteuerung.drehVR = true;
 		}
@@ -207,14 +213,14 @@ public class SpielerInput	: MonoBehaviour {
 		{
 			drehHL = true;
 			
-			bewegungZeitStart = Time.time;
+			sperreLinks = true;
 		}
 		
 		if ( coll.gameObject.tag == "PlaneHintenRechts")
 		{
 			drehHR = true;
 			
-			bewegungZeitStart = Time.time;
+			sperreRechts = true;
 		}
 		
 		if ( coll.gameObject.tag == "PlaneUntenVorne")
@@ -236,14 +242,109 @@ public class SpielerInput	: MonoBehaviour {
 		{
 			drehUR = true;
 			
-			bewegungZeitStart = Time.time;
+			sperreRechts = true;
 		}
 		
 		if ( coll.gameObject.tag == "PlaneUntenLinks")
 		{
 			drehUL = true;
 			
+			sperreLinks = true;
+		}
+		
+	}
+	
+	void OnTriggerStay(Collider coll){
+		
+		if ( coll.gameObject.tag == "PlaneObenVorne")
+		{
+			drehOV = true;
+			
 			bewegungZeitStart = Time.time;
+			
+		}
+		
+		if ( coll.gameObject.tag == "PlaneObenHinten")
+		{
+			drehOH = true;
+			
+			bewegungZeitStart = Time.time;
+			
+		}
+		
+		if ( coll.gameObject.tag == "PlaneObenRechts")
+		{
+			drehOR = true;
+			
+			sperreRechts = false;
+			
+			//CameraRechtsSteuerung.drehRechts = true;	
+		}
+		
+		if ( coll.gameObject.tag == "PlaneObenLinks")
+		{
+			drehOL = true;
+			
+			sperreLinks = false;
+		}
+		
+		if ( coll.gameObject.tag == "PlaneVorneLinks")
+		{
+			drehVL = true;
+			
+			sperreLinks = false;
+		}
+		
+		if ( coll.gameObject.tag == "PlaneVorneRechts")
+		{
+			drehVR = true;
+			
+			sperreRechts = false;
+			
+			//CameraRechtsSteuerung.drehVR = true;
+		}
+		
+		if ( coll.gameObject.tag == "PlaneHintenLinks")
+		{
+			drehHL = true;
+			
+			sperreLinks = false;
+		}
+		
+		if ( coll.gameObject.tag == "PlaneHintenRechts")
+		{
+			drehHR = true;
+			
+			sperreRechts = false;
+		}
+		
+		if ( coll.gameObject.tag == "PlaneUntenVorne")
+		{
+			drehUV = true;
+			
+			bewegungZeitStart = Time.time;
+			
+		}
+		
+		if ( coll.gameObject.tag == "PlaneUntenHinten")
+		{
+			drehUH = true;
+			
+			bewegungZeitStart = Time.time;
+		}
+		
+		if ( coll.gameObject.tag == "PlaneUntenRechts")
+		{
+			drehUR = true;
+			
+			sperreRechts = false;
+		}
+		
+		if ( coll.gameObject.tag == "PlaneUntenLinks")
+		{
+			drehUL = true;
+			
+			sperreLinks = false;
 		}
 		
 	}
@@ -271,7 +372,7 @@ public class SpielerInput	: MonoBehaviour {
 //		}
 //		
 	// Spieler bei Tastenbedienung A Bewegung nach links
-	if( Input.GetKeyDown( KeyCode.A )){
+	if( Input.GetKeyDown( KeyCode.A ) && sperreLinks){
 		
 		targetPos = -(transform.right * step);
 		
@@ -296,7 +397,7 @@ public class SpielerInput	: MonoBehaviour {
 	
 	
 	//Spieler bei Tastenbedienung D Bewegung nach rechts
-	if( Input.GetKeyDown( KeyCode.D )){
+	if( Input.GetKeyDown( KeyCode.D ) && sperreRechts ){
 		
 		targetPos = transform.right * step;
 		
