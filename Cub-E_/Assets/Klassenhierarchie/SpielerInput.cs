@@ -267,17 +267,17 @@ public class SpielerInput	: MonoBehaviour {
 		
 	}
 	
-//	if (CameraLinksSteuerung.drehungLinks){
-//		
-//		GetComponent<Rigidbody>().AddTorque(0, 95f,0);
-//		
-//	}
-//	
-//	if (CameraObenRechtsSteuerung.drehungRechts){
-//		
-//		GetComponent<Rigidbody>().AddTorque(0, -95f,0);
-//		
-//	}
+	if (Input.GetKeyDown( KeyCode.T )){
+		
+		GetComponent<Rigidbody>().AddTorque(0, 95f,95f);
+		
+	}
+	
+	if (Input.GetKeyDown( KeyCode.Z )){
+		
+		GetComponent<Rigidbody>().AddTorque(0, -95f,95f);
+		
+	}
 	
 	
 	
