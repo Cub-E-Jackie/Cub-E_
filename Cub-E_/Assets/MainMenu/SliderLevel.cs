@@ -7,6 +7,7 @@ public class SliderLevel : MonoBehaviour {
 	int count=0;
 	bool check=false;
 	bool check1=false;
+	//bool check2=false;
 	public GameObject Right; //rechts kennzeichnen
 	public GameObject Left; //links kennzeichnen
 	public GameObject obj1; //Hauptobjekt1
@@ -19,13 +20,13 @@ public class SliderLevel : MonoBehaviour {
 		if(check == true) {
 			obj1.transform.position=Vector3.Lerp (obj1.transform.position, Right.transform.position, 2f*Time.deltaTime);
 			obj2.transform.position=Vector3.Lerp (obj2.transform.position, center.transform.position, 2f*Time.deltaTime);
-			
 		} else if (check1 == true) {
 			obj1.transform.position=Vector3.Lerp (obj1.transform.position, center.transform.position, 2f*Time.deltaTime);
 			obj2.transform.position=Vector3.Lerp (obj2.transform.position, Left.transform.position, 2f*Time.deltaTime);
-		} 
-		
-
+		} /*else if (check2 == true) {
+			obj1.transform.position=Vector3.Lerp (obj1.transform.position, Left.transform.position, 2f*Time.deltaTime);
+			obj2.transform.position=Vector3.Lerp (obj2.transform.position, Left.transform.position, 2f*Time.deltaTime);
+		}*/
 	}
 	
 	//drückt man auf rechten Button
@@ -34,9 +35,11 @@ public class SliderLevel : MonoBehaviour {
 		if(count == 1) { //wenn einmal, dann alles true gestellt und durch Update Bewegung
 			check = true;
 			check1 = true;
+			//check2 = true;
 		} else if (count == 0){ //wenn null mal, dann zurück auf center
 			check=false;
 			check1=true;
+			//check2=false;
 		} else {
 			count=1;
 		}
@@ -48,9 +51,11 @@ public class SliderLevel : MonoBehaviour {
 		if(count == 0) { //wenn null zurück auf center
 			check = false;
 			check1= true;
+			//check2 = false;
 		} else if (count == -1){ //wenn minus eins, dann nach links
 			check = false;
 			check1 = false;
+			//check2 = true;
 		} else {
 			count=-1;
 		}
