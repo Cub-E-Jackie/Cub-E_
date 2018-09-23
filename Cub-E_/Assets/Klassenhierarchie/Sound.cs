@@ -9,7 +9,6 @@ public class Sound  {
 
     public AudioClip clip;
 
-
     // Slider zum einstellen
     [Range(0f, 1f)]
     public float volume; // Volume
@@ -18,8 +17,6 @@ public class Sound  {
 
     public bool loop;
 
-	
-	
     // AudioSource gespeichert
     [HideInInspector] // wird nicht angezeigt
     public AudioSource source;
