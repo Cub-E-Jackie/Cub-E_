@@ -50,6 +50,9 @@ public class Spawner : MonoBehaviour
 
     void Start()
     {
+
+        
+
         //StartCoroutine(WaitSpawner());  // Coroutine fuer WaitForSeconds	
         StartCoroutine(WaitSpawnerDuck()); // Coroutine fuer WaitForSeconds	
                                            //Update();
@@ -91,6 +94,7 @@ public class Spawner : MonoBehaviour
 
     IEnumerator WaitSpawnerDuck()
     {
+        //FindObjectOfType<AudioManager>().Play("Splash");
         yield return new WaitForSeconds(startWait); //ab wann es spawnt
 
         while (!stop)

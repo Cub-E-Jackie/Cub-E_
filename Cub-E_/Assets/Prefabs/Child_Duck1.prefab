@@ -37,7 +37,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4991265505462200}
   - component: {fileID: 136588699108841528}
-  - component: {fileID: 82023942257941670}
+  - component: {fileID: 82770423405718854}
   m_Layer: 0
   m_Name: Child_Duck1
   m_TagString: Child
@@ -117,7 +117,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1252477398120846}
   m_Mesh: {fileID: 4300000, guid: 9df9f215a62525244bba3fe1c75a9518, type: 3}
---- !u!82 &82023942257941670
+--- !u!82 &82770423405718854
 AudioSource:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -126,7 +126,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 1bf378a91b5956242b8a07a55aad558b, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 02922c81887565341995b281db9cac5f, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

@@ -20,12 +20,12 @@ public class DestroyByContact : MonoBehaviour
         //AddScore();
     }
 
-
     void OnTriggerEnter(Collider other)
     {
 
         if (other.gameObject.CompareTag("Child"))
         {
+            FindObjectOfType<AudioManager>().Play("Duck");
 
             other.gameObject.SetActive(false);
             eScore += 5;
@@ -34,7 +34,7 @@ public class DestroyByContact : MonoBehaviour
 
         }
 
-        //FindObjectOfType<AudioManager>().Play("Collision");
+        
 
 
     }

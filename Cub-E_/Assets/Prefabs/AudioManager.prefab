@@ -65,20 +65,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - name: Theme
-    clip: {fileID: 8300000, guid: 971b2579091578547a4d4578e6fd86e0, type: 3}
-    volume: 0.292
+    clip: {fileID: 8300000, guid: 6ddd2dc07a502a945802e910f6ebc5ac, type: 3}
+    volume: 0.106
     pitch: 0.55
     loop: 1
     source: {fileID: 0}
   - name: PlayerDuck
-    clip: {fileID: 8300000, guid: 686f28f10beea974aa4f1a1afa6c2f2a, type: 3}
+    clip: {fileID: 8300000, guid: 7654b6b811da3d64c98d9a8b06fd5122, type: 3}
     volume: 0.292
     pitch: 0.55
     loop: 1
     source: {fileID: 0}
   - name: Collision
-    clip: {fileID: 8300000, guid: d66d4082e205aa4459aa8e717ef2c12e, type: 3}
+    clip: {fileID: 8300000, guid: dd164c909d2c22b40a0b5f929f6b2e18, type: 3}
     volume: 0.292
+    pitch: 0.55
+    loop: 0
+    source: {fileID: 0}
+  - name: Duck
+    clip: {fileID: 8300000, guid: 5ab28cc12fb7b2a4490aebc32e03d2b6, type: 3}
+    volume: 0.88
+    pitch: 0.55
+    loop: 0
+    source: {fileID: 0}
+  - name: Splash
+    clip: {fileID: 8300000, guid: 02922c81887565341995b281db9cac5f, type: 3}
+    volume: 1
     pitch: 0.55
     loop: 0
     source: {fileID: 0}

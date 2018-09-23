@@ -18,7 +18,10 @@ public class DuckMovement : MonoBehaviour {
 	void Update () {	
     	
 		if(activModus){ //damit im PauseMenu Bewegung eingefroren ist
-			RaycastHit hit;
+
+            FindObjectOfType<AudioManager>().Play("PlayerDuck");
+
+            RaycastHit hit;
 			if (Physics.Raycast(transform.position, -transform.up, out hit)) // in hit wird Treffer gespeichert
 			{
 				lastNormal = hit.normal;
