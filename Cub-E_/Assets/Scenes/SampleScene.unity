@@ -3166,8 +3166,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   kameraOben: {fileID: 1124536375}
   kameraUnten: {fileID: 1214525817}
-  kameraLinks: {fileID: 170913298}
-  kameraRechts: {fileID: 1775090974}
   kameraHinten: {fileID: 1820084415}
   kameraVorne: {fileID: 1756812061}
 --- !u!81 &1124536374
@@ -3224,7 +3222,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1124536372}
   m_LocalRotation: {x: 0.44084054, y: -0, z: -0, w: 0.8975855}
-  m_LocalPosition: {x: 0, y: 10.01, z: -6.3}
+  m_LocalPosition: {x: 0, y: 11.48, z: -6.97}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 622574330}
@@ -3369,7 +3367,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1214525815}
   m_LocalRotation: {x: -0.89758563, y: 0, z: 0, w: 0.44084018}
-  m_LocalPosition: {x: 0, y: -10.1, z: 6.3}
+  m_LocalPosition: {x: 0, y: -12.3, z: 6.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1238867850}
@@ -4866,7 +4864,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1756812059}
   m_LocalRotation: {x: 0.94641006, y: 0, z: 0, w: 0.32296774}
-  m_LocalPosition: {x: 0, y: 6.3, z: 10.1}
+  m_LocalPosition: {x: 0, y: 6.63, z: 11.64}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1759325672}
@@ -5345,7 +5343,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1820084413}
   m_LocalRotation: {x: -0.32296774, y: 0, z: 0, w: 0.94641006}
-  m_LocalPosition: {x: 0, y: -6.3, z: -10.1}
+  m_LocalPosition: {x: 0, y: -7.3, z: -12.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 370415270}

@@ -67,8 +67,8 @@ public class CameraHintenSteuerung : MonoBehaviour {
 					kameraVorne.enabled = false;
 				
 					float kameraPositionX = 0;
-					float kameraPositionY = -6.3f;
-					float kameraPositionZ = -10.1f;
+					float kameraPositionY = -7.3f;
+					float kameraPositionZ = -12.4f;
 					
 					kameraHinten.transform.position = new Vector3(kameraPositionX, kameraPositionY, kameraPositionZ);
 					
