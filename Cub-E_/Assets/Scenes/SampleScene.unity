@@ -210,6 +210,9 @@ MonoBehaviour:
   kameraHinten: {fileID: 1820084415}
   kameraVorne: {fileID: 1756812061}
   spieler: {fileID: 1962305118}
+  zeitGesamt: 0
+  zeitAnteilAlt: 0
+  rotationsSpeed: 5
 --- !u!1001 &172242024
 Prefab:
   m_ObjectHideFlags: 0
@@ -945,7 +948,7 @@ Light:
   serializedVersion: 8
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.5
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -2091,7 +2094,7 @@ Light:
   serializedVersion: 8
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 0.7783019, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.5
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -3425,7 +3428,7 @@ Light:
   serializedVersion: 8
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 0.7764706, a: 1}
-  m_Intensity: 1.7
+  m_Intensity: 0.5
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -4908,7 +4911,7 @@ Light:
   serializedVersion: 8
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 0.7764706, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.5
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -5103,6 +5106,9 @@ MonoBehaviour:
   kameraHinten: {fileID: 1820084415}
   kameraVorne: {fileID: 1756812061}
   spieler: {fileID: 1962305118}
+  zeitGesamt: 0
+  zeitAnteilAlt: 0
+  rotationsSpeed: 5
 --- !u!1 &1787493794
 GameObject:
   m_ObjectHideFlags: 0

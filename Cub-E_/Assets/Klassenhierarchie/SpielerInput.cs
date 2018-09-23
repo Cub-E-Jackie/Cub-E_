@@ -388,12 +388,12 @@ public class SpielerInput	: MonoBehaviour {
 //		
 //	}
 	
-	if (CameraRechtsSteuerung.drehVR){
-		
-		//GetComponent<Rigidbody>().AddTorque(0, -90f, 45f);
-		
-	}
-	
+//	if (CameraRechtsSteuerung.drehVR){
+//		
+//		//GetComponent<Rigidbody>().AddTorque(0, -90f, 45f);
+//		
+//	}
+//	
 	
 	
 	//Spieler bei Tastenbedienung D Bewegung nach rechts
