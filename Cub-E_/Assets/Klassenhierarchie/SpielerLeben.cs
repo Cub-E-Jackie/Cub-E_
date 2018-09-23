@@ -71,6 +71,7 @@ public class SpielerLeben : MonoBehaviour
             zeit.activModus = false;
             Time.timeScale = 0f;
         }
+		
     }
 }
 
