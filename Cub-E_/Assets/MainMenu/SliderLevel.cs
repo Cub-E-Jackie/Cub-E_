@@ -7,51 +7,50 @@ public class SliderLevel : MonoBehaviour {
 	int count=0;
 	bool check=false;
 	bool check1=false;
-	bool check2=false;
-	public GameObject Right;
-	public GameObject Left;
-	public GameObject obj1;
-	public  GameObject center;
-	// Use this for initialization
-	void Start () {
-		
-	}
+	public GameObject Right; //rechts kennzeichnen
+	public GameObject Left; //links kennzeichnen
+	public GameObject obj1; //Hauptobjekt1
+	public GameObject obj2; //Hauptobjekt2
+	public  GameObject center; //um mitte zu kennzeichnen
 	
-	// Update is called once per frame
+	
+	// Update: mit true für den Slider,Lerp(position von Hauptobjekt, nach rechts mitte oder links, zeit)
 	public void Update () {
-		if(check = true) {
-			obj1.transform.position=Vector3.Lerp (obj1.transform.position, Right.transform.position, 1f*Time.deltaTime);
+		if(check == true) {
+			obj1.transform.position=Vector3.Lerp (obj1.transform.position, Right.transform.position, 2f*Time.deltaTime);
+			obj2.transform.position=Vector3.Lerp (obj2.transform.position, center.transform.position, 2f*Time.deltaTime);
+			
 		} else if (check1 == true) {
-			obj1.transform.position=Vector3.Lerp (obj1.transform.position, center.transform.position, 1f*Time.deltaTime);
-		} else if (check2 == true) {
-			obj1.transform.position=Vector3.Lerp (obj1.transform.position, Left.transform.position, 1f*Time.deltaTime);
-		}
+			obj1.transform.position=Vector3.Lerp (obj1.transform.position, center.transform.position, 2f*Time.deltaTime);
+			obj2.transform.position=Vector3.Lerp (obj2.transform.position, Left.transform.position, 2f*Time.deltaTime);
+		} 
+		
+
 	}
 	
+	//drückt man auf rechten Button
 	public void RightClick() {
-		count++;
-		if(count == 1) {
+		count++; //zählt
+		if(count == 1) { //wenn einmal, dann alles true gestellt und durch Update Bewegung
 			check = true;
 			check1 = true;
-			check2 = true;
-		} else if (count == 0){
+		} else if (count == 0){ //wenn null mal, dann zurück auf center
 			check=false;
 			check1=true;
-			check2=false;
 		} else {
 			count=1;
 		}
 	}
+	
+	//drückt man auf linken Button
 	public void LeftClick() {
-		count--;
-		if(count == 0) {
+		count--;//minus gezählt
+		if(count == 0) { //wenn null zurück auf center
 			check = false;
 			check1= true;
-			check2 = false;
-		} else if (count == -1){
+		} else if (count == -1){ //wenn minus eins, dann nach links
 			check = false;
 			check1 = false;
-			check2 = true;
 		} else {
 			count=-1;
 		}
