@@ -67,8 +67,8 @@ public class CameraUntenSteuerung : MonoBehaviour {
 					kameraVorne.enabled = false;
 				
 					float kameraPositionX = 0;
-					float kameraPositionY = -12.3f;
-					float kameraPositionZ = 6.9f;
+					float kameraPositionY = -10.1f;
+					float kameraPositionZ = 6.3f;
 					
 					kameraUnten.transform.position = new Vector3(kameraPositionX, kameraPositionY, kameraPositionZ);
 					

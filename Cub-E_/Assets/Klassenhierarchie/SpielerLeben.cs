@@ -7,26 +7,20 @@ using UnityEngine.SceneManagement;
 
 public class SpielerLeben : MonoBehaviour
 {
-    //leben initi
+
     public int lives;
-    //werte an Textfelder abgeben
     public TextMeshProUGUI LiveAnzeige;
     public TextMeshProUGUI HighScore;
-    //zugriff auf aktvitaet der funktion
     DuckMovement zeit;
-    //zum zugreifen der var lives in restart
     public static SpielerLeben Instance;
 
-    //animation steuern
     private bool collidingWithFeind;
     private bool collidingWithPlayer;
-    //aufrufen des animator -> zugriff auf Take
     public Animator anim;
 
 
     void Start()
     {
-        // player hat 3 leben, highscore platzhalter
         Instance = this;
         lives = 3;
         HighScore.text = "";
@@ -38,7 +32,6 @@ public class SpielerLeben : MonoBehaviour
     // Collider muss wieder auf false gestellt werden
     void OnTriggerEnter(Collider col)
     {
-        //wenn Player mit Object, welches mit Feind getaggt ist zusammenstoßt verliert er ein Leben
         if (col.CompareTag("Feind"))
         {
             FindObjectOfType<AudioManager>().Play("Collision");
@@ -47,7 +40,6 @@ public class SpielerLeben : MonoBehaviour
             lives -= 1;
             SubLives();
         }
-        // wenn Player mit einem Object zusammenstößt welches Animator erhält wir Animation abgespielt
         else if (col.CompareTag("Player"))
         {
             collidingWithPlayer = true;
@@ -55,7 +47,6 @@ public class SpielerLeben : MonoBehaviour
         }
     }
 
-    // Trigger zurüchgesetzt
     void OnTriggerExit(Collider col)
     {
         if (col.CompareTag("Feind"))
@@ -68,14 +59,14 @@ public class SpielerLeben : MonoBehaviour
         }
     }
 
-    // gibt leben an textfels aus, highscore erscheint nach ende des Spieles(lives == 0), bewegung der Ente wird gestoppt
+
     public void SubLives()
     {
         LiveAnzeige.text = "Lives:" + lives.ToString();
         if (lives == 0)
         {
             HighScore.text = "Highscore\n" + ScoreTracker.Instance.Score;
-            // zugriif aus script duckmovement um bewegung zu stoppen
+
             zeit = GameObject.Find("Player").GetComponent<DuckMovement>();
             zeit.activModus = false;
             Time.timeScale = 0f;

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-// aufrufen der Scene Menu in SampleScene
 public class Restart : MonoBehaviour {
 
     public GameObject MenuButton;
@@ -11,17 +10,15 @@ public class Restart : MonoBehaviour {
 
     void Update()
     {
-        // MenuButton wird nur angezigt wenn man gestorben ist
         if (SpielerLeben.Instance.lives == 0)
         {
-            //Sichbarkeit aktiviert
             MenuButton.SetActive(true);
         }
     }
 
-    //MenuScene laden
     public void MenuScene()
     {
+        //MenuButton.SetActive(true);
         SceneManager.LoadScene("Menu");
 
     }

@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    // fuer die gespeicherten Sounds
-    public Sound[] sounds; 
+
+    public Sound[] sounds; // fuer die gespeicherten Sounds
 
     // damit keine zwei AudioManager entstehen 
     public static AudioManager instance;
@@ -26,14 +26,12 @@ public class AudioManager : MonoBehaviour
             return; 
         }
 
-        // wird nicht neu geladen, wenn die Szene gewechselt wird
-        DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(gameObject); // wird nicht neu geladen, wenn die Szene gewechselt wird
 
         // loop
-        // Anweisungen für jedes Element in einer Instanz des Typs
         foreach (Sound s in sounds)
         {
-            // nur auf dem derzeitigen Objekt
+            // nur auf dem derzeitigen Objekt, einfacher
             s.source = gameObject.AddComponent<AudioSource>();
             // wird kopiert zum Anfang
             s.source.clip = s.clip;
@@ -41,30 +39,25 @@ public class AudioManager : MonoBehaviour
             s.source.volume = s.volume;
             s.source.pitch = s.pitch;
             s.source.loop = s.loop;
-
+			
 			//s.audioMixer.SetFloat("Volume", s.volume);
         }
     }
 
     private void Start()
     {
-        // Hauptmelodie von Anfang an;
-        Play("Theme"); 
+        Play("Theme"); // Hauptmelodie von Anfang an;
     }
 
 
     public void Play(string name)
     {
-        // gesuchter Sound wird in Sound s gespeichert
-        Sound s = Array.Find(sounds, sound => sound.name == name); 
-
+        Sound s = Array.Find(sounds, sound => sound.name == name); // gesuchter Sound wird in Sound s gespeichert
         // NullReference wird getestet
         if (s == null)
         {
-            // Warnung, dass der geusnchte Sound nicht gefunden wurde
-            Debug.LogWarning("Sound: " + name + " not found");
-            // dann passiert nichts, obwohl kein Sound gefunden wurde
-            return; 
+            Debug.LogWarning("Sound: " + name + " not found"); // Warnung, dass der geusnchte Sound nicht gefunden wurde
+            return; // dann passiert nichts, obwohl kein Sound gefunden wurde
         }
         s.source.Play();
     }

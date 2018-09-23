@@ -3,42 +3,58 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /*
-	In dieser Klasse wird das Verhalten und die Positionen der KameraOben in dem Spiel verwaltet. 
-	- Kamera wird gedreht, wenn Player mit Plane ObenVorne kollidiert
-	- wenn Animation fertig ist, wird auf Kamera vorne gewechselt
-	- Kamera Oben wird wieder an Ausgangsposition gesetzt und Ausgangsrotation eingestellt
-	- Kollision wird wieder auf false gesetzt
+	In dieser Klasse wird das Verhalten und die Positionen der Kamera in dem Spiel verwaltet. 
+	- Am Anfang soll sie weit entfernt auf das ganze Universum von Cube-E zeigen. 
+	- Mit einem Klick auf den Startbutton im Startmenü zoomt die Kamera auf den jeweiligen Cube-E.
+	- Während des Levels bewegt sich die Kamera mit einer Verzögerung mit dem Spieler nach links und rechts. Also eine verzögerte Verfolgung des Spielers.
+	- Bei Kollision mit Hindernis Camera zoomt kurz ein bisschen raus und dann wieder rein zum neuen Spielfeld. 
+	- Am Ende, sowohl bei einem Sieg als auch bei einem GameOver wird wieder heraus gezoomt und das Universum sieht man. 
+	
+	Hinweise aus der Übung von Herrn Pattmann:
+	Camera nicht parenten -> langweilig, smooth follow ist das Stichwort Google nicht die Standart Assets (Betrug!!!), 
+	Hereinzoomen bei Start auf den Klick auf den Button dann mit Kamrea reinzoomen mithilfe von Vector 3. SmoothDamp, Angabe von Zeit, Beschleunigung, Vectorziel und so weiter
 */
 
 public class CameraObenSteuerung : MonoBehaviour {
 
-	// alle Kameras
 	public Camera kameraOben;
 	public Camera kameraUnten;
+	public Camera kameraLinks;
+	public Camera kameraRechts;
 	public Camera kameraHinten;
 	public Camera kameraVorne;
 	
-	// für die Animation RotateAround()
-	float zeitGesamt;   
+	
+	float zeitGesamt;
+    
+    //float SpielerInput.winkelGesamt;
+    
     float zeitAnteilAlt;
+    
     float rotationsSpeed = 5f;
 
 	
-    // Aufruf der Funktion Startbewegung
 	void Start () {
 	
+	// Aufruf der Funktion Startbewegung
+	
 	    zeitGesamt = 1.5f;
+        //SpielerInput.winkelGesamt = 90f;
         zeitAnteilAlt = 0;
 		
 	}
 	
+
 	
+	// Update is called once per frame
 	void Update () {
 		
 		if(SpielerInput.drehOV){
 			
 			kameraOben.enabled = true;
 			kameraUnten.enabled = false;
+	 		kameraLinks.enabled = false;
+			kameraRechts.enabled = false;
 			kameraHinten.enabled = false;
 			kameraVorne.enabled = false;
 		
@@ -49,29 +65,45 @@ public class CameraObenSteuerung : MonoBehaviour {
 			kameraOben.transform.RotateAround ( new Vector3(1f, 0, 0), new Vector3(5f, 0, 0), winkelAenderung );
 			
 			zeitAnteilAlt = zeitAnteil;
-						
+			
+			Debug.Log(transform.eulerAngles.x);
+			
 			if(zeitAnteil >= 1f)
-			{
-			
-				kameraOben.enabled = false;
-				kameraUnten.enabled = false;
-				kameraHinten.enabled = false;
-				kameraVorne.enabled = true;
-			
-				float kameraPositionX = 0;
-				float kameraPositionY = 11.48f;
-				float kameraPositionZ = -6.97f;
+				{
 				
-				kameraOben.transform.position = new Vector3(kameraPositionX, kameraPositionY, kameraPositionZ);
+					kameraOben.enabled = false;
+					kameraUnten.enabled = false;
+			 		kameraLinks.enabled = false;
+					kameraRechts.enabled = false;
+					kameraHinten.enabled = false;
+					kameraVorne.enabled = true;
 				
-				kameraOben.transform.rotation = Quaternion.Slerp(transform.rotation, SpielerInput.originalDrehOben, Time.time * rotationsSpeed);
-									
-				//Variablen zurücksetzen
-				zeitGesamt = 1.5f;
-    			zeitAnteilAlt = 0;
-				SpielerInput.drehOV = false;
-			
-			}
+					float kameraPositionX = 0;
+					float kameraPositionY = 10.1f;
+					float kameraPositionZ = -6.3f;
+					
+					kameraOben.transform.position = new Vector3(kameraPositionX, kameraPositionY, kameraPositionZ);
+					
+					kameraOben.transform.rotation = Quaternion.Slerp(transform.rotation, SpielerInput.originalDrehOben, Time.time * rotationsSpeed);
+					
+//					float kameraPositionX = 0;
+//					float kameraPositionY = 0;
+//					float kameraPositionZ = -15;
+//					
+//					kameraHinten.transform.position = new Vector3(kameraPositionX, kameraPositionY, kameraPositionZ);
+//					
+					SpielerInput.drehOV = false;
+					
+					zeitGesamt = 1.5f;
+        			//SpielerInput.winkelGesamt = 90f;
+        			zeitAnteilAlt = 0;
+		
+					
+					
+				}
+		
 		}
+		
+		
 	}
 }

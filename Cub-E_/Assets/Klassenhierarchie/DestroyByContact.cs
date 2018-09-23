@@ -9,7 +9,7 @@ using TMPro;
 
 public class DestroyByContact : MonoBehaviour
 {
-    //
+
     private int eScore;
     public TextMeshProUGUI scoreAnzeige;
 
@@ -17,10 +17,9 @@ public class DestroyByContact : MonoBehaviour
     void Start()
     {
         eScore = 0;
-
+        //AddScore();
     }
 
-    // wenn TriggerObject(Player) mit Object welches mir "Child" getaggt ist, wird eScore 5 Punkte zuaddiert
     void OnTriggerEnter(Collider other)
     {
 
@@ -30,11 +29,19 @@ public class DestroyByContact : MonoBehaviour
 
             other.gameObject.SetActive(false);
             eScore += 5;
-            //Score aus ScoreTracker den jetzigen Wert wiedergeben 
             ScoreTracker.Instance.Score = eScore;
+            //AddScore();
 
         }
 
+        
+
+
+    }
+
+    public void AddScore()
+    {
+        //scoreAnzeige.text = "Score:" + eScore.ToString();
     }
 
 }

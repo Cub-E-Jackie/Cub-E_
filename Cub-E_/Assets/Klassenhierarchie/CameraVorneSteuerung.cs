@@ -2,17 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-/*
-	In dieser Klasse wird das Verhalten und die Positionen der KameraOben in dem Spiel verwaltet. 
-	- Kamera wird gedreht, wenn Player mit Plane ObenVorne kollidiert
-	- wenn Animation fertig ist, wird auf Kamera vorne gewechselt
-	- Kamera Oben wird wieder an Ausgangsposition gesetzt und Ausgangsrotation eingestellt
-	- Kollision wird wieder auf false gesetzt
-*/
-
 public class CameraVorneSteuerung : MonoBehaviour {
 
-	// alle Kameras
 	public Camera kameraOben;
 	public Camera kameraUnten;
 	public Camera kameraLinks;
@@ -21,17 +12,26 @@ public class CameraVorneSteuerung : MonoBehaviour {
 	public Camera kameraVorne;
 	
 	
-	// für die Animation RotateAround()
+	
+	float rotationsSpeed = 5f;
+	
+	
 	float zeitGesamt;
-  	float rotationsSpeed = 5f;
+    
+    //float SpielerInput.winkelGesamt;
+    
     float zeitAnteilAlt;
 
-	// Aufruf der Funktion Startbewegung
+	
 	void Start () {
 	
+	// Aufruf der Funktion Startbewegung
+	
 	    zeitGesamt = 1.5f;
+        //SpielerInput.winkelGesamt = 90f;
         zeitAnteilAlt = 0;
        
+		
 	}
 	
 
@@ -70,8 +70,8 @@ public class CameraVorneSteuerung : MonoBehaviour {
 					
 				
 					float kameraPositionX = 0;
-					float kameraPositionY = 6.63f;
-					float kameraPositionZ = 11.64f;
+					float kameraPositionY = 6.3f;
+					float kameraPositionZ = 10.1f;
 					
 					kameraVorne.transform.position = new Vector3(kameraPositionX, kameraPositionY, kameraPositionZ);
 					
@@ -79,7 +79,8 @@ public class CameraVorneSteuerung : MonoBehaviour {
 					
 					SpielerInput.drehUV = false;
 					zeitGesamt = 1.5f;
-        			zeitAnteilAlt = 0;
+        //SpielerInput.winkelGesamt = 90f;
+        zeitAnteilAlt = 0;
 		
 					
 				}
