@@ -17,6 +17,8 @@ TagManager:
   - PlaneUntenHinten
   - PlaneUntenLinks
   - PlaneUntenRechts
+  - Feind
+  - Child
   layers:
   - Default
   - TransparentFX

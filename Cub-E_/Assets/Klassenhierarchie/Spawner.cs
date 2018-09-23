@@ -158,50 +158,50 @@ public class Spawner : MonoBehaviour
 
         while (!stop)
         {
-            Vector3 rndPos = new Vector3(Random.Range(-4.5f, 4.5f), 5, Random.Range(-4.5f, 4.5f)); // duckObj
-            Vector3 rndPos1 = new Vector3(Random.Range(-4.5f, 4.5f), -5, Random.Range(-4.5f, 4.5f)); // duckObj1
-            Vector3 rndPos2 = new Vector3(5, Random.Range(-4.5f, 4.5f), Random.Range(-4.5f, 4.5f)); // duckObj2
-            Vector3 rndPos3 = new Vector3(-5, Random.Range(-4.5f, 4.5f), Random.Range(-4.5f, 4.5f)); // duckObj3
-            Vector3 rndPos4 = new Vector3(Random.Range(-4.5f, 4.5f), Random.Range(-4.5f, 4.5f), 5); // duckObj4
-            Vector3 rndPos5 = new Vector3(Random.Range(-4.5f, 4.5f), Random.Range(-4.5f, 4.5f), -5); // duckObj5
+            Vector3 rndPosw = new Vector3(Random.Range(-4f, 4f), 4.8f, Random.Range(-4f, 4f)); // duckObj
+            Vector3 rndPosw1 = new Vector3(Random.Range(-4f, 4f), -5.3f, Random.Range(-4f, 4f)); // duckObj1
+            Vector3 rndPosw2 = new Vector3(5f, Random.Range(-4f, 4f), Random.Range(-4f, 4f)); // duckObj2
+            Vector3 rndPosw3 = new Vector3(-5, Random.Range(-4f, 4f), Random.Range(-4f, 4f)); // duckObj3
+            Vector3 rndPosw4 = new Vector3(Random.Range(-4f, 4f), Random.Range(-4f, 4f), 5); // duckObj4
+            Vector3 rndPosw5 = new Vector3(Random.Range(-4f, 4f), Random.Range(-4f, 4f), -5); // duckObj5
 
             #region Wood
-            woodObj = Instantiate(woodPrefab, rndPos, Quaternion.identity);
+            woodObj = Instantiate(woodPrefab, rndPosw, Quaternion.identity);
             woodObj.name = "Wood";
             woodObj.transform.parent = root.transform;
             //duckObj.transform.position = transform.position;
             //woodObj.transform.eulerAngles = new Vector3(0, Random.Range(0f, 360f), 0);
             Destroy(woodObj, 4f);
 
-            woodObj1 = Instantiate(woodPrefab1, rndPos1, Quaternion.identity);
+            woodObj1 = Instantiate(woodPrefab1, rndPosw1, Quaternion.identity);
             woodObj1.name = "Wood1";
             woodObj1.transform.parent = root.transform;
             //duckObj.transform.position = transform.position;
             //woodObj.transform.eulerAngles = new Vector3(0, Random.Range(0f, 360f), 0);
             Destroy(woodObj1, 4f);
 
-            woodObj2 = Instantiate(woodPrefab2, rndPos2, Quaternion.identity);
+            woodObj2 = Instantiate(woodPrefab2, rndPosw2, Quaternion.identity);
             woodObj2.name = "Wood2";
             woodObj2.transform.parent = root.transform;
             //duckObj.transform.position = transform.position;
             //woodObj.transform.eulerAngles = new Vector3(0, Random.Range(0f, 360f), 0);
             Destroy(woodObj2, 4f);
 
-            woodObj3 = Instantiate(woodPrefab3, rndPos3, Quaternion.identity);
+            woodObj3 = Instantiate(woodPrefab3, rndPosw3, Quaternion.identity);
             woodObj3.name = "Wood3";
             woodObj3.transform.parent = root.transform;
             //duckObj.transform.position = transform.position;
             //woodObj.transform.eulerAngles = new Vector3(0, Random.Range(0f, 360f), 0);
             Destroy(woodObj3, 4f);
 
-            woodObj4 = Instantiate(woodPrefab4, rndPos4, Quaternion.identity);
+            woodObj4 = Instantiate(woodPrefab4, rndPosw4, Quaternion.identity);
             woodObj4.name = "Wood4";
             woodObj4.transform.parent = root.transform;
             //duckObj.transform.position = transform.position;
             //woodObj.transform.eulerAngles = new Vector3(0, Random.Range(0f, 360f), 0);
             Destroy(woodObj4, 4f);
 
-            woodObj5 = Instantiate(woodPrefab5, rndPos5, Quaternion.identity);
+            woodObj5 = Instantiate(woodPrefab5, rndPosw5, Quaternion.identity);
             woodObj5.name = "Wood5";
             woodObj5.transform.parent = root.transform;
             //duckObj.transform.position = transform.position;
