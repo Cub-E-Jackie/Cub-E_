@@ -203,16 +203,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9ec91fd40ed02e49a4aebafdc2b487d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kameraOben: {fileID: 1124536375}
-  kameraUnten: {fileID: 1214525817}
-  kameraLinks: {fileID: 170913298}
-  kameraRechts: {fileID: 1775090974}
-  kameraHinten: {fileID: 1820084415}
-  kameraVorne: {fileID: 1756812061}
-  spieler: {fileID: 1962305118}
-  zeitGesamt: 0
-  zeitAnteilAlt: 0
-  rotationsSpeed: 5
 --- !u!1001 &172242024
 Prefab:
   m_ObjectHideFlags: 0
@@ -3797,7 +3787,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1333105727}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 88.79, y: 38.13, z: 42.175606}
+  m_LocalPosition: {x: 87.77, y: 38.13, z: 42.175606}
   m_LocalScale: {x: 1, y: 1, z: 0.05}
   m_Children: []
   m_Father: {fileID: 1255095760}
@@ -5099,16 +5089,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 629ccc8f7a9dee445a9627bd7ffe6461, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kameraOben: {fileID: 1124536375}
-  kameraUnten: {fileID: 1214525817}
-  kameraLinks: {fileID: 170913298}
-  kameraRechts: {fileID: 1775090974}
-  kameraHinten: {fileID: 1820084415}
-  kameraVorne: {fileID: 1756812061}
-  spieler: {fileID: 1962305118}
-  zeitGesamt: 0
-  zeitAnteilAlt: 0
-  rotationsSpeed: 5
 --- !u!1 &1787493794
 GameObject:
   m_ObjectHideFlags: 0
@@ -5662,7 +5642,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1940815612}
   m_LocalRotation: {x: 0.5, y: 0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: 87.77, y: 43.086056, z: 36.98}
+  m_LocalPosition: {x: 87.77, y: 43.086056, z: 37.19}
   m_LocalScale: {x: 1, y: 1, z: 0.05}
   m_Children: []
   m_Father: {fileID: 1255095760}
@@ -5914,11 +5894,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!1 &1962305118 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1842113018389952, guid: 8a1ffa17e5a134a9092fa78d8baa1dec,
-    type: 2}
-  m_PrefabInternal: {fileID: 1621510462}
 --- !u!54 &1962305124 stripped
 Rigidbody:
   m_CorrespondingSourceObject: {fileID: 54126557043324612, guid: 8a1ffa17e5a134a9092fa78d8baa1dec,
