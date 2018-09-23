@@ -25,7 +25,7 @@ public class CameraHintenSteuerung : MonoBehaviour {
 	
 	// Aufruf der Funktion Startbewegung
 	
-	    zeitGesamt = 3f;
+	    zeitGesamt = 1.5f;
         //SpielerInput.winkelGesamt = 90f;
         zeitAnteilAlt = 0;
 		
@@ -67,14 +67,14 @@ public class CameraHintenSteuerung : MonoBehaviour {
 					kameraVorne.enabled = false;
 				
 					float kameraPositionX = 0;
-					float kameraPositionY = 0;
-					float kameraPositionZ = -15f;
+					float kameraPositionY = -6.3f;
+					float kameraPositionZ = -10.1f;
 					
 					kameraHinten.transform.position = new Vector3(kameraPositionX, kameraPositionY, kameraPositionZ);
 					
 					kameraHinten.transform.rotation = Quaternion.Slerp(transform.rotation, SpielerInput.originalDrehHinten, Time.time * rotationsSpeed);
 					
-					zeitGesamt = 3f;
+					zeitGesamt = 1.5f;
         			//SpielerInput.winkelGesamt = 90f;
         			zeitAnteilAlt = 0;
 					

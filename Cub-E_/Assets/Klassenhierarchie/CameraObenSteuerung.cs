@@ -38,7 +38,7 @@ public class CameraObenSteuerung : MonoBehaviour {
 	
 	// Aufruf der Funktion Startbewegung
 	
-	    zeitGesamt = 3f;
+	    zeitGesamt = 1.5f;
         //SpielerInput.winkelGesamt = 90f;
         zeitAnteilAlt = 0;
 		
@@ -79,8 +79,8 @@ public class CameraObenSteuerung : MonoBehaviour {
 					kameraVorne.enabled = true;
 				
 					float kameraPositionX = 0;
-					float kameraPositionY = 15f;
-					float kameraPositionZ = 0;
+					float kameraPositionY = 10.1f;
+					float kameraPositionZ = -6.3f;
 					
 					kameraOben.transform.position = new Vector3(kameraPositionX, kameraPositionY, kameraPositionZ);
 					
@@ -94,7 +94,7 @@ public class CameraObenSteuerung : MonoBehaviour {
 //					
 					SpielerInput.drehOV = false;
 					
-					zeitGesamt = 3f;
+					zeitGesamt = 1.5f;
         			//SpielerInput.winkelGesamt = 90f;
         			zeitAnteilAlt = 0;
 		
