@@ -17,8 +17,7 @@ using UnityEngine;
 public class SpielerInput	: MonoBehaviour {
 
 
-  
-    
+	public Rigidbody drehKin;
 
     //Vektor zur Speicherung des Nullvektors
     private Vector3 targetPos = Vector3.zero;
@@ -125,12 +124,14 @@ public class SpielerInput	: MonoBehaviour {
     	drehHR = false;
     	drehHL = false;
     	
-    		kameraOben.enabled = true;
-			kameraUnten.enabled = false;
-	 		kameraLinks.enabled = false;
-			kameraRechts.enabled = false;
-			kameraHinten.enabled = false;
-			kameraVorne.enabled = false;
+		kameraOben.enabled = true;
+		kameraUnten.enabled = false;
+ 		kameraLinks.enabled = false;
+		kameraRechts.enabled = false;
+		kameraHinten.enabled = false;
+		kameraVorne.enabled = false;
+		
+		drehKin = GetComponent<Rigidbody>();
     	
 //        zeitGesamt = 3f;
 //        winkelGesamt = 90f;
@@ -176,7 +177,7 @@ public class SpielerInput	: MonoBehaviour {
 			
 			bewegungZeitStart = Time.time;
 			
-			CameraRechtsSteuerung.drehRechts = true;	
+			//CameraRechtsSteuerung.drehRechts = true;	
 		}
 		
 		if ( coll.gameObject.tag == "PlaneObenLinks")
@@ -198,6 +199,8 @@ public class SpielerInput	: MonoBehaviour {
 			drehVR = true;
 			
 			bewegungZeitStart = Time.time;
+			
+			//CameraRechtsSteuerung.drehVR = true;
 		}
 		
 		if ( coll.gameObject.tag == "PlaneHintenLinks")
@@ -261,12 +264,12 @@ public class SpielerInput	: MonoBehaviour {
 	// Update is called once per frame
 	void Update () { 
 
-		if (CameraRechtsSteuerung.drehRechts){
-			
-			targetPos = -(transform.right * (5f*step));
-			
-		}
-		
+//		if (CameraRechtsSteuerung.drehRechts){
+//			
+//			targetPos = -(transform.right * (5f*step));
+//			
+//		}
+//		
 	// Spieler bei Tastenbedienung A Bewegung nach links
 	if( Input.GetKeyDown( KeyCode.A )){
 		
@@ -275,15 +278,18 @@ public class SpielerInput	: MonoBehaviour {
 	}
 	
 	
-	if (Input.GetKeyDown( KeyCode.T )){
-		
-		GetComponent<Rigidbody>().AddTorque(0, 95f,95f);
-		
-	}
+//	if (CameraRechtsSteuerung.drehRechts){
+//		
+//		drehKin.isKinematic = false;
+//		
+//		GetComponent<Rigidbody>().AddTorque(0, 45f , -90f);
+//		drehKin.isKinematic = true;
+//		
+//	}
 	
-	if (Input.GetKeyDown( KeyCode.Z )){
+	if (CameraRechtsSteuerung.drehVR){
 		
-		GetComponent<Rigidbody>().AddTorque(0, -95f,95f);
+		//GetComponent<Rigidbody>().AddTorque(0, -90f, 45f);
 		
 	}
 	
@@ -327,7 +333,7 @@ public class SpielerInput	: MonoBehaviour {
 		
 		float zeitAnteil = (Time.time - zeitSchaltuhrStart)/sprungSperre;
 				
-		jump = (zeitAnteil - sprungZeitAlt) * 2.5f;
+		jump = (zeitAnteil - sprungZeitAlt) * 5f;
 		
 		//zeitAnteil = zeitAnteil - sprungZeitAlt;
 		

@@ -26,6 +26,7 @@ public class CameraLinksSteuerung : MonoBehaviour {
 	
 	//public static bool drehRechts = false;
 	
+	public GameObject spieler;
 	
 	float zeitGesamt;
     
@@ -54,6 +55,8 @@ public class CameraLinksSteuerung : MonoBehaviour {
 		if(SpielerInput.drehOL){
 			
 			
+			spieler.GetComponent<Rigidbody>().isKinematic = false;
+			//drehRechts = true;
 					
 			
 			kameraOben.enabled = true;
@@ -75,6 +78,8 @@ public class CameraLinksSteuerung : MonoBehaviour {
 			
 			
 					//drehRechts = false;
+					
+					spieler.GetComponent<Rigidbody>().AddTorque(0, -45f , 90f);
 					
 			if(zeitAnteil >= 1f)
 				{
@@ -101,6 +106,66 @@ public class CameraLinksSteuerung : MonoBehaviour {
 //					kameraHinten.transform.position = new Vector3(kameraPositionX, kameraPositionY, kameraPositionZ);
 //					
 					SpielerInput.drehOL = false;
+					
+					zeitGesamt = 3f;
+        			//SpielerInput.winkelGesamt = 90f;
+        			zeitAnteilAlt = 0;
+        			
+        			spieler.GetComponent<Rigidbody>().isKinematic = true;
+					
+					
+				}
+		
+		}
+		
+		if(SpielerInput.drehHL){
+			
+			
+			kameraOben.enabled = false;
+			kameraUnten.enabled = false;
+	 		kameraLinks.enabled = true;
+			kameraRechts.enabled = false;
+			kameraHinten.enabled = false;
+			kameraVorne.enabled = false;
+		
+			float zeitAnteil = (Time.time - SpielerInput.bewegungZeitStart) / zeitGesamt;
+			
+			float winkelAenderung = (zeitAnteil - zeitAnteilAlt) * 90f;
+			
+			kameraLinks.transform.RotateAround ( new Vector3(0, 1f, 0), new Vector3(0, 5f, 0), winkelAenderung );
+			
+			zeitAnteilAlt = zeitAnteil;
+			
+			Debug.Log(transform.eulerAngles.x);
+			
+			
+					//drehVR = false;
+					
+			if(zeitAnteil >= 1f)
+				{
+				
+					kameraOben.enabled = false;
+					kameraUnten.enabled = false;
+			 		kameraLinks.enabled = false;
+					kameraRechts.enabled = false;
+					kameraHinten.enabled = false;
+					kameraVorne.enabled = true;
+				
+					float kameraPositionX = 15f;
+					float kameraPositionY = 0;
+					float kameraPositionZ = 0;
+					
+					kameraLinks.transform.position = new Vector3(kameraPositionX, kameraPositionY, kameraPositionZ);
+					
+					kameraLinks.transform.rotation = Quaternion.Slerp(transform.rotation, SpielerInput.originalDrehLinks, Time.time * rotationsSpeed);
+					
+//					float kameraPositionX = 0;
+//					float kameraPositionY = 0;
+//					float kameraPositionZ = -15;
+//					
+//					kameraHinten.transform.position = new Vector3(kameraPositionX, kameraPositionY, kameraPositionZ);
+//					
+					SpielerInput.drehHL = false;
 					
 					zeitGesamt = 3f;
         			//SpielerInput.winkelGesamt = 90f;

@@ -122,8 +122,8 @@ GameObject:
   m_Component:
   - component: {fileID: 170913299}
   - component: {fileID: 170913298}
-  - component: {fileID: 170913300}
   - component: {fileID: 170913297}
+  - component: {fileID: 170913300}
   m_Layer: 0
   m_Name: Camera Links
   m_TagString: Untagged
@@ -209,6 +209,7 @@ MonoBehaviour:
   kameraRechts: {fileID: 1775090974}
   kameraHinten: {fileID: 1820084415}
   kameraVorne: {fileID: 1756812061}
+  spieler: {fileID: 1962305118}
 --- !u!1001 &172242024
 Prefab:
   m_ObjectHideFlags: 0
@@ -518,7 +519,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 236280670}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 88.45287, y: 43.086056, z: 47.175606}
+  m_LocalPosition: {x: 88.59, y: 43.086056, z: 47.175606}
   m_LocalScale: {x: 1, y: 1, z: 0.05}
   m_Children: []
   m_Father: {fileID: 1255095760}
@@ -4152,7 +4153,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1557042705}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 88.45287, y: 48.086056, z: 42.175606}
+  m_LocalPosition: {x: 88.45287, y: 48.31, z: 42.175606}
   m_LocalScale: {x: 1, y: 1, z: 0.05000003}
   m_Children: []
   m_Father: {fileID: 1255095760}
@@ -4564,13 +4565,23 @@ Prefab:
     - target: {fileID: 114559383679879224, guid: 8a1ffa17e5a134a9092fa78d8baa1dec,
         type: 2}
       propertyPath: movementSpeed
-      value: 0.1
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 114559383679879224, guid: 8a1ffa17e5a134a9092fa78d8baa1dec,
         type: 2}
       propertyPath: rotationSpeed
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 54126557043324612, guid: 8a1ffa17e5a134a9092fa78d8baa1dec,
+        type: 2}
+      propertyPath: m_AngularDrag
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114437624877122174, guid: 8a1ffa17e5a134a9092fa78d8baa1dec,
+        type: 2}
+      propertyPath: drehKin
+      value: 
+      objectReference: {fileID: 1962305124}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a1ffa17e5a134a9092fa78d8baa1dec, type: 2}
   m_IsPrefabAsset: 0
@@ -4903,6 +4914,7 @@ MonoBehaviour:
   kameraRechts: {fileID: 1775090974}
   kameraHinten: {fileID: 1820084415}
   kameraVorne: {fileID: 1756812061}
+  spieler: {fileID: 1962305118}
 --- !u!1 &1787493794
 GameObject:
   m_ObjectHideFlags: 0
@@ -5612,6 +5624,16 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1946613181}
   m_CullTransparentMesh: 0
+--- !u!1 &1962305118 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1842113018389952, guid: 8a1ffa17e5a134a9092fa78d8baa1dec,
+    type: 2}
+  m_PrefabInternal: {fileID: 1621510462}
+--- !u!54 &1962305124 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 54126557043324612, guid: 8a1ffa17e5a134a9092fa78d8baa1dec,
+    type: 2}
+  m_PrefabInternal: {fileID: 1621510462}
 --- !u!1 &2034044999
 GameObject:
   m_ObjectHideFlags: 0
