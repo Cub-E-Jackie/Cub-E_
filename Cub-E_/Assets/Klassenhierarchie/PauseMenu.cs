@@ -40,12 +40,6 @@ public class PauseMenu : MonoBehaviour {
 		PausedGame = true; //Game pausiert
 	}
 	
-	/*public void Restart() {
-		pauseMenu.SetActive(false);
-		PausedGame = false;
-		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+0); 
-		
-	}*/
 	
 	//Bei auf Menu drücken: auf Menu wechseln
 	public void LoadMenu() {
