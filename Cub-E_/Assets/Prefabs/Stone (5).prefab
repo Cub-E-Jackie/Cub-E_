@@ -1413,8 +1413,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4036526966322850}
   - component: {fileID: 136101950777910206}
-  - component: {fileID: 114076351368265468}
   - component: {fileID: 111317456508547808}
+  - component: {fileID: 114989252023824698}
   m_Layer: 0
   m_Name: Stone (5)
   m_TagString: Feind
@@ -6236,7 +6236,7 @@ Animation:
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
---- !u!114 &114076351368265468
+--- !u!114 &114989252023824698
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6247,7 +6247,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b162b2cf555ec74d9fa93dfd34bcbee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 0}
+  anim: {fileID: 95873628688585016}
 --- !u!136 &136101950777910206
 CapsuleCollider:
   m_ObjectHideFlags: 1

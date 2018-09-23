@@ -293,7 +293,7 @@ GameObject:
   - component: {fileID: 4823574308362658}
   - component: {fileID: 136000465513285864}
   - component: {fileID: 111045888850640422}
-  - component: {fileID: 114508806369033240}
+  - component: {fileID: 114978490694972062}
   m_Layer: 0
   m_Name: Stone (2)
   m_TagString: Feind
@@ -6236,7 +6236,7 @@ Animation:
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
---- !u!114 &114508806369033240
+--- !u!114 &114978490694972062
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}

@@ -37,8 +37,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4539379420646406}
   - component: {fileID: 136231776795283188}
-  - component: {fileID: 114424238302300552}
   - component: {fileID: 111296264048644354}
+  - component: {fileID: 114923945365473846}
   m_Layer: 0
   m_Name: Wood_Holz
   m_TagString: Feind
@@ -1041,8 +1041,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4199961836469836}
   - component: {fileID: 95676105300080590}
-  - component: {fileID: 114480898720675654}
-  - component: {fileID: 111505354885797332}
   m_Layer: 0
   m_Name: Wood_Model
   m_TagString: Untagged
@@ -8038,7 +8036,7 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1555406413669264}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 9000000, guid: 82e9b9e671e414885ad3c6569730c6cb, type: 3}
   m_Controller: {fileID: 9100000, guid: 329d980e918244edd9b14d9d88b4057f, type: 2}
   m_CullingMode: 0
@@ -8063,21 +8061,7 @@ Animation:
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
---- !u!111 &111505354885797332
-Animation:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1555406413669264}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 82e9b9e671e414885ad3c6569730c6cb, type: 3}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 0
-  m_AnimatePhysics: 0
-  m_CullingType: 0
---- !u!114 &114424238302300552
+--- !u!114 &114923945365473846
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8089,18 +8073,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 95676105300080590}
---- !u!114 &114480898720675654
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1555406413669264}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b162b2cf555ec74d9fa93dfd34bcbee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anim: {fileID: 0}
 --- !u!136 &136231776795283188
 CapsuleCollider:
   m_ObjectHideFlags: 1
