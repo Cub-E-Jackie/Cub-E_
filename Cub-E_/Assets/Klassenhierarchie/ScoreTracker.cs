@@ -7,11 +7,14 @@ public class ScoreTracker : MonoBehaviour
 {
 
     private int score;
+    // um auf die var score zugreifen zu koennen in destroyByContact
     public static ScoreTracker Instance;
+    //werte an textfelder abzugeben
     public TextMeshProUGUI ScoreText;
     public TextMeshProUGUI HighScoreText;
 
-
+    // setten der Punkte, mit Playprefs alte score mit neuer verglichen -> wenn groesser in highscore gespeuchert und ausgegeben
+    //hoechster heighscore bleibt auch bei playbeenden erhalten
     public int Score
     {
         get
