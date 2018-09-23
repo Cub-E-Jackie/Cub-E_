@@ -19,7 +19,7 @@ public class SpielerLeben : MonoBehaviour
     void Start()
     {
     
-        lives = 3;
+        lives = 100;
         HighScore.text = "";
         SubLives();
 
