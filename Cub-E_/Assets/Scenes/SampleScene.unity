@@ -837,8 +837,8 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 1
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.5
+  m_Color: {r: 1, g: 1, b: 0.7764706, a: 1}
+  m_Intensity: 0.8
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -1248,7 +1248,7 @@ MonoBehaviour:
     topRight: {r: 1, g: 1, b: 1, a: 1}
     bottomLeft: {r: 1, g: 1, b: 1, a: 1}
     bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 11400000, guid: 0aded741f769522448f231bebe8a22d3,
+  m_fontColorGradientPreset: {fileID: 11400000, guid: 485ec0b36a8c2594eb7dcf991a071e0d,
     type: 2}
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
@@ -2140,7 +2140,7 @@ Light:
   serializedVersion: 8
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 0.7783019, a: 1}
-  m_Intensity: 0.5
+  m_Intensity: 0.8
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -2949,14 +2949,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnWait: 2
-  startWait: 1
+  startWait: 0.5
   stop: 0
   duckPrefab: {fileID: 1121870705426258, guid: 0e785b15ed50f7b4bbf5000895eab62d, type: 2}
   duckPrefab1: {fileID: 1674832291215974, guid: 73c631e028f42fe4180ad1684bd41d7b,
-    type: 2}
-  duckPrefab2: {fileID: 1440207769552836, guid: 249bdf74735826647bcd3ec01b976e85,
-    type: 2}
-  duckPrefab3: {fileID: 1401081536858174, guid: 3e756577a5f4f004ba56d94307638f29,
     type: 2}
   duckPrefab4: {fileID: 1253401098745558, guid: 042773a3077b7754c875e183a2921d1c,
     type: 2}
@@ -2965,10 +2961,6 @@ MonoBehaviour:
   woodPrefab: {fileID: 1010809007040682, guid: cd2e109cc6e1d4707b1d12a3b95441df, type: 2}
   woodPrefab1: {fileID: 1669028613812634, guid: 4c3386ea33128499ca6478b69b6461b7,
     type: 2}
-  woodPrefab2: {fileID: 1272359556504988, guid: 2497cf86a5d024927b40d9179aa1a99b,
-    type: 2}
-  woodPrefab3: {fileID: 1048515827886786, guid: 8acabb5da8ae943b2a9e265e2580b1fb,
-    type: 2}
   woodPrefab4: {fileID: 1936585184860680, guid: 614cdb481347441c29c192b5b160e365,
     type: 2}
   woodPrefab5: {fileID: 1019342507589256, guid: 7252379c8aa434106ba55da3b99ac74e,
@@ -2976,10 +2968,6 @@ MonoBehaviour:
   stonePrefab: {fileID: 1996448891200206, guid: 8c0a0e123650ee84a88783a471517539,
     type: 2}
   stonePrefab1: {fileID: 1906528037858892, guid: 52f90415a9db04ddb96d9778ad9a9d5f,
-    type: 2}
-  stonePrefab2: {fileID: 1147373367506476, guid: 949deb590e76e457c9ee3d9b3d349a63,
-    type: 2}
-  stonePrefab3: {fileID: 1618289856436932, guid: 63656210732404a7e8a4be5a6ae388ae,
     type: 2}
   stonePrefab4: {fileID: 1486222246979144, guid: ae1003650231d41bd8ad13aabe9f3537,
     type: 2}
@@ -3146,8 +3134,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   kameraOben: {fileID: 1124536375}
   kameraUnten: {fileID: 1214525817}
-  kameraLinks: {fileID: 170913298}
-  kameraRechts: {fileID: 1775090974}
   kameraHinten: {fileID: 1820084415}
   kameraVorne: {fileID: 1756812061}
 --- !u!81 &1124536374
@@ -3204,7 +3190,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1124536372}
   m_LocalRotation: {x: 0.44084054, y: -0, z: -0, w: 0.8975855}
-  m_LocalPosition: {x: 0, y: 10.01, z: -6.3}
+  m_LocalPosition: {x: 0, y: 11.48, z: -6.97}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 622574330}
@@ -3349,7 +3335,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1214525815}
   m_LocalRotation: {x: -0.89758563, y: 0, z: 0, w: 0.44084018}
-  m_LocalPosition: {x: 0, y: -10.1, z: 6.3}
+  m_LocalPosition: {x: 0, y: -12.3, z: 6.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1238867850}
@@ -3412,7 +3398,7 @@ Light:
   serializedVersion: 8
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 0.7764706, a: 1}
-  m_Intensity: 0.5
+  m_Intensity: 0.8
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -4660,7 +4646,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4851109259910422, guid: 8a1ffa17e5a134a9092fa78d8baa1dec, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 5.35
+      value: 5.31
       objectReference: {fileID: 0}
     - target: {fileID: 4851109259910422, guid: 8a1ffa17e5a134a9092fa78d8baa1dec, type: 2}
       propertyPath: m_LocalPosition.z
@@ -4846,7 +4832,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1756812059}
   m_LocalRotation: {x: 0.94641006, y: 0, z: 0, w: 0.32296774}
-  m_LocalPosition: {x: 0, y: 6.3, z: 10.1}
+  m_LocalPosition: {x: 0, y: 6.63, z: 11.64}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1759325672}
@@ -4909,7 +4895,7 @@ Light:
   serializedVersion: 8
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 0.7764706, a: 1}
-  m_Intensity: 0.5
+  m_Intensity: 0.8
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -5122,14 +5108,14 @@ RectTransform:
   m_GameObject: {fileID: 1787493794}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.8, y: 1.8, z: 1.8}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children: []
   m_Father: {fileID: 1409808353}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 110}
+  m_AnchoredPosition: {x: 0, y: 24.999996}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.50000006, y: 0.49999994}
 --- !u!114 &1787493796
@@ -5325,7 +5311,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1820084413}
   m_LocalRotation: {x: -0.32296774, y: 0, z: 0, w: 0.94641006}
-  m_LocalPosition: {x: 0, y: -6.3, z: -10.1}
+  m_LocalPosition: {x: 0, y: -7.3, z: -12.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 370415270}
