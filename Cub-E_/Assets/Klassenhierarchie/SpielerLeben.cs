@@ -42,6 +42,7 @@ public class SpielerLeben : MonoBehaviour
         {
             collidingWithPlayer = true;
             anim.enabled = true;
+            Destroy(gameObject);
         }
     }
 
