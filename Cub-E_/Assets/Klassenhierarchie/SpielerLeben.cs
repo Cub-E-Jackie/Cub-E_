@@ -14,25 +14,27 @@ public class SpielerLeben : MonoBehaviour
     DuckMovement zeit;
 
 
-
-
     void Start()
     {
         lives = 100;
         HighScore.text = "";
         SubLives();
+
     }
 
     void OnTriggerEnter(Collider other)
     {
 
-        if (other.gameObject.CompareTag("Feind"))
+        if (other.gameObject.tag == ("Feind"))
         {
+
+
             other.gameObject.SetActive(false);
             lives -= 1;
             SubLives();
+
         }
-        FindObjectOfType<AudioManager>().Play("Collision");
+        // FindObjectOfType<AudioManager>().Play("Collision");
     }
 
     public void SubLives()
@@ -48,5 +50,4 @@ public class SpielerLeben : MonoBehaviour
         }
     }
 }
-
 

@@ -2116,6 +2116,15 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1996448891200206, guid: 8c0a0e123650ee84a88783a471517539, type: 2}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 114420723580287080, guid: 8c0a0e123650ee84a88783a471517539,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c0a0e123650ee84a88783a471517539, type: 2}
   m_IsPrefabAsset: 0
@@ -17744,16 +17753,21 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114083792032559616, guid: 8a1ffa17e5a134a9092fa78d8baa1dec,
+    - target: {fileID: 114384339217526134, guid: 8a1ffa17e5a134a9092fa78d8baa1dec,
         type: 2}
-      propertyPath: LiveAnzeige
+      propertyPath: ScoreText
       value: 
-      objectReference: {fileID: 1590680192}
-    - target: {fileID: 114083792032559616, guid: 8a1ffa17e5a134a9092fa78d8baa1dec,
+      objectReference: {fileID: 391801371}
+    - target: {fileID: 114384339217526134, guid: 8a1ffa17e5a134a9092fa78d8baa1dec,
         type: 2}
-      propertyPath: HighScore
+      propertyPath: HighScoreText
       value: 
       objectReference: {fileID: 1787493796}
+    - target: {fileID: 114814051835910360, guid: 8a1ffa17e5a134a9092fa78d8baa1dec,
+        type: 2}
+      propertyPath: scoreAnzeige
+      value: 
+      objectReference: {fileID: 391801371}
     - target: {fileID: 114437624877122174, guid: 8a1ffa17e5a134a9092fa78d8baa1dec,
         type: 2}
       propertyPath: worldCube
@@ -17789,19 +17803,14 @@ Prefab:
       propertyPath: kameraVorne
       value: 
       objectReference: {fileID: 1756812061}
-    - target: {fileID: 114814051835910360, guid: 8a1ffa17e5a134a9092fa78d8baa1dec,
+    - target: {fileID: 114083792032559616, guid: 8a1ffa17e5a134a9092fa78d8baa1dec,
         type: 2}
-      propertyPath: scoreAnzeige
+      propertyPath: LiveAnzeige
       value: 
-      objectReference: {fileID: 391801371}
-    - target: {fileID: 114384339217526134, guid: 8a1ffa17e5a134a9092fa78d8baa1dec,
+      objectReference: {fileID: 1590680192}
+    - target: {fileID: 114083792032559616, guid: 8a1ffa17e5a134a9092fa78d8baa1dec,
         type: 2}
-      propertyPath: ScoreText
-      value: 
-      objectReference: {fileID: 391801371}
-    - target: {fileID: 114384339217526134, guid: 8a1ffa17e5a134a9092fa78d8baa1dec,
-        type: 2}
-      propertyPath: HighScoreText
+      propertyPath: HighScore
       value: 
       objectReference: {fileID: 1787493796}
     m_RemovedComponents: []

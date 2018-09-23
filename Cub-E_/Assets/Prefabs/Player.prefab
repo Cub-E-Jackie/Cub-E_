@@ -74,6 +74,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LiveAnzeige: {fileID: 0}
   HighScore: {fileID: 0}
+  anim: {fileID: 95278286354347076, guid: 8c0a0e123650ee84a88783a471517539, type: 2}
 --- !u!114 &114384339217526134
 MonoBehaviour:
   m_ObjectHideFlags: 1
