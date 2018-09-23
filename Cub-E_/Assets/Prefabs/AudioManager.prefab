@@ -88,9 +88,9 @@ MonoBehaviour:
     pitch: 0.55
     loop: 0
     source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
-    volume: 0
-    pitch: 0.1
+  - name: Splash
+    clip: {fileID: 8300000, guid: 02922c81887565341995b281db9cac5f, type: 3}
+    volume: 1
+    pitch: 0.55
     loop: 0
     source: {fileID: 0}
