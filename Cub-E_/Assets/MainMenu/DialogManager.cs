@@ -19,19 +19,23 @@ public class DialogManager : MonoBehaviour {
 	void Start(){
 
         //Zuweisung der Audio Source
-        source = GetComponent<AudioSource>();
+		source = GetComponent<AudioSource>();
+		Time.timeScale = 1f;
 		StartCoroutine(Type()); //Weitergabe an Unity
 	}
 	
 	void Update () {
 		//damit die Sätze nacheinander abgebildet und nicht gleichzeitig	
+		Time.timeScale = 1f;
 		if(textShow.text == sentences[i]) { 
+		Time.timeScale = 1f;
 		button.SetActive(true); // Button angezeigt nachdem Satz fertig
 		}
 	}
 	
 	//Text anzeigen
 	IEnumerator Type(){
+		Time.timeScale = 1f;
 		foreach(char letter in sentences[i].ToCharArray()){
 			textShow.text += letter;
 			yield return new WaitForSeconds(speed);
@@ -46,6 +50,7 @@ public class DialogManager : MonoBehaviour {
 
 		button.SetActive(false);
 		if(i<sentences.Length - 1){
+			Time.timeScale = 1f;
 			i++; //+1 gerechnet
 			textShow.text = "";
 			StartCoroutine(Type());
