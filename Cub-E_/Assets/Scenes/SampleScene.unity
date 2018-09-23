@@ -242,26 +242,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 114208130143429572, guid: 3d96e38082a24ab488afb9e738f16688,
-        type: 2}
-      propertyPath: sounds.Array.data[4].volume
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114208130143429572, guid: 3d96e38082a24ab488afb9e738f16688,
-        type: 2}
-      propertyPath: sounds.Array.data[4].pitch
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114208130143429572, guid: 3d96e38082a24ab488afb9e738f16688,
-        type: 2}
-      propertyPath: sounds.Array.data[4].name
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114208130143429572, guid: 3d96e38082a24ab488afb9e738f16688,
-        type: 2}
-      propertyPath: sounds.Array.data[4].clip
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d96e38082a24ab488afb9e738f16688, type: 2}
   m_IsPrefabAsset: 0
