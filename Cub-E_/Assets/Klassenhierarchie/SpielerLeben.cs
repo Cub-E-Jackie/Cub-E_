@@ -8,10 +8,11 @@ using UnityEngine.SceneManagement;
 public class SpielerLeben : MonoBehaviour
 {
 
-    private int lives;
+    public int lives;
     public TextMeshProUGUI LiveAnzeige;
     public TextMeshProUGUI HighScore;
     DuckMovement zeit;
+    public static SpielerLeben Instance;
 
     private bool collidingWithFeind;
     private bool collidingWithPlayer;
@@ -20,7 +21,8 @@ public class SpielerLeben : MonoBehaviour
 
     void Start()
     {
-        lives = 100;
+        Instance = this;
+        lives = 3;
         HighScore.text = "";
         SubLives();
 
