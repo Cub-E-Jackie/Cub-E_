@@ -4128,7 +4128,7 @@ MonoBehaviour:
     will unlock a new world where poor Berta has lost her children again... What a
     pity!
   - Have fun and good luck!
-  speed: 0.04
+  speed: 0.02
   button: {fileID: 1434297676}
 --- !u!1 &1037139612
 GameObject:
@@ -4838,7 +4838,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.36499, y: -77}
+  m_AnchoredPosition: {x: -0.00000023842, y: -76}
   m_SizeDelta: {x: 193.8, y: 40.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1214364660
