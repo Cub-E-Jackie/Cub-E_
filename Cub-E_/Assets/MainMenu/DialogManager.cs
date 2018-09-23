@@ -26,16 +26,13 @@ public class DialogManager : MonoBehaviour {
 	
 	void Update () {
 		//damit die Sätze nacheinander abgebildet und nicht gleichzeitig	
-		Time.timeScale = 1f;
 		if(textShow.text == sentences[i]) { 
-		Time.timeScale = 1f;
 		button.SetActive(true); // Button angezeigt nachdem Satz fertig
 		}
 	}
 	
 	//Text anzeigen
 	IEnumerator Type(){
-		Time.timeScale = 1f;
 		foreach(char letter in sentences[i].ToCharArray()){
 			textShow.text += letter;
 			yield return new WaitForSeconds(speed);
@@ -44,13 +41,10 @@ public class DialogManager : MonoBehaviour {
 	
 	//damit nach Continue Button drücken neuer Satz gezeigt wird
 	public void NextSentence(){
-
         // Spielt den Click Sound bei Continue
         source.Play();
-
 		button.SetActive(false);
 		if(i<sentences.Length - 1){
-			Time.timeScale = 1f;
 			i++; //+1 gerechnet
 			textShow.text = "";
 			StartCoroutine(Type());
