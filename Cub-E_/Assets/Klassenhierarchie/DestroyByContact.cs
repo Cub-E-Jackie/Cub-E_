@@ -34,7 +34,7 @@ public class DestroyByContact : MonoBehaviour
 
         }
 
-        FindObjectOfType<AudioManager>().Play("Collision");
+        //FindObjectOfType<AudioManager>().Play("Collision");
 
 
     }

@@ -18,17 +18,13 @@ public class SpielerLeben : MonoBehaviour
 
     void Start()
     {
-    
         lives = 100;
         HighScore.text = "";
         SubLives();
-
-
     }
 
     void OnTriggerEnter(Collider other)
     {
-
 
         if (other.gameObject.CompareTag("Feind"))
         {
@@ -36,8 +32,6 @@ public class SpielerLeben : MonoBehaviour
             lives -= 1;
             SubLives();
         }
-
-
         FindObjectOfType<AudioManager>().Play("Collision");
     }
 
@@ -51,8 +45,6 @@ public class SpielerLeben : MonoBehaviour
             zeit = GameObject.Find("Player").GetComponent<DuckMovement>();
             zeit.activModus = false;
             Time.timeScale = 0f;
-
-
         }
     }
 }
